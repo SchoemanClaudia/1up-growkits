@@ -1,0 +1,215 @@
+body {
+    position: relative;
+    background: url('/media/home-main-banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000000;
+    font-family: 'Outfit';
+}
+
+body::before {
+    content: "none";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color */
+    z-index: -1;
+}
+
+a {
+    text-decoration-style: none;
+}
+
+header {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    font-size: smaller;
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+.bg-light {
+    background-color: #f5b201 !important;
+}
+
+.navbar-brand {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.navbar-nav {
+    margin-top: 1em;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000000;
+    text-align: center;
+}
+
+.navbar-nav:hover .nav-link:hover {
+    color: #000000;
+    font-weight: 500;
+    font-size: small;
+}
+
+.navbar-toggler {
+    font-size: x-large;
+    border: none;
+    color: #000000 !important;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+}
+
+.dropdown-item {
+    color: #000000;
+}
+
+a.dropdown-item:hover {
+    background-color: #f5b201;
+}
+
+.hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+
+i:hover {
+    font-size: larger;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: none;
+    border-color: #f5b201;
+    border-width: 2px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f5b201;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.featured-products {
+    text-align: left;
+    padding: 2rem;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+}
+
+footer i:hover {
+    color: #f5b201;
+}
+
+hr {
+    border: .25px solid #f5b201;
+    width: 30%;
+}
+
+.footer-text-small {
+    font-size: small;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.text-light {
+    color: #ffffff !important;
+    font-weight: lighter;
+}
+
+.bg-dark {
+    background-color: #000000 !important;
+}
+
+/* Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1999;
+      }
+  
+      .header-container {
+          padding-top: 200px;
+      }
+
+      .navbar-brand {
+        font-size: 2.5em;
+        flex-direction: inherit;
+    }
+  }
