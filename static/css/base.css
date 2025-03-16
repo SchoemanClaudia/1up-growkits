@@ -32,13 +32,18 @@ nav ul {
 }
 
 nav ul li {
+    font-size: smaller;
     display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #000000;
 }
 
 .bg-light {
@@ -46,18 +51,41 @@ nav ul li a {
 }
 
 .navbar-brand {
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 900;
+}
+
+.navbar-nav {
+    margin-top: 1em;
 }
 
 .navbar-light .navbar-nav .nav-link {
     color: #000000;
+    text-align: center;
 }
 
 .navbar-nav:hover .nav-link:hover {
     color: #000000;
-    font-weight: bold;
-    font-size: large;
+    font-weight: 500;
+    font-size: small;
+}
+
+.navbar-toggler {
+    font-size: x-large;
+    border: none;
+    color: #000000 !important;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+}
+
+.dropdown-item {
+    color: #000000;
+}
+
+a.dropdown-item:hover {
+    background-color: #f5b201;
 }
 
 .hero {
@@ -134,6 +162,10 @@ footer {
     margin-top: 20px;
 }
 
+footer i:hover {
+    color: #f5b201;
+}
+
 hr {
     border: .25px solid #f5b201;
     width: 30%;
@@ -169,10 +201,15 @@ hr {
           top: 0;
           right: 0;
           left: 0;
-          z-index: 1030;
+          z-index: 1999;
       }
   
       .header-container {
-          padding-top: 164px;
+          padding-top: 200px;
       }
+
+      .navbar-brand {
+        font-size: 2.5em;
+        flex-direction: inherit;
+    }
   }
