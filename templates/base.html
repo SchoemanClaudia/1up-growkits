@@ -1,77 +1,122 @@
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-
     <!-- Required meta tags -->
     {% block meta %}
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% endblock %}
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    {% endblock %} 
+    
     {% block extra_meta %}
     {% endblock %}
 
     <!-- Bootstrap CSS -->
     {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    {% endblock %}
-
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    {% endblock %} 
+    
     {% block extra_css %}
     {% endblock %}
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     {% block corejs %}
-        <!-- jQuery library must be loaded before Popper and Bootstrap for everything to work correctly -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/49f8c5c44f.js" crossorigin="anonymous"></script>
-    {% endblock %}
-
-    {% block extra_js %}
-    {% endblock %}
+    <!-- jQuery library must be loaded before Popper and Bootstrap for everything to work correctly -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/49f8c5c44f.js"
+      crossorigin="anonymous"
+    ></script>
+    {% endblock %} {% block extra_js %} {% endblock %}
 
     <title>1up GrowKits {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-
     {% block page_header %}
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">1up GrowKits</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Grow Kits</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Grow Guide</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">1up GrowKits</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Grow Guide</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     {% endblock %}
 
     <!-- Page Content -->
     <main class="container my-5">
-        {% block content %}
-        {% endblock %}
+      {% block content %}
+      {% endblock %}
     </main>
 
     <!-- Footer -->
     <footer class="bg-dark text-light text-center py-3">
-        <p>© 2025 1up GrowKits | <a href="https://www.facebook.com/" target="_blank" class="text-light">Give us a follow  <i class="fa-brands fa-facebook"></i></a></p>
+      <p>
+          Share your grow progress &nbsp; <a href="https://www.facebook.com/" target="_blank" class="text-light">
+            <i class="fa-brands fa-facebook"></i></a>
+        &nbsp; 1upGrowKits
+      </p>
+      <p class="footer-text-small">
+        2025 Code Institute &nbsp; | &nbsp; This website has been created for
+        education purposes only
+      </p>
     </footer>
-    
+
     {% block postloadjs %}
     {% endblock %}
-    
   </body>
 </html>
