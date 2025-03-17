@@ -54,17 +54,21 @@
   </head>
   
   <body>
-    {% block page_header %}
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  {% block page_header %}
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}">1up GrowKits</a>
+        <a class="navbar-brand" href="{% url 'home' %}">
+          1up
+          <img  src="{% static 'assets/logo-icon.png' %}" alt="Logo" width="40" height="40" class="d-inline-block align-center">
+          GrowKits
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-          <span"><i class="fa-solid fa-bars"></i></span>
+          <span><i class="fa-solid fa-bars"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Mushroom Kits</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">Mushroom Kits</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Grow Guide</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
           </ul>
@@ -114,8 +118,9 @@
         </ul>
       </div>
     </div>
-    </nav>
-    {% endblock %}
+  </nav>
+  {% endblock %}
+
 
     <!-- Page Content -->
     <main class="container my-5">

@@ -1,11 +1,12 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
 
 {% block content %}
     <section class="hero">
         <div class="hero-text">
             <h1>Gourmet Mushroom Grow Kits</h1>
             <p>Grow & harvest your own mushrooms with our easy-to-use kits</p>
-            <a href="#" class="btn">Shop Now</a>
+            <a href="{% url 'products' %}" class="btn">Shop Now</a>
         </div>
     </section>
 
