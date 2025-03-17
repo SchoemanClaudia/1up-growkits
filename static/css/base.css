@@ -167,7 +167,7 @@ footer i:hover {
 }
 
 hr {
-    border: 1px solid #f5b201;
+    border: .5px solid #f5b201;
 }
 
 .footer-text-small {
@@ -220,5 +220,16 @@ hr {
       .navbar-brand {
         font-size: 2.5em;
         flex-direction: inherit;
+    }
+  }
+
+  /* pad the top a bit when navbar is collapsed on mobile */
+  @media (max-width: 991px) {
+    .header-container {
+        padding-top: 200px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
   }
