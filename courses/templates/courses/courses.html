@@ -18,11 +18,11 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 {% if course.image %}
-                                <a href="">
+                                <a href="{% url 'course_detail' course.id %}">
                                     <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
                                 </a>
                                 {% else %}
-                                <a href="">
+                                <a href="{% url 'course_detail' course.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
                                 </a>
                                 {% endif %}
