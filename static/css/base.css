@@ -167,8 +167,7 @@ footer i:hover {
 }
 
 hr {
-    border: .25px solid #f5b201;
-    width: 30%;
+    border: 1px solid #f5b201;
 }
 
 .footer-text-small {
@@ -183,6 +182,16 @@ hr {
 
 .bg-dark {
     background-color: #000000 !important;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 /* Media Queries */
