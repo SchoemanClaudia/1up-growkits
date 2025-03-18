@@ -162,6 +162,10 @@ footer {
     margin-top: 20px;
 }
 
+footer a {
+    text-decoration: none !important;
+}
+
 footer i:hover {
     color: #f5b201;
 }

@@ -54,72 +54,72 @@
   </head>
   
   <body>
-  {% block page_header %}
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}">
-          1up
-          <img  src="{% static 'assets/logo-icon.png' %}" alt="Logo" width="40" height="40" class="d-inline-block align-center">
-          GrowKits
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-          <span><i class="fa-solid fa-bars"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">Mushroom Kits</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Grow Guide</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'courses' %}">Courses</a></li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-
-          <li class="list-inline-item dropdown">
-            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              <div class="text-center">
-                <div><i class="fa-solid fa-user"></i></div>
-                <p class="my-0">My Profile</p>
-              </div>
+    <header class="bg-light">
+       <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+              1up
+              <img  src="{% static 'assets/logo-icon.png' %}" alt="Logo" width="40" height="40" class="d-inline-block align-center">
+              GrowKits
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
-              {% if request.user.is_authenticated %}
-              {% if request.user.is_superuser %}
-              <a href="" class="dropdown-item">Manage Products</a>
-              {% endif %}
-              <a href="" class="dropdown-item">My Profile</a>
-              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-              {% else %}
-              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-              {% endif %}
+            <!-- Navigation -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+              <span><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">Mushroom Kits</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Grow Guide</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'courses' %}">Courses</a></li>
+              </ul>
             </div>
-          </li>
+          </div>
 
-          <li class="list-inline-item">
-            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-              <div class="text-center">
-                <div><i class="fa-solid fa-cart-shopping"></i></div>
-                <p class="my-0">
-                  {% if grand_total %}
-                  €{{ grand_total|floatformat:2 }}
-                  {% else %}
-                  €0.00
+          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+
+              <li class="list-inline-item dropdown">
+                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  <div class="text-center">
+                    <div><i class="fa-solid fa-user"></i></div>
+                    <p class="my-0">My Profile</p>
+                  </div>
+                </a>
+                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                  {% if request.user.is_authenticated %}
+                  {% if request.user.is_superuser %}
+                  <a href="" class="dropdown-item">Manage Products</a>
                   {% endif %}
-                </p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  {% endblock %}
+                  <a href="" class="dropdown-item">My Profile</a>
+                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                  {% else %}
+                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                  {% endif %}
+                </div>
+              </li>
 
+              <li class="list-inline-item">
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                  <div class="text-center">
+                    <div><i class="fa-solid fa-cart-shopping"></i></div>
+                    <p class="my-0">
+                      {% if grand_total %}
+                      €{{ grand_total|floatformat:2 }}
+                      {% else %}
+                      €0.00
+                      {% endif %}
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!-- Page Content -->
     <main class="container my-5">
@@ -130,12 +130,10 @@
     <!-- Footer -->
     <footer class="bg-dark text-light text-center py-3">
       <p>
-          Share your grow progress &nbsp; <a href="https://www.facebook.com/" target="_blank" class="text-light">
-            <i class="fa-brands fa-facebook"></i></a>
-        &nbsp; 1upGrowKits
+        <a href="https://www.facebook.com/" target="_blank" class="text-light">Share your grow progress &nbsp; <i class="fa-brands fa-facebook"></i> &nbsp; 1upGrowKits</a>
       </p>
       <p class="footer-text-small">
-        2025 Code Institute &nbsp; | &nbsp; This website has been created for
+        2025 Code Institute PP5 &nbsp; | &nbsp; This website has been created for
         education purposes only
       </p>
     </footer>
