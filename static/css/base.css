@@ -132,6 +132,22 @@ i:hover {
     margin-top: 10px;
 }
 
+.btn-shop {
+    background-color: #f5b201;
+    color: #ffffff;
+}
+
+.btn-shop-return {
+    border-color: #000000;
+    color: #000000;
+}
+
+.btn-shop-return:hover {
+    border-color: #000000;
+    background-color: #000000;
+    color: #ffffff;
+}
+
 .featured-products {
     text-align: left;
     padding: 2rem;
