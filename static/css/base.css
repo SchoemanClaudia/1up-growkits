@@ -142,7 +142,7 @@ i:hover {
     color: #000000;
 }
 
-.btn-shop-return:hover {
+.btn-shop-return:ho {
     border-color: #000000;
     background-color: #000000;
     color: #ffffff;
@@ -247,9 +247,5 @@ hr {
   @media (max-width: 991px) {
     .header-container {
         padding-top: 200px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
     }
   }
