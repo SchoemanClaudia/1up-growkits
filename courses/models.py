@@ -5,10 +5,13 @@ from django.core.mail import send_mail
 class Course(models.Model):
     title = models.CharField(max_length=255, unique=True)
     description = models.TextField()
+    code = models.CharField(max_length=254, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     video_url = models.URLField(help_text="Private video link for enrolled users")
     duration = models.DurationField(help_text="Duration in hours and minutes")
     image = models.ImageField(upload_to='course_images/', null=True, blank=True)
+    attendee_qty = models.IntegerField(default=0)  #Allowed Attendees
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
