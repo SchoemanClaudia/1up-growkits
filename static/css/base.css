@@ -46,6 +46,11 @@ nav ul li a:hover {
     color: #000000;
 }
 
+#delivery-banner {
+    font-style: italic;
+    color: #f5b201;
+}
+
 .bg-light {
     background-color: #f5b201 !important;
 }
@@ -157,6 +162,10 @@ a.text-info:focus, a.text-info:hover {
     color: #000000 !important;
     text-decoration: overline;
     font-size: larger;
+}
+
+.text-delivery {
+    color: #b22222;
 }
 
 .featured-products {
