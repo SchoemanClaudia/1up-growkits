@@ -142,10 +142,21 @@ i:hover {
     color: #000000;
 }
 
-.btn-shop-return:ho {
+.btn-shop-return:hover {
     border-color: #000000;
     background-color: #000000;
     color: #ffffff;
+}
+
+.text-info {
+    color: #000000 !important;
+    text-decoration: overline;
+}
+
+a.text-info:focus, a.text-info:hover {
+    color: #000000 !important;
+    text-decoration: overline;
+    font-size: larger;
 }
 
 .featured-products {
