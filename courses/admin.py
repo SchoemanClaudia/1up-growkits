@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Course, Enrollment
 
 class EnrollmentAdmin(admin.ModelAdmin):
-    list_display = ('user', 'course', 'is_paid', 'access_granted')
+    list_display = ('user', 'course', 'is_paid', 'confirmed')
     actions = ['mark_as_paid']
 
     def mark_as_paid(self, request, queryset):
@@ -11,7 +11,7 @@ class EnrollmentAdmin(admin.ModelAdmin):
             enrollment.send_course_email()
             enrollment.save()
         self.message_user(request, "Selected enrollments have been marked as paid and emails sent")
-    mark_as_paid.short_description = "Mark selected as paid and send access email"
+    mark_as_paid.short_description = "Mark selected as paid and send confirmation email"
 
 admin.site.register(Course)
 admin.site.register(Enrollment, EnrollmentAdmin)

@@ -8,10 +8,10 @@ class Course(models.Model):
     code = models.CharField(max_length=254, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    video_url = models.URLField(help_text="Private video link for enrolled users")
+    location = models.CharField(max_length=255, help_text="Physical location of the course", null=True, blank=True)
     duration = models.DurationField(help_text="Duration in hours and minutes")
     image = models.ImageField(upload_to='course_images/', null=True, blank=True)
-    attendee_qty = models.IntegerField(default=0)  #Allowed Attendees
+    attendee_qty = models.IntegerField(default=0)  # allowed attendees
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -24,17 +24,16 @@ class Enrollment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     enrolled_at = models.DateTimeField(auto_now_add=True)
     is_paid = models.BooleanField(default=False)
-    access_granted = models.BooleanField(default=False)
+    confirmed = models.BooleanField(default=False)
 
     def send_course_email(self):
         """Send course access email to user after payment confirmation"""
-        if self.is_paid and not self.access_granted:
+        if self.is_paid and not self.confirmed:
             subject = f"Access to {self.course.title}"
             message = (
                 f"Hello {self.user.first_name},\n\n"
-                f"Thank you for purchasing {self.course.title}!\n"
-                f"You can access your course using the link below:\n\n"
-                f"{self.course.video_url}\n\n"
+                f"Thank you for registering for {self.course.title}!\n"
+                f"Your course will be held at: {self.course.location}\n\n"
                 f"Fungi Greetings - 1up GrowKit Team"
             )
             send_mail(
@@ -44,7 +43,7 @@ class Enrollment(models.Model):
                 [self.user.email],
                 fail_silently=False,
             )
-            self.access_granted = True
+            self.confirmed = True
             self.save()
 
     def __str__(self):

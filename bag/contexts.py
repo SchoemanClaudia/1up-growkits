@@ -13,8 +13,13 @@ def bag_contents(request):
     for item_key, quantity in bag.items():
         # Product handler
         if item_key.startswith("product_"):
-            item_id = item_key.split("_")[1]
-            product = get_object_or_404(Product, pk=item_id)
+            item_id = item_key.split("_", 1)[1]
+            try:
+                item_id = int(item_id)
+                product = get_object_or_404(Product, pk=item_id)
+            except (ValueError, Product.DoesNotExist):
+                continue # Skip invalid product id
+
             subtotal = quantity * product.price 
             total += subtotal
             product_count += quantity
@@ -25,10 +30,16 @@ def bag_contents(request):
                 'subtotal': subtotal, 
                 'type': 'product',
             })
+
         # Course handler
         elif item_key.startswith("course_"):
-            item_id = item_key.split("_")[1]
-            course = get_object_or_404(Course, pk=item_id)
+            item_id = item_key.split("_", 1)[1]
+            try:
+                item_id = int(item_id)
+                course = get_object_or_404(Course, pk=item_id)
+            except (ValueError, Course.DoesNotExist):
+                continue  # Skip invalid course id
+
             subtotal = quantity * course.price 
             total += subtotal
             product_count += quantity
@@ -40,7 +51,7 @@ def bag_contents(request):
                 'type': 'course',
             })
 
-    # Calculate delivery costs
+    # Delivery calculation
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total

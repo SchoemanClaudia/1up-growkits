@@ -32,6 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1', #local preview
     'shop-1up-growkits-e6669e001bb1.herokuapp.com', #heroku app
+    'localhost',
 ]
 
 
