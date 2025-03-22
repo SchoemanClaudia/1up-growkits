@@ -63,7 +63,25 @@
                             <p class="my-0">€{{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
-                            <p class="my-0">{{ item.quantity }}</p>
+
+                            <form action="{% url 'adjust_bag' item.item_id %}" method="POST" class="form-inline d-inline bag-item-form-{{ item.item_id }}">
+                                {% csrf_token %}
+                                <input type="hidden" name="item_type" value="{{ item.type }}">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            
+                                <input 
+                                    class="form-control form-control-sm qty_input" 
+                                    type="number" name="quantity" 
+                                    value="{{ item.quantity }}" min="1" max="99">
+                            
+                                <a href="#" class="text-primary small ml-2" onclick="submitBagForm('{{ item.item_id }}'); return false;">
+                                    Update
+                                </a>
+                                <a href="#" class="text-danger small ml-1" onclick="submitRemoveItem('{{ item.item_id }}'); return false;">
+                                    Remove
+                                </a>
+                            </form>                            
+                            
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong>€{{ item.subtotal|floatformat:2 }}</strong></p>
@@ -113,4 +131,7 @@
         </div>
     </div>
 </div>
+
+<script src="{% static 'js/bag.js' %}"></script>
+
 {% endblock %}
