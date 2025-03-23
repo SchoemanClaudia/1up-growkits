@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from courses.models import Course
 from products.models import Product
 
@@ -17,15 +18,19 @@ def add_to_bag(request, item_id):
         item = get_object_or_404(Course, pk=item_id)
         # Course item indetifier
         item_key = f"course_{item_id}"
+        item_name = item.title
     else:
         item = get_object_or_404(Product, pk=item_id)
         # Product item indetifier
         item_key = f"product_{item_id}"
+        item_name = item.name
 
     if item_key in bag:
         bag[item_key] += quantity
+        messages.success(request, f'Updated quantity to {bag[item_key]}x {item_name}')
     else:
         bag[item_key] = quantity
+        messages.success(request, f'Added {item_name} to your bag')
 
     request.session['bag'] = bag
 
