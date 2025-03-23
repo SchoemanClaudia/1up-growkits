@@ -153,6 +153,29 @@ i:hover {
     color: #ffffff;
 }
 
+.button-link {
+    background: none !important;
+    border: none !important;
+    font-size: small !important;
+    cursor: pointer !important;
+}
+
+.button-link:hover {
+    text-decoration: underline;
+    font-weight: 500;
+    color: #228e29;
+}
+
+.danger:hover {
+    font-weight: 500;
+    color: #b22222;
+}
+
+.form-control {
+    width: 50px;
+    margin-right: 5px;
+}
+
 .text-info {
     color: #000000 !important;
     text-decoration: overline;
@@ -269,3 +292,45 @@ hr {
         padding-top: 200px;
     }
   }
+
+  @media (max-width: 576px) {
+    .bag-item-form input.qty_input {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+
+    .bag-item-form .button-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bag-item-form .d-flex.flex-column.flex-sm-row {
+        flex-direction: column !important;
+        gap: 5px;
+    }
+
+    .table td, .table th {
+        font-size: 0.9rem;
+        white-space: normal;
+    }
+
+    .table img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    .text-right {
+        text-align: center !important;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn + .btn {
+        margin-top: 10px;
+    }
+}
+
+  
