@@ -5,10 +5,15 @@ from .models import Order, OrderLineItem
 
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
-    readonly_fields = ('lineitem_total', 'display_item')
+    readonly_fields = ('display_item', 'quantity', 'lineitem_total')
+    can_delete = False
+    # Only displays panels when prompted
+    extra = 0
+    show_change_link = False
 
     # Field to display product or course
     def display_item(self, obj):
+        """ Show either product or course name """
         if obj.product:
             return f"Product: {obj.product.name}"
         elif obj.course:
