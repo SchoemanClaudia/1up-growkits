@@ -2,7 +2,7 @@
 
 It's more than just an e-commerce store, it's a gateway to sustainable living, self-sufficiency, and hands-on learning.
 
-We are on a mission to empower people, from hobbyists to urban farmers - by providing premium mushroom grow kits and expert-led courses that bring the magic of mushroom cultivation to homes and businesses.
+We are on a mission to empower people, from hobbyists to urban farmers, by providing premium mushroom grow kits and expert-led courses that bring the magic of mushroom cultivation to homes and businesses.
 
 In a world where people crave organic, homegrown food, our platform offers a seamless, educational, and rewarding experience. Customers can purchase high-quality grow kits, book hands-on courses, and access expert knowledge, all through an intuitive and beautifully designed online store.
 
@@ -88,8 +88,33 @@ User stories were used to keep track of the MOSCOW framework and project MVP as 
 
 ![User stories](static/documentation/readme/user-stories.webp)
 
+### EPICS:
+- [ ] **EPIC 1:** User Authentication & Account Management
+- [ ] **EPIC 2:** Product Listings & E-commerce
+- [ ] **EPIC 3:** Checkout & Payment System
+- [ ] **EPIC 4:** Booking a Course Feature
+- [ ] **EPIC 5:** Subscription & Email Marketing
+- [ ] **EPIC 6:** UI / UX Enhancements & Social Links
+
 | **USER STORY** | **DETAILS** | **ACCEPTANCE CRITERIA** |
 | -------------- | ----------- | ----------------------- |
+| **Register an account** | As a User / Admin, I want to register an account so that I can create a personal profile | (1) User/Admin can create an account with a username, email & password. (2) User/Admin receives a confirmation email upon successful registration.
+| **Login & logout of account** | As a User / Admin, I want to log in and log out my account so that I can keep my profile secure | (1) User/Admin can log in using their username/email and password. (2) A "Remember Me" option is available for convenience. (3) Users/Admin can log in / out out at any time via site header.
+| **Manage user accounts** | As an Admin, I want to access user profiles from admin panel so that I can manage user accounts | (1) Admins can view, activate, and deactivate user accounts. (2) Admins can manually reset user passwords if needed.
+| **Browse products & courses** | As a User, I want to view available mushroom grow kits & course so that I can decide before making purchase | (1) Products are displayed with images, descriptions, prices & quantity panel. (2) A dedicated page for mushroom-growing courses with with images, descriptions & prices.
+| **Detailed product & course view** | As a User, I want to view a product & course details so that I can see in depth details before making purchase | (1) Clicking a product / course opens a detailed page with full descriptions, stock levels and images. (2) If the item is out of stock or course fully booked, an automated message is displayed.
+| **Add featured items** | As a User, I want to view a product & course details so that I can see in depth details before making purchase | (1) Clicking a product / course opens a detailed page with full descriptions, stock levels and images. (2) If the item is out of stock or course fully booked, an automated message is displayed.
+| **Add to shopping cart** | As a User, I want to add items to my shopping cart so that I can continue browsing | (1) User can add multiple products to their cart. (2) The cart updates dynamically with quantity and total price.
+| **Update items in cart** | As a User, I want to update my shopping cart so that I can or add or remove items | (1) User can increase / decrease item quantity. (2) User can remove items from the cart before checkout.
+| **Secure card payment checkout** | As a User, I want to I want to securely pay for my order so that I can place order effortlessly | (1) User enters shipping details. (2) Card payment is processed via Stripe securely. (3) A confirmation email is sent upon successful payment. (4) Error messages if card payment is not successful, prompting user. (5)Order not processed if declined, keep order payment pending.
+| **Order summary display** | As a User, I want to see an order summary so that I can review items before completing checkout | (1) User can review products, quantities and final prices before payment.
+| **Order management** | As an Admin, I want to see successful orders in admin panel so that I can manage customer orders | (1) Orders appear in the Admin panel. (2) Admin can update order status (Pending, Shipped, Delivered). (3) Admin can search and sort orders by date, status, and user.
+| **Successful order email** | As an Admin, I want to receive a confirmation email after purchase so that I can see my order has been placed successfully | (1) An email is automatically sent to user with order confirmation.
+| **Product & course management** | As an Admin, I want to add, edit & delete items so that edit & add new products / courses easily | (1) Admin can add, edit and delete products / courses via the Admin dashboard. (2) Admin can add, edit and delete products / courses directly on site when logged in as an admin.
+| **Auto low-stock warning** | As an Admin, I want to see stock levels and a low-stock warning so that I can manage restocking easily | (1) If stock is below 5 units, a warning appears. (2) If stock is 0, the product is marked as "Out of Stock".
+| **Booking a course** | As a User, I want to book a mushroom-growing course so that I can learn more about mushrooms | (1) Courses are listed separately on a dedicated page. (2) User can select a course and pay for the course as a product. (3) User receives an email confirming course registration, after successful payment upon checkout.
+| **Social media profile** | As a User, I want to follow 1up GrowKits on facebook so that I can share my mushroom growing journey | (1) User can access facebook profile page via footer link. (2) Social profile contains logo, recent user post tags, and latest news.
+| **Optimize with Google SEO** | As a Developer, I want the website to be optimised for Google SEO so that the site can be top of mind when user searched mushroom grow kits | (1) Meta tags are correctly structured for SEO.
 
 
 ## Site Testing 
