@@ -1,0 +1,409 @@
+body {
+    position: relative;
+    background: url('/media/home-main-banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000000;
+    font-family: 'Outfit';
+}
+
+body::before {
+    content: "none";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color */
+    z-index: -1;
+}
+
+a {
+    text-decoration-style: none;
+}
+
+header {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    font-size: smaller;
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+#delivery-banner {
+    font-style: italic;
+    color: #f5b201;
+}
+
+.bg-light {
+    background-color: #f5b201 !important;
+}
+
+.navbar-brand {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.navbar-nav {
+    margin-top: 1em;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000000;
+    text-align: center;
+}
+
+.navbar-nav:hover .nav-link:hover {
+    color: #000000;
+    font-weight: 500;
+    font-size: small;
+}
+
+.navbar-toggler {
+    font-size: x-large;
+    border: none;
+    color: #000000 !important;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+}
+
+.dropdown-item {
+    color: #000000;
+}
+
+a.dropdown-item:hover {
+    background-color: #f5b201;
+}
+
+.hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+
+i:hover {
+    font-size: larger;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: none;
+    border-color: #f5b201;
+    border-width: 2px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f5b201;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-shop {
+    background-color: #f5b201;
+    color: #ffffff;
+}
+
+.btn-shop-return {
+    border-color: #000000;
+    color: #000000;
+}
+
+.btn-shop-return:hover {
+    border-color: #000000;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.button-link {
+    background: none !important;
+    border: none !important;
+    font-size: small !important;
+    cursor: pointer !important;
+}
+
+.button-link:hover {
+    text-decoration: underline;
+    font-weight: 500;
+    color: #228e29;
+}
+
+.danger:hover {
+    font-weight: 500;
+    color: #b22222;
+}
+
+.form-control {
+    width: 50px;
+    margin-right: 5px;
+}
+
+.text-info {
+    color: #000000 !important;
+    text-decoration: overline;
+}
+
+a.text-info:focus, a.text-info:hover {
+    color: #000000 !important;
+    text-decoration: overline;
+    font-size: larger;
+}
+
+.text-delivery {
+    color: #b22222;
+}
+
+.featured-products {
+    text-align: left;
+    padding: 2rem;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+}
+
+footer a {
+    text-decoration: none !important;
+}
+
+footer i:hover {
+    color: #f5b201;
+}
+
+hr {
+    border: .5px solid #f5b201;
+}
+
+.footer-text-small {
+    font-size: small;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.text-light {
+    color: #ffffff !important;
+    font-weight: lighter;
+}
+
+.bg-dark {
+    background-color: #000000 !important;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+/* bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.btn-message-panel {
+    color: #000000;
+}
+
+/* Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1999;
+      }
+  
+      .header-container {
+          padding-top: 200px;
+      }
+
+      .navbar-brand {
+        font-size: 2.5em;
+        flex-direction: inherit;
+    }
+  }
+
+  /* pad the top a bit when navbar is collapsed on mobile */
+  @media (max-width: 991px) {
+    .header-container {
+        padding-top: 200px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .bag-item-form input.qty_input {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+
+    .bag-item-form .button-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bag-item-form .d-flex.flex-column.flex-sm-row {
+        flex-direction: column !important;
+        gap: 5px;
+    }
+
+    .table td, .table th {
+        font-size: 0.9rem;
+        white-space: normal;
+    }
+
+    .table img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    .text-right {
+        text-align: center !important;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn + .btn {
+        margin-top: 10px;
+    }
+}
+
+  
