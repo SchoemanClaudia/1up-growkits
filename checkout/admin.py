@@ -1,25 +1,16 @@
 from django.contrib import admin
 from .models import Order, OrderLineItem
+from .forms import OrderLineItemForm
 
-# Register your models here.
 
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
-    fields = ('product', 'course', 'quantity', 'lineitem_total')
+    form = OrderLineItemForm
+    fields = ('item', 'quantity', 'lineitem_total')
     readonly_fields = ('lineitem_total',)
     can_delete = True
     extra = 0
     show_change_link = False
-
-    # Field to display product or course
-    def display_item(self, obj):
-        """ Show either product or course name """
-        if obj.product:
-            return f"Product: {obj.product.name}"
-        elif obj.course:
-            return f"Course: {obj.course.title}"
-        return "—"
-    display_item.short_description = 'Item'
 
 
 class OrderAdmin(admin.ModelAdmin):
@@ -46,5 +37,6 @@ class OrderAdmin(admin.ModelAdmin):
 
     class Media:
         js = ('checkout/js/admin_message.js',)
+
 
 admin.site.register(Order, OrderAdmin)

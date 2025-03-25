@@ -1,5 +1,10 @@
 from django import forms
+
 from .models import Order
+from .models import OrderLineItem
+
+from products.models import Product
+from courses.models import Course
 
 
 class OrderForm(forms.ModelForm):
@@ -37,3 +42,41 @@ class OrderForm(forms.ModelForm):
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
+
+
+class OrderLineItemForm(forms.ModelForm):
+    item = forms.ChoiceField(label='Item', required=True)
+
+    class Meta:
+        model = OrderLineItem
+        fields = ('item', 'quantity')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        # Combined dropdown options
+        product_choices = [(f'product_{p.id}', f'Product: {p.name}') for p in Product.objects.all()]
+        course_choices = [(f'course_{c.id}', f'Course: {c.title}') for c in Course.objects.all()]
+        self.fields['item'].choices = product_choices + course_choices
+
+        instance = kwargs.get('instance')
+        if instance:
+            if instance.product:
+                self.fields['item'].initial = f'product_{instance.product.id}'
+            elif instance.course:
+                self.fields['item'].initial = f'course_{instance.course.id}'
+
+    def save(self, commit=True):
+        item_type, item_id = self.cleaned_data['item'].split('_')
+
+        # Clear fields before allocating item
+        self.instance.product = None
+        self.instance.course = None
+
+        # Assign selected item
+        if item_type == 'product':
+            self.instance.product = Product.objects.get(id=item_id)
+        elif item_type == 'course':
+            self.instance.course = Course.objects.get(id=item_id)
+
+        return super().save(commit=commit)
