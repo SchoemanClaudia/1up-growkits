@@ -62,9 +62,11 @@ __Future Features__
   - xxx
 
 
-## Agile
+## Agile Development
 
-For the Agile process utilised within Github project board and user stories. Detailing the production process and highlighting issues when they arose. 
+### Agile Workflow
+
+An Agile development process was followed using GitHub Projects for sprint planning, user story tracking, and task issue management.
 
 ### Project Issues
 
@@ -72,12 +74,14 @@ For the Agile process utilised within Github project board and user stories. Det
 
 New user stories have been added as the project progressed and based on user feedback during the final testing phase. 
 
-A MOSCOW framework has been utilised. 
+### MoSCoW Prioritisation:
 
-**Mo:** 
-**S:** 
-**C:** 
-**oW:** 
+- **Must Have:** Essential for MVP and launch.
+- **Should Have:** Important but not critical for MVP.
+- **Could Have:** Enhancements added in later sprints.
+- **Won’t Have:** Out of current scope.
+
+See agile [project boards here](https://github.com/users/SchoemanClaudia/projects/5/views/6)
 
 
 ## User Stories
@@ -167,15 +171,52 @@ Site was deployed after all styling and error handling was in place. An up-to-da
   - NewsletterSubscription – Manages email opt-ins for Mailchimp.
 
 
-### ERD Design
+### ERD & Database Design
 
-A detailed ERD diagram below to visualize data flow.
+**Product**
+- id (AutoField, Primary Key)
+- item (CharField, Unique)
+- description (TextField)
+- price (DecimalField)
+- image (ImageField)
+- stock_quantity (IntegerField)
+- low_stock_indicator (BooleanField) – Admin Only
+- created_at (DateTimeField) – Admin Only
 
-![ERD Design](static/documentation/readme/erd.webp)
+**Course**
+- id (AutoField, Primary Key)
+- title (CharField, Unique)
+- description (TextField)
+- location (CharField)
+- duration (DurationField)
+- attendee_qty (IntegerField)
+- price (DecimalField)
+- image (ImageField)
 
-### Database Model
+**Cart**
+- id (AutoField, Primary Key)
+- user (ForeignKey to User)
+- product (ForeignKey to Product)
+- quantity (IntegerField)
 
-![Database Model](static/documentation/readme/model.webp)
+**Order**
+- id (AutoField, Primary Key)
+- user (ForeignKey to UserProfile)
+- product (ForeignKey to Product, Nullable)
+- course (ForeignKey to Course, Nullable)
+- total_price (DecimalField)
+- status (CharField: Pending, Completed, Cancelled)
+- created_at (DateTimeField)
+
+**StockAlert** – Admin Only
+- id (AutoField, Primary Key)
+- product (ForeignKey to Product)
+- stock_threshold (IntegerField)
+- alert_sent (BooleanField)
+
+A detailed first look at ERD & database models below:
+
+![ERD & Database Model](static/documentation/readme/model.webp)
 
 
 ## Technologies Used
