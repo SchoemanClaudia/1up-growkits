@@ -99,13 +99,12 @@
                 <p class="mb-0"><strong>Delivery:</strong> €{{ order.delivery_cost|floatformat:2 }}</p>
                 <p class="mb-0"><strong>Grand Total:</strong> €{{ order.grand_total|floatformat:2 }}</p>
             </div>
-        </div>
-
-        <div class="col-12 col-lg-5 text-right">
-            <a href="{% url 'products' %}" class="btn btn-shop-return rounded-0 my-2">
-                <span class="icon mr-2"><i class="fa-solid fa-tag"></i></span>
-                <span class="text-uppercase">Now check out the latest deals!</span>
-            </a>
+            <div class="col-12 text-right">
+                <a href="{% url 'products' %}" class="btn btn-shop-return rounded-0 my-2">
+                    <span class="icon mr-2"><i class="fa-solid fa-tag"></i></span>
+                    <span class="text-uppercase">Now check out the latest deals!</span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
