@@ -5,9 +5,9 @@ from .models import Order, OrderLineItem
 
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
-    readonly_fields = ('display_item', 'quantity', 'lineitem_total')
-    can_delete = False
-    # Only displays panels when prompted
+    fields = ('product', 'course', 'quantity', 'lineitem_total')
+    readonly_fields = ('lineitem_total',)
+    can_delete = True
     extra = 0
     show_change_link = False
 
@@ -44,5 +44,7 @@ class OrderAdmin(admin.ModelAdmin):
 
     ordering = ('-date',)
 
+    class Media:
+        js = ('checkout/js/admin_message.js',)
 
 admin.site.register(Order, OrderAdmin)
