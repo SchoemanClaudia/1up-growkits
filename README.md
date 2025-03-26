@@ -454,6 +454,173 @@ __Application Structure__
 
 ## Deployment
 
+### AWS Cloud Service
+**Amazon Web Services (AWS)** used to store 1up GrowKits' static & media files securely, for fast & reliable access.
+
+#### Steps to Set Up AWS:
+
+##### (1) Create & Configure an S3 Bucket
+- **Login** to your AWS Management Console
+- Go to **S3** & create a new bucket with a globally unique name
+- Choose a region closest to your user base
+
+**Public Access & Ownership:**
+- Uncheck "Block all public access"
+- Under Object Ownership, select "ACLs enabled" & "Bucket owner preferred"
+
+**Enable Static Website Hosting:**
+- In the "Properties" tab, enable static website hosting
+- Set `index.html` & `error.html` as the default documents
+
+**CORS Configuration:**
+```json
+[
+  {
+    "AllowedHeaders": ["Authorization"],
+    "AllowedMethods": ["GET"],
+    "AllowedOrigins": ["*"],
+    "ExposeHeaders": []
+  }
+]
+```
+
+**Bucket Policy:**
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::your-bucket-name/*"
+    }
+  ]
+}
+```
+
+**Access Control List (ACL):**
+- Enable "List" for public access
+
+##### (2) Configure IAM
+
+**Create a User Group:**
+- Go to IAM > User Groups > Create New Group
+- Name it (e.g., `group-1up-growkits`)
+
+**Attach Policies:**
+- Attach `AmazonS3FullAccess` policy
+- Modify it:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::your-bucket-name",
+        "arn:aws:s3:::your-bucket-name/*"
+      ]
+    }
+  ]
+}
+```
+
+**Create a User:**
+- Enable Programmatic Access
+- Assign to the group
+- Download credentials CSV (AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY)
+
+##### (3) Final AWS Setup
+- Remove `DISABLE_COLLECTSTATIC` from Heroku Config Vars
+- Create a `media/` directory in your S3 bucket
+- Upload files & set public access
+
+**Security:** 
+- Never commit AWS credentials in source code
+- Create env.py to keep keys secure
+
+### Stripe Integration
+- Stripe is used to process payments securely
+
+#### Stripe Setup:
+(1) Create a Stripe account and login
+(2) Retrieve:
+   - `STRIPE_PUBLIC_KEY`
+   - `STRIPE_SECRET_KEY`
+
+(3) Setup Webhooks:
+   - Go to **Developers > Webhooks > Add Endpoint**
+   - URL: `https://your-site.com/checkout/wh/`
+   - Events: "Receive all events"
+   - Copy `STRIPE_WH_SECRET`
+
+(4) Use Test Mode:
+   - Card: `4242 4242 4242 4242`
+   - Expiry: Any future date
+   - CVC: Any 3-digit number
+
+- Store keys in Heroku Config Vars or secure .env files
+
+### Gmail SMTP Integration
+Used to send transactional emails (confirmations, resets etc.)
+
+#### Setup:
+(1) Enable 2FA on Gmail account
+(2) Create App Password:
+   - Go to Security > App Passwords
+   - Choose "Mail" > Other > Enter name (e.g., DjangoApp)
+   - Copy 16-digit password
+
+(3) Update settings in Django:
+
+```python
+EMAIL_HOST_USER = 'your-email@gmail.com'
+EMAIL_HOST_PASSWORD = 'your-app-password'
+```
+- Use environment variables to store these securely
+
+### Heroku Deployment
+(1) Login to [Heroku](https://heroku.com)
+(2) Create a new app
+(3) In **Settings > Config Vars**, add:
+   - `SECRET_KEY`
+   - `AWS_ACCESS_KEY_ID`
+   - `AWS_SECRET_ACCESS_KEY`
+   - `AWS_STORAGE_BUCKET_NAME`
+   - `EMAIL_HOST_USER`
+   - `EMAIL_HOST_PASSWORD`
+   - `STRIPE_PUBLIC_KEY`
+   - `STRIPE_SECRET_KEY`
+   - `STRIPE_WH_SECRET`
+   - `USE_AWS=True`
+
+(4) Link GitHub repo in **Deploy** tab
+(5) Click **Deploy Branch**
+(6) Ensure:
+   - `DEBUG=False` in `settings.py`
+   - Heroku URL is in `ALLOWED_HOSTS`
+   - `requirements.txt` and `Procfile` are committed
+
+### Forking the Project
+(1) Go to the GitHub repo
+(2) Click **Fork** (top-right corner)
+
+### Cloning the Project
+(1) Click **Code** & copy the repo URL
+(2) In your terminal:
+
+```bash
+git clone https://github.com/your-username/repo-name.git
+```
+
+(3) Navigate into the project directory & install dependencies
+
+- Ensure sensitive keys are stored securely
+- Regularly update your dependencies & monitor for security updates
+
 
 ## Credits 
 
