@@ -28,6 +28,94 @@ Live Link:
 - [x] Newsletter subscription integration with Mailchimp.
 - [x] Facebook social links in the header and footer.
 
+
+## Web Marketing Strategy
+
+- **Content Marketing**: Blogs, YouTube tutorials, social media reels
+- **Emailers**: Launch announcements, course welcome series, recipes
+- **Social Media Campaigns**: Product demos, giveaways
+- **Referral & Loyalty Programs**: Encourage word of mouth, referal rewards
+- **Influencer Collaborations**: Wellness, gardening, sustainability niches
+
+
+### Products & Services
+
+**Mushroom Grow Kits**
+- Ready-to-grow kits (Oyster variations & Lion’s Mane)
+- Designed for beginners — no prior experience needed
+
+**Growing Courses**
+- Beginner to advanced mushroom cultivation
+- Hands on lessons and grow guide tips
+
+**Community Support**
+- Access to grower supports on social platforms
+
+
+### Target Market
+
+**Primary Audiences:**
+- Hobbyists & DIY enthusiasts
+- Health & wellness seekers
+- Beginner growers
+- Parents & educators
+- Aspiring micro-farmers / entrepreneurs
+
+**Demographics:**
+- Age 20 to 45
+- Urban / suburban living
+- Sustainability on the mind
+- Active on social media
+
+**Market Problem**
+Most mushroom grow products and courses on the market are:
+- Too complex or scientific for beginners
+- Lack customer support / community
+- Not visually appealing or well-branded
+
+**Our Solution:**
+- Aesthetically packaged, foolproof grow kits
+- Easy-to-follow, high-quality instructional content
+- Friendly support & growing community
+- Optional kit & course bundles for seamless learning
+
+
+### Audience sales Model
+
+**Primary Sales:**
+- Direct-to-consumer sales (grow kits & course via website)
+- Service sales (courses, mini workshops)
+- Bundled kits & courses at a discount
+- Upsells and cross-sells (advanced kits, build your own resources)
+
+**Secondary Opportunities:**
+- Affiliate marketing with influencers
+- Wholesale to small retailers or schools
+- Future subscription model (seasonal grow kit club)
+
+
+### Competitors
+
+| Competitor         | Strengths                        | Weaknesses                              |
+|--------------------|----------------------------------|-----------------------------------------|
+| North Spore        | Strong brand, wide product line  | Can feel too advanced for beginners     |
+| Midwest Grow Kits  | Affordable, functional products  | Outdated branding and user experience   |
+| YouTube Creators   | Great free content               | No product ecosystem or structured path |
+
+**1up GrowKits Advantage:** 
+- Combines aesthetics, simplicity, and community with education and product quality
+
+
+### Launch Goal Timeline
+
+| Phase | Goal                                      | Description                           |
+|-------|-------------------------------------------|---------------------------------------|
+| 01    | Launch website + kits + courses           | Sell initial batch, collect feedback  |
+| 02    | Launch online courses                     | Start email marketing & IG content    |
+| 02    | Build online community                    | Open Discord Group                    |
+| 03    | Introduce advanced kits + advanced course | Prepare for holiday season            |
+
+
 ## Features
 
 __Existing features:__
