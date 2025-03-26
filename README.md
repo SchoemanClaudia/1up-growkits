@@ -116,6 +116,45 @@ Most mushroom grow products and courses on the market are:
 | 03    | Introduce advanced kits + advanced course | Prepare for holiday season            |
 
 
+## SEO Keyword Strategy
+
+Targeted keywords to improve organic traffic and reach the right audience:
+
+**High intent product keywords:**
+- buy mushroom grow kit  
+- best mushroom grow kits 2025  
+- mushroom grow kit for beginners  
+- lions mane grow kit  
+- oyster mushroom growing kit  
+- indoor mushroom growing kit  
+
+**Informational keywords:**
+- how to grow mushrooms at home  
+- mushroom cultivation for beginners  
+- are mushroom kits worth it?  
+- how long do mushrooms take to grow?  
+- mushroom growing mistakes to avoid  
+
+**Course related keywords:**
+- learn how to grow mushrooms  
+- mushroom cultivation course online  
+- growing mushrooms at home course  
+- mushroom farming training  
+
+**Niche keywords:**
+- DIY mushroom cultivation kit  
+- grow lions mane mushrooms at home  
+- functional mushroom grow kit  
+- homestead mushroom growing  
+- mushroom kit with video course  
+
+**Seasonal keywords:**
+- holiday gift mushroom grow kit  
+- eco friendly gifts for gardeners  
+- DIY mushroom kits for Christmas  
+- spring indoor growing kits
+
+
 ## Features
 
 __Existing features:__
