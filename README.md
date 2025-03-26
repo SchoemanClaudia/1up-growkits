@@ -38,21 +38,21 @@ Live Link:
 - **Influencer Collaborations**: Wellness, gardening, sustainability niches
 
 
-### Products & Services
+__Products & Services__
 
-**Mushroom Grow Kits**
-- Ready-to-grow kits (Oyster variations & Lion’s Mane)
-- Designed for beginners — no prior experience needed
+- **Mushroom Grow Kits**
+  - Ready-to-grow kits (Oyster variations & Lion’s Mane)
+  - Designed for beginners — no prior experience needed
 
-**Growing Courses**
-- Beginner to advanced mushroom cultivation
-- Hands on lessons and grow guide tips
+- **Growing Courses**
+  - Beginner to advanced mushroom cultivation
+  - Hands on lessons and grow guide tips
 
-**Community Support**
-- Access to grower supports on social platforms
+- **Community Support**
+  - Access to grower supports on social platforms
 
 
-### Target Market
+__Target Market__
 
 **Primary Audiences:**
 - Hobbyists & DIY enthusiasts
@@ -80,7 +80,7 @@ Most mushroom grow products and courses on the market are:
 - Optional kit & course bundles for seamless learning
 
 
-### Audience sales Model
+__Audience Sales Model__
 
 **Primary Sales:**
 - Direct-to-consumer sales (grow kits & course via website)
@@ -106,7 +106,7 @@ Most mushroom grow products and courses on the market are:
 - Combines aesthetics, simplicity, and community with education and product quality
 
 
-### Launch Goal Timeline
+__Launch Goal Timeline__
 
 | Phase | Goal                                      | Description                           |
 |-------|-------------------------------------------|---------------------------------------|
@@ -120,39 +120,39 @@ Most mushroom grow products and courses on the market are:
 
 Targeted keywords to improve organic traffic and reach the right audience:
 
-**High intent product keywords:**
-- buy mushroom grow kit  
-- best mushroom grow kits 2025  
-- mushroom grow kit for beginners  
-- lions mane grow kit  
-- oyster mushroom growing kit  
-- indoor mushroom growing kit  
+- **High intent product keywords:**
+  - buy mushroom grow kit  
+  - best mushroom grow kits 2025  
+  - mushroom grow kit for beginners  
+  - lions mane grow kit  
+  - oyster mushroom growing kit  
+  - indoor mushroom growing kit  
 
-**Informational keywords:**
-- how to grow mushrooms at home  
-- mushroom cultivation for beginners  
-- are mushroom kits worth it?  
-- how long do mushrooms take to grow?  
-- mushroom growing mistakes to avoid  
+- **Informational keywords:**
+  - how to grow mushrooms at home  
+  - mushroom cultivation for beginners  
+  - are mushroom kits worth it?  
+  - how long do mushrooms take to grow?  
+  - mushroom growing mistakes to avoid  
 
-**Course related keywords:**
-- learn how to grow mushrooms  
-- mushroom cultivation course online  
-- growing mushrooms at home course  
-- mushroom farming training  
+- **Course related keywords:**
+  - learn how to grow mushrooms  
+  - mushroom cultivation course online  
+  - growing mushrooms at home course  
+  - mushroom farming training  
 
-**Niche keywords:**
-- DIY mushroom cultivation kit  
-- grow lions mane mushrooms at home  
-- functional mushroom grow kit  
-- homestead mushroom growing  
-- mushroom kit with video course  
+- **Niche keywords:**
+  - DIY mushroom cultivation kit  
+  - grow lions mane mushrooms at home  
+  - functional mushroom grow kit  
+  - homestead mushroom growing  
+  - mushroom kit with video course  
 
-**Seasonal keywords:**
-- holiday gift mushroom grow kit  
-- eco friendly gifts for gardeners  
-- DIY mushroom kits for Christmas  
-- spring indoor growing kits
+- **Seasonal keywords:**
+  - holiday gift mushroom grow kit  
+  - eco friendly gifts for gardeners  
+  - DIY mushroom kits for Christmas  
+  - spring indoor growing kits
 
 
 ## Features
@@ -184,9 +184,62 @@ __Existing features:__
 
 __Future Features__
 
-- **Review Posts:**
+The following features are planned for possible future development to enhance user experience, boost engagement, and scale website functionality:
 
-  - xxx
+**Product & Course Reviews**
+(Build trust & provide social proof)
+  - Logged-in users can leave reviews with optional star ratings
+  - Reviews displayed on product & course detail pages
+  - Admin moderation panel for managing posted content
+  - 'Most Loved' badge for products with high ratings
+
+**Course Calendar**
+(Users can easily find available dates & register for upcoming courses)
+  - Calendar view for all scheduled courses
+  - Filter by level (beginner to advanced) or location (on-site / online)
+  - 'Book Now' button directly integrated into calendar view
+
+**Wishlist**
+(Allow users to bookmark items they are interested in)
+  - Logged-in users can add products / courses to a personal wishlist
+  - 'Save Items' option on checkout page
+  - Wishlist accessible from the user's account dashboard
+
+**Rewards Program**
+(Incentivise repeat purchases)
+  - Users earn points for purchases, referrals, reviews or social shares
+  - Points displayed on user's profile
+  - Redeem discounts, free products or early access to new products & courses
+
+**Subscription Model**
+(Create recurring sales & convenience for user)  
+  - Monthly or seasonal grow kit subscription options
+  - Auto renew with Stripe integration
+  - Email reminders & subscription management from user dashboard
+
+**Advanced Kit Customisation**
+(Allow users to build kits tailored to their needs)
+  - Choose strain, substrate type and grow experience level
+  - Dynamic price updates based on selections
+  - Helpful tips / guides shown depending on the chosen options
+
+**Product Refills**
+(Encourage sustainable practices & repeat purchases) 
+  - Users can reorder substrate / refill their existing kits
+  - Refill reminders via email based on typical grow cycles
+  - Bundled refill & digital grow guide offer
+
+**Info Hub**
+(Free resources section for SEO value)
+  - Growing tips, troubleshooting articles & recipe blog posts
+  - Search & filter options by topic or mushroom strain
+  - Integrated video embeds from YouTube channel
+
+**Re-stock Alerts**
+(Capture demand for sold out products)
+  - Users can subscribe for email or SMS alerts
+  - Admin notified of high demand waitlist items
+  - Option to notify users when their item is back in stock
 
 
 ## Agile Development
