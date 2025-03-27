@@ -1,0 +1,99 @@
+[
+    {
+        "model":"products.product",
+        "pk":1,
+        "fields":{
+            "name":"Organic Blue Oyster",
+            "description":"Grow your own delicious and nutritious Organic Blue Oyster Mushrooms at home with this easy-to-use grow kit! Perfect for beginners and experienced growers alike, this kit includes everything you need to cultivate fresh mushrooms in just a few weeks. Grey Oyster Mushrooms are known for their delicate texture and mild, savoury flavour, making them a versatile ingredient for soups, stir-fries, pasta dishes, and more. Simply follow the included instructions, mist regularly, and watch your mushrooms flourish!",
+            "sku":"BOYST-001",
+            "price":"20.00",
+            "rating":"4.80",
+            "image_url":null,
+            "image":"organic-blue-oyster-mushroom-spray-grow-kit.webp",
+            "stock_quantity":10,
+            "created_at":"2025-03-16T23:00:12.595Z",
+            "low_stock_indicator":false
+        }
+    },
+    {
+        "model":"products.product",
+        "pk":3,
+        "fields":{
+            "name":"Organic Pink Oyster",
+            "description":"Add a pop of color to your kitchen with the vibrant Pink Oyster Mushroom Grow Kit! These mushrooms have a delicate, meaty texture with a slightly sweet and nutty flavor. Ideal for stir-fries, pasta, and gourmet dishes. Fast-growing and easy to cultivate, this kit is perfect for home gardeners and mushroom enthusiasts.",
+            "sku":"POYST-002",
+            "price":"20.00",
+            "rating":"5.00",
+            "image_url":null,
+            "image":"organic-pink-oyster-mushroom-spray-grow-kit.webp",
+            "stock_quantity":10,
+            "created_at":"2025-03-17T15:57:48.929Z",
+            "low_stock_indicator":false
+        }
+    },
+    {
+        "model":"products.product",
+        "pk":4,
+        "fields":{
+            "name":"Organic Lions Mane",
+            "description":"Grow your own brain-boosting Lion’s Mane Mushrooms with this simple grow kit! \r\n\r\nKnown for their shaggy, white appearance and unique seafood-like texture, these mushrooms are highly valued for their cognitive and health benefits. Perfect for sautés, teas, or as a meat substitute in dishes.",
+            "sku":"LMANE-004",
+            "price":"25.00",
+            "rating":"4.50",
+            "image_url":null,
+            "image":"organic-lions-mane-mushroom-spray-grow-kit.webp",
+            "stock_quantity":15,
+            "created_at":"2025-03-17T15:58:42.237Z",
+            "low_stock_indicator":false
+        }
+    },
+    {
+        "model":"products.product",
+        "pk":7,
+        "fields":{
+            "name":"Organic Golden Oyster",
+            "description":"Brighten up your kitchen with the stunning Golden Oyster Mushrooms! These mushrooms grow in beautiful yellow clusters and have a mild, nutty flavor with a slightly peppery finish. They’re perfect for stir-fries, omelets, and sautés. Fast-growing and beginner-friendly, this kit makes gourmet mushroom cultivation easy.",
+            "sku":"GOYST-003",
+            "price":"20.00",
+            "rating":"4.00",
+            "image_url":null,
+            "image":"organic-golden-oyster-mushroom-spray-grow-kit.webp",
+            "stock_quantity":8,
+            "created_at":"2025-03-17T16:00:58.775Z",
+            "low_stock_indicator":false
+        }
+    },
+    {
+        "model":"products.product",
+        "pk":14,
+        "fields":{
+            "name":"3-Pack Organic Oyster Kit Bundle",
+            "description":"Our oyster mushroom kits tend to yield large flushes of beautiful delicious mushrooms when given adequate humidity. With continued proper care, you should be able to get multiple flushes. (We 100% guarantee your first flush of mushrooms, but hope you'll try for 2 or 3!)\r\n\r\nEach oyster variety varies in taste and texture, offering growers a unique gourmet experience:\r\n\r\nBlue oyster mushrooms are velvety, savory, and mild and pair perfectly with just about any recipe!\r\nPink oyster mushrooms aren’t just strikingly beautiful. They are also succulent and savory, and are perfect sautéed or added to pastas, pizzas, and more.\r\nGolden oyster mushrooms are aromatic, delicate, and delicious. They also have a hint of nuttiness (similar to cashews).",
+            "sku":"BPOYS-006",
+            "price":"55.00",
+            "rating":"4.60",
+            "image_url":null,
+            "image":"3-pack-organic-oyster-mushroom-spray-grow-kit-bundle.webp",
+            "stock_quantity":18,
+            "created_at":"2025-03-17T18:01:48.913Z",
+            "low_stock_indicator":false
+        }
+    },
+    {
+        "model":"courses.course",
+        "pk":2,
+        "fields":{
+            "title":"Summer Course",
+            "description":"cultivating-mushrooms-with-used coffee-grounds-online-course",
+            "code":"COURSE_010425",
+            "price":"35.00",
+            "rating":"4.50",
+            "location":"Wicklow",
+            "duration":"06:30:00",
+            "image":"course_images/cultivating-mushrooms-with-used_coffee-grounds-online-course_orRxEKm.webp",
+            "attendee_qty":10,
+            "created_at":"2025-03-23T15:12:00.387Z",
+            "updated_at":"2025-03-23T15:12:00.387Z"
+        }
+    }
+]
