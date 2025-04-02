@@ -6,31 +6,34 @@
 <div class="container-fluid">
     <div class="row">
         <div class="product-container col-10 offset-1">
-            <!-- Guide Title -->
-            <div class="col text-left mt-5">
-                <h2 class="mb-2">{{ guide.guide_title }}</h2>
-                <hr>
-            </div>
 
-            <div class="row mt-1 mb-2"></div>
-            <div class="row">
+            {% for guide in guide %}
+            <div class="mb-5">
+                <div class="col text-left mt-5 pt-4">
+                    <h2 class="mb-2">{{ guide.guide_title }}</h2>
+                    <hr>
+                </div>
+                <div class="row mt-1 mb-2"></div>
+                <div class="row">
+                    <div class="d-flex flex-column flex-md-row">
 
-                <div class="d-flex flex-column flex-md-row">
-                    <!-- Image -->
-                    <div class="col-12 col-md-5 text-left mb-4 mb-md-0">
-                        {% if guide.image %}
+                        <!-- Image -->
+                        <div class="col-12 col-md-5 text-left">
+                            {% if guide.image %}
                             <img class="img-fluid" src="{{ guide.image.url }}" alt="{{ guide.guide_title }}">
-                        {% else %}
-                            <img class="img-fluid" src="{% static 'noimage.png' %}" alt="No image available">
-                        {% endif %}
-                    </div>
+                            {% endif %}
+                        </div>
 
-                    <!-- Instructions -->
-                    <div class="col-12 col-md-7">
-                        <p>{{ guide.instructions }}</p>
+                        <!-- Instructions -->
+                        <div class="col-12 col-md-7">
+                            <p>{{ guide.instructions }}</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
+            {% endfor %}
+
         </div>
     </div>
 </div>
