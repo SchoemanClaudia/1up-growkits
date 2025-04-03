@@ -330,6 +330,51 @@ hr {
     color: #000000;
 }
 
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content {
+    margin-top: 1.5rem; /* mt-4 */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content a {
+	color: #000000; /* text-info */
+}
+
+text-info {
+    font-weight: 200;
+}
+
+a.text-info {
+    color:#000000 !important;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+a.text-info:hover {
+    font-size: larger;
+    text-decoration: none;
+}
+
+.form-control {
+    width: 100% !important;
+    margin-right: 5px;
+}
+
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -358,6 +403,7 @@ hr {
         flex-direction: inherit;
     }
   }
+
 
   /* pad the top a bit when navbar is collapsed on mobile */
   @media (max-width: 991px) {
