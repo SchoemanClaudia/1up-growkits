@@ -145,3 +145,43 @@ Accessibility was included in every planning stage for 1up Grow Kits, through th
 
     ![No errors](static/documentation/testing/clear.webp)  ![Contrast Checker](static/documentation/testing/contrast.webp)
 
+
+## Manual Testing
+
+### User Input / Form Validation
+
+Testing was carried out on desktop using a Chrome browser to ensure all forms take the intended input and process the input appropriately.
+Manual testing by checking the following:
+
+| **TEST INPUT**| **CORRECT OUTCOME** | **MEET REQUIREMENTS** |
+| ------------- |:-------------------:|-----------------------|
+| **Navbar Logo and Icons** | PASS | Logo takes user to home page, nav bar links take user to intended location, highlight mouse over for better accessibility. Nav bar toggle opens and closes in mobile view | 
+| **Login Link** | PASS | Opens Login page |
+| **Log into Account** | PASS | Username & password fields. Fields must be exactly as registered originally in either lowercase/uppercase or mixture. Empty fields deliver prompt to user, email field demands '@' symbols. Login is successful, pop up below navbar message to confirm you are logged in.|
+| **Register Link** | PASS | Opens Register page |
+| **Register Account** | PASS | Username, email(optional) and password fields. Empty fields deliver prompt to user, email field demands '@' symbols, username/password too similar, password too short, username already in use. Account is registered, message to confirm successful sign up |
+| **Home Page Shop Now** | PASS | Shop now button directs to the correct products view page |
+| **Grow Kits Page Link** | PASS | Grow Kits page loaded |
+| **Grow Guide Page Link** | PASS | Grow Guide page loaded |
+| **Courses Page Link** | PASS | Courses page loaded |
+| **Logout** | PASS | Redirects to log out confirmation page, and user is logged out message confirmed with display as pop up below navbar. |
+| **Social Links** | PASS | External link open in a new windows to correct sites |
+
+
+## Bugs Encountered 
+  
+The below are bugs that I spent more time investigating, most of these encountered were learning curves. 
+
+| **No.** | **Bug** | **Solved** | **Fix** | **Solution Credit** | **Commit No.** |
+| ------- | ------- |:----------:| ------- | ------------------- |:--------------:|
+| **1.** | Courses not displaying in bag view | YES | Fix bag logic to handle both Product & Course items. Modified bag_contents to distinguish between items. | [Django Docs](https://docs.djangoproject.com/en/5.2/topics/http/shortcuts/#get-object-or-404/) | 93a69e0 |
+| **2.** | Admin OrderLineItem user error | YES | Prevent deleting of line items from the order admin panel, by hiding extra item panels until needed. | [Django Docs](https://docs.djangoproject.com/en/5.1/ref/contrib/admin/) | 44e8f9f |
+| **3.**| Delete message prompt in OrderAdmin | YES | Re-activating delete function to modify orders, but prevent deleting accidentally by adding a delete message prompt to admin. Deletion of order items to be confirmed before action proceeds when saved. | [Stack Overflow](https://stackoverflow.com/questions/4661074/delete-confirmation/) | a0bd3de |
+| **4.** | Admin OrderLineItem confusing UI logic | YES | Modify product & course fields from side-by-side layout, to a single dropdown field labeled “Item” | [Stack Overflow](https://stackoverflow.com/questions/18265023/self-instance-in-django-modelform/) | e5cb149 |
+| **5.** | Course charging delivery cost | NO | xx | xx | xx |
+
+### Unfixed Bugs
+
+- 
+
+    ![Django-Allauth Bug](static/documentation/testing/bug.webp)
