@@ -12,3 +12,4 @@ def grow_guide(request):
     }
 
     return render(request, 'guide/grow_guide.html', {'guide': guide})
+    

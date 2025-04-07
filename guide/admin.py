@@ -3,4 +3,7 @@ from .models import GrowGuide
 
 # Register your models here.
 
-admin.site.register(GrowGuide)
+class GrowGuideAdmin(admin.ModelAdmin):
+    list_display = ('guide_title', 'step_no', 'instructions', 'image')
+
+admin.site.register(GrowGuide, GrowGuideAdmin)
