@@ -246,13 +246,16 @@ The following features are planned for possible future development to enhance us
 
 ### Agile Workflow
 
-An Agile development process was followed using GitHub Projects for sprint planning, user story tracking, and task issue management.
+An Agile development process was followed using GitHub Projects for sprint planning, user story tracking, and task issue management. New user stories have been added as the project progressed and based on user feedback during the final testing phase.
 
 ### Project Issues
 
 ![Issues](static/documentation/readme/issues.webp)
 
-New user stories have been added as the project progressed and based on user feedback during the final testing phase. 
+### Project Milestones
+
+![Issues](static/documentation/readme/milestones-closed.webp)
+![Issues](static/documentation/readme/milestones.webp) 
 
 ### MoSCoW Prioritisation:
 
@@ -268,9 +271,9 @@ See agile [project boards here](https://github.com/users/SchoemanClaudia/project
 
 User stories were used to keep track of the MOSCOW framework and project MVP as working through the project. 
 
-![Agile](static/documentation/readme/agile.webp)
+![User story](static/documentation/readme/user-story.webp)
 
-![User stories](static/documentation/readme/user-stories.webp)
+![Agile](static/documentation/readme/agile.webp)
 
 ### EPICS:
 - [ ] **EPIC 1:** User Authentication & Account Management
