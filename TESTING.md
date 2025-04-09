@@ -90,11 +90,23 @@ Testing file for 1up GrowKits [README.md](README.md).
     All Python files containing the project's code have been tested. 
     All the errors were fixed, and after running the CI Python Linter, it shows there are no errors.
 
-| **Feature** | **admin.py** | **forms.py** | **models.py** | **urls.py** | **views.py** | **test_views.py** | **test_forms.py** | **tests.py** |
-| ----------- |:------------:|:------------:|:-------------:|:-----------:|:------------:|:-----------------:|:-----------------:|:------------:|
-| 1up GrowKits main app | n/a | n/a | n/a | [no errors](static/documentation/testing/main-urls.webp) | n/a | n/a | n/a | n/a |
-| Products | [no errors](static/documentation/testing/products-admin.webp) | [no errors](static/documentation/testing/products-forms.webp) | [no errors](static/documentation/testing/products-models.webp) | [no errors](static/documentation/testing/products-urls.webp) | [no errors](static/documentation/testing/products-views.webp) | [no errors](static/documentation/testing/products-test-views.webp) | [no errors](static/documentation/testing/products-test-forms.webp) | [no errors](static/documentation/testing/products-tests.webp) |
-| Courses  | [no errors](static/documentation/testing/courses-admin.webp) | [no errors](static/documentation/testing/courses-forms.webp) | [no errors](static/documentation/testing/courses-models.webp) | [no errors](static/documentation/testing/courses-urls.webp) | [no errors](static/documentation/testing/courses-views.webp) | [no errors](static/documentation/testing/courses-test-views.webp) | [no errors](static/documentation/testing/courses-test-forms.webp) | [no errors](static/documentation/testing/courses-tests.webp) |
+| **Feature** | **admin.py** | **apps.py** | **models.py** | **urls.py** | **views.py** | **forms.py** | **tests.py** | 
+| ----------- |:------------:|:-----------:|:-------------:|:-----------:|:------------:|:------------:|:------------:|
+| 1up GrowKits main app | n/a | n/a | n/a | [no errors](static/documentation/testing/main-urls.webp) | n/a | n/a | n/a |
+| home | [no errors](static/documentation/testing/home-admin.webp) | [no errors](static/documentation/testing/home-apps.webp) |  [no errors](static/documentation/testing/home-models.webp) | [no errors](static/documentation/testing/home-urls.webp) | [no errors](static/documentation/testing/bag-views.webp) | n/a | [no errors](static/documentation/testing/home-tests.webp) |
+| products | [no errors](static/documentation/testing/products-admin.webp) | [no errors](static/documentation/testing/products-apps.webp) | [no errors](static/documentation/testing/products-models.webp) | [no errors](static/documentation/testing/products-urls.webp) | [no errors](static/documentation/testing/products-views.webp) | n/a | [no errors](static/documentation/testing/products-tests.webp) |
+| guide | [no errors](static/documentation/testing/guide-admin.webp) | [no errors](static/documentation/testing/guide-apps.webp) | [no errors](static/documentation/testing/guide-models.webp) | [no errors](static/documentation/testing/guide-urls.webp) | [no errors](static/documentation/testing/guide-views.webp) | n/a | [no errors](static/documentation/testing/guide-tests.webp) |
+| courses | [no errors](static/documentation/testing/courses-admin.webp) | [no errors](static/documentation/testing/courses-apps.webp) | [no errors](static/documentation/testing/courses-models.webp) | [no errors](static/documentation/testing/courses-urls.webp) | [no errors](static/documentation/testing/courses-views.webp) | n/a | [no errors](static/documentation/testing/courses-tests.webp) |
+| bag | [no errors](static/documentation/testing/bag-admin.webp) | [no errors](static/documentation/testing/bag-apps.webp) | [no errors](static/documentation/testing/bag-models.webp) | [no errors](static/documentation/testing/bag-urls.webp) | [no errors](static/documentation/testing/bag-views.webp) | n/a | [no errors](static/documentation/testing/bag-tests.webp) |
+| checkout | [no errors](static/documentation/testing/checkout-admin.webp) | [no errors](static/documentation/testing/checkout-apps.webp) | [no errors](static/documentation/testing/checkout-forms.webp) | [no errors](static/documentation/testing/checkout-models.webp) | [no errors](static/documentation/testing/checkout-urls.webp) | [no errors](static/documentation/testing/checkout-views.webp) | [no errors](static/documentation/testing/checkout-tests.webp) |
+| profiles | [no errors](static/documentation/testing/profiles-admin.webp) | [no errors](static/documentation/testing/profiles-apps.webp) | [no errors](static/documentation/testing/profiles-models.webp) | [no errors](static/documentation/testing/profiles-urls.webp) | [no errors](static/documentation/testing/profiles-views.webp) | n/a | [no errors](static/documentation/testing/profiles-tests.webp) |
+
+
+| **Feature** | **contexts.py** | **signals.py** | **webhook_handler.py** | **webhooks.py** |
+|-------------|:---------------:|:--------------:|:----------------------:|:---------------:|
+| bag | [no errors](static/documentation/testing/bag-contexts.webp) | n/a | n/a | n/a |
+| checkout | n/a | [no errors](static/documentation/testing/checkout-signals.webp) | [no errors](static/documentation/testing/checkout-webhook-handler.webp) | [no errors](static/documentation/testing/checkout-webhooks.webp)
+
 
 ![Python Tests Clear](static/documentation/testing/py-clear.webp)
 
