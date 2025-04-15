@@ -48,3 +48,27 @@ def add_course(request):
         'form': form,
     }
     return render(request, 'courses/add_course.html', context) 
+
+
+def edit_course(request, course_id):
+    """ Edit a course in the store """
+    course = get_object_or_404(Course, pk=course_id)
+    if request.method == 'POST':
+        form = CourseForm(request.POST, request.FILES, instance=course)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated course!')
+            return redirect(reverse('course_detail', args=[course.id]))
+        else:
+            messages.error(request, 'Failed to update course. Please ensure the form is valid.')
+    else:
+        form = CourseForm(instance=course)
+        messages.info(request, f'You are editing {course.title}')
+
+    template = 'courses/edit_course.html'
+    context = {
+        'form': form,
+        'course': course,
+    }
+
+    return render(request, template, context)
