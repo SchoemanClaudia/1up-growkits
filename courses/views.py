@@ -1,4 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
+from django.urls import reverse
+
 from .models import Course
 from .forms import CourseForm
 
@@ -30,10 +33,18 @@ def course_detail(request, course_id):
 
 def add_course(request):
     """ Add a course to the store """
-    form = CourseForm()
-    template = 'courses/add_course.html'
+    if request.method == 'POST':
+        form = CourseForm(request.POST, request.FILES) 
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added course!')
+            return redirect(reverse('courses')) 
+        else:
+            messages.error(request, 'Failed to add course. Please ensure the form is valid.')
+    else:
+        form = CourseForm() 
+
     context = {
         'form': form,
     }
-
-    return render(request, template, context)
+    return render(request, 'courses/add_course.html', context) 
