@@ -3,6 +3,8 @@ from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 from django.utils.timezone import now
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -173,26 +175,42 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-        # Add enrollments for all courses
-        lineitems = order.lineitems.all()
-        for item in lineitems:
-            if item.course:
-                user = request.user
-                course = item.course
+    # Add enrollments for courses
+    lineitems = order.lineitems.all()
+    for item in lineitems:
+        if item.course:
+            user = request.user
+            course = item.course
 
-                enrollment = Enrollment.objects.create(
-                    course=course,
-                    user=user,
-                    order=order,
-                    enrolled_at=order.date,
-                    is_paid=True,
-                    confirmed=False,
-                    status=Enrollment.PENDING,
-                    spots_booked=item.quantity,
-                )
+            enrollment = Enrollment.objects.create(
+                course=course,
+                user=user,
+                order=order,
+                enrolled_at=order.date,
+                is_paid=True,
+                confirmed=False,
+                status=Enrollment.PENDING,
+                spots_booked=item.quantity,
+            )
+            enrollment.send_course_email()
 
-                enrollment.send_course_email()
+    # Send order confirmation email
+    subject = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_subject.txt',
+        {'order': order, 'user': request.user}
+    ).strip()
 
+    body = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_body.txt',
+        {'order': order, 'user': request.user}
+    )
+
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [order.email],
+    )
 
     messages.success(request, f'Order successfully processed! '
                               f'Your order number is {order_number}. '
