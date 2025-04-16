@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.mail import send_mail
+from django.utils import timezone
+
 
 class Course(models.Model):
     title = models.CharField(max_length=255, unique=True)
@@ -30,10 +32,12 @@ class Enrollment(models.Model):
         (ENROLLED, 'Enrolled'),
         (COMPLETED, 'Completed'),
     ]
-    
+ 
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="enrollments")
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    enrolled_at = models.DateTimeField(auto_now_add=True)
+    spots_booked = models.PositiveIntegerField(default=1)
+    order = models.ForeignKey('checkout.Order', on_delete=models.SET_NULL, null=True, blank=True, related_name="enrollments")
+    enrolled_at = models.DateTimeField(default=timezone.now)
     is_paid = models.BooleanField(default=False)
     confirmed = models.BooleanField(default=False)
     status = models.CharField(
@@ -47,13 +51,13 @@ class Enrollment(models.Model):
         if self.is_paid and not self.confirmed:
             subject = f"Access to {self.course.title}"
             message = (
-                f"Hello {self.user.first_name},\n\n"
-                f"Thank you for registering for {self.course.title}!\n"
-                f"Course details summary:\n\n"
+                f"Hello There Fungi Fan,\n\n"
+                f"Thank you for registering for our {self.course.title}!\n"
+                f"Your course details summary:\n\n"
                 f"Start Date - {self.course.start_date}\n\n"
                 f"Location - {self.course.location}\n\n"
                 f"Duration - {self.course.duration}\n\n"
-                f"Please confirm your attendance by email\n\n"
+                f"Please confirm your attendance by email to courses@1upgrowkits.com\n\n"
                 f"Fungi Greetings - 1up GrowKit Team"
             )
             send_mail(
@@ -63,8 +67,7 @@ class Enrollment(models.Model):
                 [self.user.email],
                 fail_silently=False,
             )
-            self.confirmed = True
-            self.save()
 
     def __str__(self):
-        return f"{self.user.username} - {self.course.title} ({'Paid' if self.is_paid else 'Pending'})"
+        return f"{self.user.username} - {self.course.title} ({self.spots_booked} spot{'s' if self.spots_booked > 1 else ''})"
+

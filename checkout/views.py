@@ -2,11 +2,12 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.utils.timezone import now
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
-from courses.models import Course
+from courses.models import Course, Enrollment
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from bag.contexts import bag_contents
@@ -56,24 +57,32 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
+
+            # Save user details to ensure signals work
+            if request.user.is_authenticated:
+                order.user_profile = UserProfile.objects.get(user=request.user)
+
             order.save()
+
             for item_key, quantity in bag.items():
                 item_type, item_id = item_key.split('_')
                 try:
                     if item_type == 'product':
                         product = get_object_or_404(Product, pk=item_id)
-                        OrderLineItem.objects.create(
+                        line_item = OrderLineItem(
                             order=order,
                             product=product,
                             quantity=quantity,
                         )
+                        line_item.save()
                     elif item_type == 'course':
                         course = get_object_or_404(Course, pk=item_id)
-                        OrderLineItem.objects.create(
+                        line_item = OrderLineItem(
                             order=order,
                             course=course,
                             quantity=quantity,
                         )
+                        line_item.save()
                 except (Product.DoesNotExist, Course.DoesNotExist):
                     messages.error(request, (
                         "An item in your bag wasn't found in our database. "
@@ -81,6 +90,7 @@ def checkout(request):
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
+
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
@@ -144,11 +154,11 @@ def checkout_success(request, order_number):
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
-        # Attach the user's profile to the order
+
         order.user_profile = profile
         order.save()
 
-        # Save the user's info
+        # Save info to profile
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,
@@ -162,6 +172,27 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
+
+        # Add enrollments for all courses
+        lineitems = order.lineitems.all()
+        for item in lineitems:
+            if item.course:
+                user = request.user
+                course = item.course
+
+                enrollment = Enrollment.objects.create(
+                    course=course,
+                    user=user,
+                    order=order,
+                    enrolled_at=order.date,
+                    is_paid=True,
+                    confirmed=False,
+                    status=Enrollment.PENDING,
+                    spots_booked=item.quantity,
+                )
+
+                enrollment.send_course_email()
+
 
     messages.success(request, f'Order successfully processed! '
                               f'Your order number is {order_number}. '

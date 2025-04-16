@@ -30,8 +30,7 @@ class OrderAdmin(admin.ModelAdmin):
         'original_bag', 'stripe_pid', 'status',)
 
     list_display = (
-        'order_number', 'date', 'full_name',
-        'order_total', 'delivery_cost', 'grand_total', 'status',)
+        'order_number', 'date', 'full_name', 'grand_total', 'status',)
     
     list_filter = ('status',)
 

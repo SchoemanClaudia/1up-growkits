@@ -1,0 +1,22 @@
+#profile-update-form .form-control {
+    color: #000000;
+}
+
+#profile-update-form input::placeholder {
+    color: #aab7c4 !important;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000000;
+}
+
+#id_default_country option:first-child {
+    color: #aab7c4 !important;
+}
+
+/* height of profile form + submit button */
+.order-history {
+    max-height: 416px;
+    overflow-y: auto;
+}

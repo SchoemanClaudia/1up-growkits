@@ -7,7 +7,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from products.models import Product
-from courses.models import Course
+from courses.models import Course, Enrollment
 from profiles.models import UserProfile
 
 # Create your models here.
@@ -94,18 +94,16 @@ class OrderLineItem(models.Model):
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
-        """
-        Override save to calculate lineitem_total from product or course
-        """
         if self.product:
             price = self.product.price
         elif self.course:
             price = self.course.price
         else:
             price = 0
-        
+
         self.lineitem_total = price * self.quantity
         super().save(*args, **kwargs)
+
         self.order.update_total()
 
     def __str__(self):

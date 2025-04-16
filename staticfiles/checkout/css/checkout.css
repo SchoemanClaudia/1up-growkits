@@ -41,6 +41,16 @@
     margin-right: 5px;
 }
 
+select, 
+select option {
+    color: #000000;
+}
+
+select:invalid, 
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 text-info {
     font-weight: 200;
 }
