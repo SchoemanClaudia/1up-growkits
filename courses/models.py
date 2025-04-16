@@ -8,6 +8,7 @@ class Course(models.Model):
     code = models.CharField(max_length=254, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    start_date = models.DateField(null=True, blank=True, help_text="The date the course starts")
     location = models.CharField(max_length=255, help_text="Physical location of the course", null=True, blank=True)
     duration = models.DurationField(help_text="Duration in hours and minutes")
     image = models.ImageField(upload_to='course_images/', null=True, blank=True)
@@ -20,11 +21,26 @@ class Course(models.Model):
 
 
 class Enrollment(models.Model):
+    PENDING = 'Pending'
+    ENROLLED = 'Enrolled'
+    COMPLETED = 'Completed'
+
+    ENROLLMENT_STATUS_CHOICES = [
+        (PENDING, 'Pending'),
+        (ENROLLED, 'Enrolled'),
+        (COMPLETED, 'Completed'),
+    ]
+    
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="enrollments")
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     enrolled_at = models.DateTimeField(auto_now_add=True)
     is_paid = models.BooleanField(default=False)
     confirmed = models.BooleanField(default=False)
+    status = models.CharField(
+        max_length=20,
+        choices=ENROLLMENT_STATUS_CHOICES,
+        default=PENDING,
+    )
 
     def send_course_email(self):
         """Send course access email to user after payment confirmation"""
@@ -33,7 +49,11 @@ class Enrollment(models.Model):
             message = (
                 f"Hello {self.user.first_name},\n\n"
                 f"Thank you for registering for {self.course.title}!\n"
-                f"Your course will be held at: {self.course.location}\n\n"
+                f"Course details summary:\n\n"
+                f"Start Date - {self.course.start_date}\n\n"
+                f"Location - {self.course.location}\n\n"
+                f"Duration - {self.course.duration}\n\n"
+                f"Please confirm your attendance by email\n\n"
                 f"Fungi Greetings - 1up GrowKit Team"
             )
             send_mail(

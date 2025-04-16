@@ -17,11 +17,13 @@ class Order(models.Model):
     PENDING = 'Pending'
     SHIPPED = 'Shipped'
     DELIVERED = 'Delivered'
+    COURSE_BOOKED = 'Course Booked'
 
     ORDER_STATUS_CHOICES = [
         (PENDING, 'Pending'),
         (SHIPPED, 'Shipped'),
         (DELIVERED, 'Delivered'),
+        (COURSE_BOOKED, 'Course Booked'),
     ]
 
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -44,7 +46,7 @@ class Order(models.Model):
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
 
     status = models.CharField(
-        max_length=10,
+        max_length=20,
         choices=ORDER_STATUS_CHOICES,
         default=PENDING,
     )
