@@ -33,9 +33,9 @@
   {% endfor %}
 
 <div class="buttonHolder">
-      <button class="secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
-      <button class="secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
-      <button class="primaryAction" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+      <button class="button-link" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
+      <button class="button-link" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
+      <button class="button-link danger" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
 </div>
 
 </fieldset>
@@ -46,7 +46,7 @@
 
 {% endif %}
 
-
+    <br>
     <h2>{% trans "Add E-mail Address" %}</h2>
 
     <form method="post" action="{% url 'account_email' %}" class="add_email">
