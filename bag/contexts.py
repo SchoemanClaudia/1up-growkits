@@ -51,12 +51,14 @@ def bag_contents(request):
                 'type': 'course',
             })
 
-    # Delivery calculation
-    if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
-        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
+    # Only calculate delivery for physical products
+    physical_total = sum(item['subtotal'] for item in bag_items if item['type'] == 'product')
+
+    if 0 < physical_total < settings.FREE_DELIVERY_THRESHOLD:
+        delivery = physical_total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - physical_total
     else:
-        delivery = 0
+        delivery = Decimal('0.00')
         free_delivery_delta = 0
 
     grand_total = delivery + total

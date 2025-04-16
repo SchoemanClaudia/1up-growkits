@@ -1,7 +1,7 @@
 import uuid
 
 from django.db import models
-from django.db.models import Sum
+from django.db.models import Sum, Q
 from django.conf import settings
 
 from django_countries.fields import CountryField
@@ -60,15 +60,27 @@ class Order(models.Model):
     def update_total(self):
         """
         Update grand total each time a line item is added,
-        accounting for delivery costs.
+        calculating delivery based only on physical products.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
-        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+        all_items_total = self.lineitems.aggregate(
+            Sum('lineitem_total'))['lineitem_total__sum'] or 0
+
+        physical_items_total = self.lineitems.filter(product__isnull=False).aggregate(
+            Sum('lineitem_total'))['lineitem_total__sum'] or 0
+
+        self.order_total = all_items_total
+
+        if 0 < physical_items_total < settings.FREE_DELIVERY_THRESHOLD:
+            self.delivery_cost = physical_items_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
         else:
             self.delivery_cost = 0
+
         self.grand_total = self.order_total + self.delivery_cost
+
+        print(f"All total: {self.order_total} | Physical total: {physical_items_total} | Delivery: {self.delivery_cost}")
+
         self.save()
+
     
     def save(self, *args, **kwargs):
         """
