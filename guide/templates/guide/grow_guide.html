@@ -5,32 +5,39 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="product-container col-10 offset-1">
+        <div class="col text-center mt-3">
+            <h2 class="text-center mb-2">Our Grow Guide</h2>
+            <hr class="w-25 mb-5">
+        </div>
+    </div>
+    <div class="row">
+        <div class="product-container col-10 offset-1 py-4 px-3 px-md-5">
 
             {% for guide in guide %}
             <div class="mb-5">
-                <div class="col text-left mt-5 pt-4">
-                    <h2 class="mb-2">{{ guide.guide_title }}</h2>
+                <!-- Steps -->
+                <div class="text-left mt-5 pt-4">
+                    <h2 class="mb-2">{{ guide.step_no }}. {{ guide.guide_title }}</h2>
                     <hr>
                 </div>
-                <div class="row mt-1 mb-2"></div>
+
+                <!-- Instructions -->
                 <div class="row">
-                    <div class="d-flex flex-column flex-md-row">
-
-                        <!-- Image -->
-                        <div class="col-12 col-md-5 text-left">
-                            {% if guide.image %}
-                            <img class="img-fluid" src="{{ guide.image.url }}" alt="{{ guide.guide_title }}">
-                            {% endif %}
-                        </div>
-
-                        <!-- Instructions -->
-                        <div class="col-12 col-md-7">
-                            <p>{{ guide.instructions }}</p>
-                        </div>
-
+                    {% if guide.image %}
+                    <!-- Centered image container -->
+                    <div class="col-12 col-md-5 d-flex align-items-center justify-content-center mb-3 mb-md-0">
+                        <img class="img-fluid" src="{{ guide.image.url }}" alt="{{ guide.guide_title }}">
                     </div>
+                    <div class="col-12 col-md-7">
+                        <p>{{ guide.instructions|linebreaks }}</p>
+                    </div>
+                    {% else %}
+                    <div class="col-12">
+                        <p>{{ guide.instructions|linebreaks }}</p>
+                    </div>
+                    {% endif %}
                 </div>
+                
             </div>
             {% endfor %}
 

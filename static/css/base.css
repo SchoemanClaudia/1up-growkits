@@ -444,6 +444,22 @@ a.text-info:hover {
 }
 
 @media (max-width: 576px) {
+    @media (max-width: 576px) {
+        .product-container h2 {
+            font-size: 1.4rem;
+        }
+    
+        .product-container p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    
+        .product-container img {
+            max-height: 250px;
+            object-fit: cover;
+        }
+    }    
+
     .bag-item-form input.qty_input {
         width: 100% !important;
         margin-bottom: 10px;
