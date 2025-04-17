@@ -68,7 +68,6 @@ def add_to_bag(request, item_id):
         return redirect(request.POST.get('redirect_url', 'view_bag'))
     
 
-@login_required
 def view_bag(request):
     """ A view that renders the bag contents page """
     return render(request, 'bag/bag.html')

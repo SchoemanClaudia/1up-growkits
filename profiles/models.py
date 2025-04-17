@@ -4,6 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 from django_countries.fields import CountryField
+from django.contrib.postgres.fields import JSONField
 
 
 class UserProfile(models.Model):
@@ -19,6 +20,8 @@ class UserProfile(models.Model):
     default_county = models.CharField(max_length=80, null=True, blank=True)
     default_postcode = models.CharField(max_length=20, null=True, blank=True)
     default_country = CountryField(blank_label='Country', null=True, blank=True)
+
+    saved_bag = models.JSONField(null=True, blank=True, default=dict)
 
     def __str__(self):
         return self.user.username
