@@ -5,6 +5,7 @@ from django.conf import settings
 from django.utils.timezone import now
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
+from django.contrib.auth import REDIRECT_FIELD_NAME
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -35,6 +36,10 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    if not request.user.is_authenticated:
+        messages.warning(request, "Please log in to continue with your order.")
+        return redirect(f'{settings.LOGIN_URL}?{REDIRECT_FIELD_NAME}={request.path}')
+
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -60,7 +65,6 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
 
-            # Save user details to ensure signals work
             if request.user.is_authenticated:
                 order.user_profile = UserProfile.objects.get(user=request.user)
 
@@ -93,7 +97,6 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse('view_bag'))
 
-
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
@@ -114,23 +117,20 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        if request.user.is_authenticated:
-            try:
-                profile = UserProfile.objects.get(user=request.user)
-                order_form = OrderForm(initial={
-                    'full_name': profile.user.get_full_name(),
-                    'email': profile.user.email,
-                    'phone_number': profile.default_phone_number,
-                    'country': profile.default_country,
-                    'postcode': profile.default_postcode,
-                    'town_or_city': profile.default_town_or_city,
-                    'street_address1': profile.default_street_address1,
-                    'street_address2': profile.default_street_address2,
-                    'county': profile.default_county,
-                })
-            except UserProfile.DoesNotExist:
-                order_form = OrderForm()
-        else:
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            order_form = OrderForm(initial={
+                'full_name': profile.user.get_full_name(),
+                'email': profile.user.email,
+                'phone_number': profile.default_phone_number,
+                'country': profile.default_country,
+                'postcode': profile.default_postcode,
+                'town_or_city': profile.default_town_or_city,
+                'street_address1': profile.default_street_address1,
+                'street_address2': profile.default_street_address2,
+                'county': profile.default_county,
+            })
+        except UserProfile.DoesNotExist:
             order_form = OrderForm()
 
         if not stripe_public_key:
@@ -148,13 +148,6 @@ def checkout(request):
 
 
 def checkout_success(request, order_number):
-    """
-    Handle successful checkouts with:
-    - Save profile info
-    - User course enrollments
-    - Minus product stock
-    - Send confirmation email
-    """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -163,7 +156,6 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-        # Save info to profile
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,
@@ -180,14 +172,12 @@ def checkout_success(request, order_number):
 
     lineitems = order.lineitems.all()
     for item in lineitems:
-        # Minus product stock qty
         if item.product:
             product = item.product
             if product.stock_quantity >= item.quantity:
                 product.stock_quantity -= item.quantity
                 product.save()
 
-        # Add enrollments for courses
         elif item.course:
             course = item.course
             user = request.user if request.user.is_authenticated else None
@@ -205,7 +195,6 @@ def checkout_success(request, order_number):
                 )
                 enrollment.send_course_email()
 
-    # Send order confirmation email
     subject = render_to_string(
         'checkout/confirmation_emails/confirmation_email_subject.txt',
         {'order': order, 'user': request.user}
@@ -226,6 +215,7 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! '
                               f'Your order number is {order_number}. '
                               f'A confirmation email will be sent to {order.email}.')
+
     if 'bag' in request.session:
         del request.session['bag']
 
