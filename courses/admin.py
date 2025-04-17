@@ -2,6 +2,15 @@ from django.contrib import admin
 from .models import Course, Enrollment
 
 
+class CourseAdmin(admin.ModelAdmin):
+    list_display = ('title', 'attendee_qty', 'spaces_left', 'start_date', 'location')
+
+    def spaces_left(self, obj):
+        return obj.spaces_left
+
+admin.site.register(Course, CourseAdmin)
+
+
 class EnrollmentAdmin(admin.ModelAdmin):
     list_display = (
         'user',
@@ -34,5 +43,4 @@ class EnrollmentAdmin(admin.ModelAdmin):
     mark_as_confirmed.short_description = "Mark selected as confirmed"
 
 
-admin.site.register(Course)
 admin.site.register(Enrollment, EnrollmentAdmin)

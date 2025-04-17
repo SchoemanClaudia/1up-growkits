@@ -19,12 +19,11 @@
                     <div class="card h-100 border-0">
                         {% if course.image %}
                         <a href="{% url 'course_detail' course.id %}">
-                            <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
+                            <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.title }}">
                         </a>
                         {% else %}
                         <a href="{% url 'course_detail' course.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ course.name }}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.title }}">
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
@@ -44,10 +43,8 @@
                                 </a>
                             </small>
                             {% endif %}
-
-
                         </div>
-                        <br>
+
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
@@ -57,6 +54,7 @@
                         </div>
                     </div>
                 </div>
+
                 {% if forloop.counter|divisibleby:1 %}
                 <div class="col-12 d-sm-none mb-5">
                     <hr>

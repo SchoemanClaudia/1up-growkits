@@ -18,6 +18,14 @@ class Course(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    @property
+    def spaces_left(self):
+        """Return number of available spots based on confirmed, paid enrollments"""
+        valid_enrollments = self.enrollments.filter(is_paid=True)
+        total_enrolled = sum(e.spots_booked for e in valid_enrollments)
+        return max(0, self.attendee_qty - total_enrolled)
+
+
     def __str__(self):
         return self.title
 

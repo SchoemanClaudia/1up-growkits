@@ -23,8 +23,7 @@ def add_to_bag(request, item_id):
             item_name = item.title
             
             # Prevent overbooking
-            total_enrolled = item.enrollments.count()
-            spaces_left = item.attendee_qty - total_enrolled
+            spaces_left = item.spaces_left
             existing_in_bag = bag.get(item_key, 0)
 
             if quantity + existing_in_bag > spaces_left:
@@ -88,8 +87,7 @@ def adjust_bag(request, item_id):
         if item_type == "course":
             item = get_object_or_404(Course, pk=item_id)
             item_name = item.title
-            total_enrolled = item.enrollments.count()
-            spaces_left = item.attendee_qty - total_enrolled
+            spaces_left = item.spaces_left
 
             if quantity > 0:
                 if quantity > spaces_left:

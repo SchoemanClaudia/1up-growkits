@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Course
 from .forms import CourseForm
 
+
 # Create your views here.
 
 def online_courses(request):
@@ -22,7 +23,6 @@ def online_courses(request):
 
 def course_detail(request, course_id):
     """ A view to show individual online course details """
-
     course = get_object_or_404(Course, pk=course_id)
 
     context = {
@@ -30,6 +30,7 @@ def course_detail(request, course_id):
     }
 
     return render(request, 'courses/course_detail.html', context)
+
 
 @login_required
 def add_course(request):
