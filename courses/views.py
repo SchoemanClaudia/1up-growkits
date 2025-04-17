@@ -93,3 +93,4 @@ def delete_course(request, course_id):
     course.delete()
     messages.success(request, 'Course deleted!')
     return redirect(reverse('courses'))
+

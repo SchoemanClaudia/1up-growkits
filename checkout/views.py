@@ -149,14 +149,17 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    Handle successful checkouts with:
+    - Save profile info
+    - User course enrollments
+    - Minus product stock
+    - Send confirmation email
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
-
         order.user_profile = profile
         order.save()
 
@@ -175,24 +178,32 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    # Add enrollments for courses
     lineitems = order.lineitems.all()
     for item in lineitems:
-        if item.course:
-            user = request.user
-            course = item.course
+        # Minus product stock qty
+        if item.product:
+            product = item.product
+            if product.stock_quantity >= item.quantity:
+                product.stock_quantity -= item.quantity
+                product.save()
 
-            enrollment = Enrollment.objects.create(
-                course=course,
-                user=user,
-                order=order,
-                enrolled_at=order.date,
-                is_paid=True,
-                confirmed=False,
-                status=Enrollment.PENDING,
-                spots_booked=item.quantity,
-            )
-            enrollment.send_course_email()
+        # Add enrollments for courses
+        elif item.course:
+            course = item.course
+            user = request.user if request.user.is_authenticated else None
+
+            if user and not Enrollment.objects.filter(course=course, order=order, user=user).exists():
+                enrollment = Enrollment.objects.create(
+                    course=course,
+                    user=user,
+                    order=order,
+                    enrolled_at=order.date,
+                    is_paid=True,
+                    confirmed=False,
+                    status=Enrollment.PENDING,
+                    spots_booked=item.quantity,
+                )
+                enrollment.send_course_email()
 
     # Send order confirmation email
     subject = render_to_string(
@@ -215,7 +226,6 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! '
                               f'Your order number is {order_number}. '
                               f'A confirmation email will be sent to {order.email}.')
-
     if 'bag' in request.session:
         del request.session['bag']
 
