@@ -9,9 +9,12 @@ class ProductAdmin(admin.ModelAdmin):
         'sku',
         'stock_quantity',
         'price',
+        'featured',
         'image',
     )
-
+    
+    list_filter = ('featured',)
+    search_fields = ('name', 'sku', 'description')
     ordering = ('sku',)
 
 admin.site.register(Product, ProductAdmin)

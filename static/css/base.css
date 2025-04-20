@@ -112,6 +112,11 @@ a.dropdown-item:hover {
     font-size: 1.1rem;
 }
 
+.featured-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+  }  
+
 i:hover {
     font-size: larger;
 }
@@ -444,21 +449,19 @@ a.text-info:hover {
 }
 
 @media (max-width: 576px) {
-    @media (max-width: 576px) {
-        .product-container h2 {
-            font-size: 1.4rem;
-        }
+    .product-container h2 {
+         font-size: 1.4rem;
+    }
     
-        .product-container p {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
+    .product-container p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
     
-        .product-container img {
-            max-height: 250px;
-            object-fit: cover;
-        }
-    }    
+    .product-container img {
+        max-height: 250px;
+         object-fit: cover;
+    }
 
     .bag-item-form input.qty_input {
         width: 100% !important;

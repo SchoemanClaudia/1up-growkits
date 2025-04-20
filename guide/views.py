@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import GrowGuide
 
+# Create your views here.
+
+
 def grow_guide(request):
     guide = GrowGuide.objects.all()
 

@@ -2,44 +2,38 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Gourmet Mushroom Grow Kits</h1>
-            <p>Grow & harvest your own mushrooms with our easy-to-use kits</p>
-            <a href="{% url 'products' %}" class="btn">Shop Now</a>
-        </div>
-    </section>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Gourmet Mushroom Grow Kits</h1>
+        <p>Grow & harvest your own mushrooms with our easy-to-use kits</p>
+        <a href="{% url 'products' %}" class="btn">Shop Now</a>
+    </div>
+</section>
 
-    <section class="featured-products">
-        <div class="product-grid">
-            {% for product in products %}
-                <div class="product-card">
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
-                    <h3>{{ product.name }}</h3>
-                    <p>${{ product.price }}</p>
-                    <a href="#" class="btn">Add to Cart</a>
+<!-- Featured Products Section -->
+<section class="featured-products">
+    <div class="row justify-content-center">
+        {% for product in featured_products %}
+        <div class="col-12 col-sm-6 col-md-4 mb-4 d-flex align-items-stretch">
+            <div class="card product-card text-center">
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">€{{ product.price }}</p>
+                    <a href="{% url 'product_detail' product.id %}" class="btn btn-shop">View Product</a>
                 </div>
-            {% endfor %}
+            </div>
         </div>
-    </section>
-    <section class="featured-products">
-        <div class="product-grid">
-            {% for product in products %}
-                <div class="product-card">
-                    <img src="{{ course.image.url }}" alt="{{ course.name }}">
-                    <h3>{{ course.name }}</h3>
-                    <p>${{ course.price }}</p>
-                    <a href="#" class="btn">Start Course</a>
-                </div>
-            {% endfor %}
-        </div>
-    </section>
+        {% endfor %}
+    </div>    
+</section>
+
 {% endblock %}

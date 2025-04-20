@@ -1,18 +1,23 @@
+from profiles.models import UserProfile
+
 def save_bag_on_logout(request, user):
-    """ Save session bag to user's profile """
-    if request.user.is_authenticated:
-        profile = user.userprofile
-        profile.saved_bag = request.session.get('bag', {})
+    """
+    Store current session bag to user's profile
+    """
+    bag = request.session.get('bag', {})
+    if user.is_authenticated and bag:
+        profile = UserProfile.objects.get(user=user)
+        profile.saved_bag = bag
         profile.save()
 
 
 def restore_bag_on_login(request, user):
-    """ Restore bag to session from user profile if session bag is empty """
-    if user.is_authenticated:
-        profile = user.userprofile
-        # Only restore if session bag empty
-        if not request.session.get('bag') and profile.saved_bag:
-            request.session['bag'] = profile.saved_bag
-            profile.saved_bag = {}
-            profile.save()
-
+    """
+    Restore saved bag from profile on login
+    """
+    profile = UserProfile.objects.get(user=user)
+    # Only restore if session bag empty
+    if profile.saved_bag and not request.session.get('bag'):
+        request.session['bag'] = profile.saved_bag
+        profile.saved_bag = {}  # clear saved bag once restored
+        profile.save()
