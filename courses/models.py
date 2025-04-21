@@ -65,13 +65,13 @@ class Enrollment(models.Model):
                 f"Start Date - {self.course.start_date}\n\n"
                 f"Location - {self.course.location}\n\n"
                 f"Duration - {self.course.duration}\n\n"
-                f"Please confirm your attendance by email to courses@1upgrowkits.com\n\n"
+                f"Please confirm your attendance by email to courses@1up-growkits.com\n\n"
                 f"Fungi Greetings - 1up GrowKit Team"
             )
             send_mail(
                 subject,
                 message,
-                'noreply@1upgrowkits.com',
+                'noreply@1up-growkits.com',
                 [self.user.email],
                 fail_silently=False,
             )

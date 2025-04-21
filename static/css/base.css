@@ -1,4 +1,10 @@
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     position: relative;
     background: url(/static/assets/home-main-banner.webp) no-repeat center center fixed;
     background-size: cover;
@@ -16,6 +22,10 @@ body::before {
     background: rgba(0, 0, 0, 0.5);
     /* Adjust the opacity and color */
     z-index: -1;
+}
+
+main {
+    flex: 1;
 }
 
 a {
@@ -172,6 +182,19 @@ i:hover {
     color: #228e29;
 }
 
+.bag-buttons .btn {
+    white-space: nowrap;
+    min-width: 180px;
+    text-align: center;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.bag-buttons .btn:hover {
+    opacity: 0.9;
+    text-decoration: none;
+}
+
 .danger:hover {
     font-weight: 500;
     color: #b22222;
@@ -264,8 +287,14 @@ hr {
     z-index: -1;
 }
 
-/* bootstrap toasts */
+.disclaimer {
+    font-size: 0.75rem;
+    color: #6c757d;
+    font-style: italic;
+}
 
+
+/* bootstrap toasts */
 .message-container {
     position: fixed;
     top: 72px;
@@ -281,8 +310,8 @@ hr {
     height: 2px;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0;
     height: 0;
@@ -293,6 +322,7 @@ hr {
     top: -10px;
     right: 36px;
 }
+
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
@@ -339,13 +369,12 @@ hr {
 
 
 /* Allauth form formatting */
-
 .allauth-form-inner-content {
     margin-top: 1.5rem;
     /* mt-4 */
 }
 
-.allauth-form-inner-content input {
+.allauth-form-inner-content input:not([type="submit"]) {
     border-color: #000000;
     border-radius: 0;
 }
@@ -383,8 +412,8 @@ a.text-info:hover {
     margin-right: 5px;
 }
 
-/* Product Form */
 
+/* Product Form */
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -411,6 +440,7 @@ a.text-info:hover {
     border-radius: 0;
 }
 
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -419,6 +449,7 @@ a.text-info:hover {
         max-width: 80%;
     }
 }
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -449,56 +480,81 @@ a.text-info:hover {
 }
 
 @media (max-width: 576px) {
-    .product-container h2 {
-         font-size: 1.4rem;
-    }
-    
-    .product-container p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-    
-    .product-container img {
-        max-height: 250px;
-         object-fit: cover;
-    }
-
     .bag-item-form input.qty_input {
-        width: 100% !important;
-        margin-bottom: 10px;
+      width: 100% !important;
+      margin-bottom: 10px;
     }
-
+  
     .bag-item-form .button-link {
-        width: 100%;
-        text-align: center;
+      width: 100%;
+      text-align: center;
+      padding: 6px 0;
     }
-
-    .bag-item-form .d-flex.flex-column.flex-sm-row {
-        flex-direction: column !important;
-        gap: 5px;
+  
+    .bag-item-form .d-flex.flex-sm-row {
+      flex-direction: column !important;
+      gap: 5px;
     }
-
+  
     .table td,
     .table th {
-        font-size: 0.9rem;
-        white-space: normal;
+      font-size: 0.9rem;
+      white-space: normal;
+      padding: 0.5rem;
     }
-
+  
     .table img {
-        max-width: 100px;
-        height: auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
     }
-
+  
     .text-right {
-        text-align: center !important;
+      text-align: center !important;
     }
 
-    .btn {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .text-delivery {
+        font-size: .8rem;
+    }
+  
+    .btn.btn-shop.rounded-0,
+    .btn.btn-shop-return.rounded-0 {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.85rem;
+    }
+  
+    .btn.btn-shop.rounded-0.btn-lg,
+    .btn.btn-shop-return.rounded-0.btn-lg {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.85rem;
+    }
+  
+    .increment-qty, .decrement-qty {
+      padding: 0.25rem 0.5rem !important;
+    }
+
+    .bag-buttons {
+        flex-direction: column !important;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .bag-buttons .btn {
         width: 100%;
-        margin-top: 10px;
     }
-
-    .btn+.btn {
-        margin-top: 10px;
+  
+    .product-info-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-}
+  }
+  
