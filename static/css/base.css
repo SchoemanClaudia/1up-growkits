@@ -479,6 +479,63 @@ a.text-info:hover {
     }
 }
 
+/* Mobile bag view */
+@media (max-width: 768px) {
+    .mobile-bag-summary .btn {
+      width: 100%;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+  
+    .mobile-bag-summary h6,
+    .mobile-bag-summary h5 {
+      margin-bottom: 0.25rem;
+    }
+  
+    .mobile-bag-summary p.text-delivery {
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+  
+    .mobile-bag-item {
+      border-top: 1px solid #aab7c4;
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+  
+    .mobile-bag-img {
+      width: 100px !important;
+      height: auto !important;
+      object-fit: contain;
+      display: block;
+      padding-right: 20px;
+    }
+  
+    .mobile-bag-item p {
+      margin-bottom: 0.25rem;
+      font-size: 0.9rem;
+    }
+  
+    .mobile-bag-item .small {
+      font-size: 0.85rem;
+    }
+  
+    .qty_input {
+      max-width: 70px;
+      padding: 0.25rem 0.4rem;
+    }
+  
+    .mobile-bag-item .button-link {
+      padding: 0.25rem 0.4rem;
+      font-size: 0.85rem;
+    }
+  
+    .empty-bag {
+      text-align: left !important;
+    }
+  }
+  
+
 @media (max-width: 576px) {
     .bag-item-form input.qty_input {
       width: 100% !important;
