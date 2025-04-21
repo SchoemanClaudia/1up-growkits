@@ -146,6 +146,9 @@
     {% endblock %}
   </main>
 
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
+
   <!-- Footer -->
   <footer class="bg-dark text-light text-center py-3">
     <p>
@@ -159,12 +162,33 @@
   </footer>
 
   {% block postloadjs %}
-
   <script type="text/javascript">
     $('.toast').toast('show');
-  </script>
 
+    // Scroll to top button behavior
+    window.onscroll = function () {
+      const btn = document.getElementById("scrollToTopBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const scrollBtn = document.getElementById("scrollToTopBtn");
+      if (scrollBtn) {
+        scrollBtn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+    });
+  </script>
   {% endblock %}
+
 </body>
 
 </html>
