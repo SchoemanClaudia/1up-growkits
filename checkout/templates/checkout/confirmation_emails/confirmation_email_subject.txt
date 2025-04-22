@@ -1,1 +1,1 @@
-Boutique Ado Confirmation for Order Number {{ order.order_number }}
+1up GrowKits Confirmation for Order Number {{ order.order_number }}
