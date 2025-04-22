@@ -26,7 +26,7 @@ def contact_view(request):
 
             # Send email
             subject = f"Contact Form Message from {name}"
-            send_mail(subject, message, email, [settings.DEFAULT_FROM_EMAIL or 'noreply@example.com'])
+            send_mail(subject, message, email, [settings.DEFAULT_FROM_EMAIL or 'noreply@1up-growkits.com'])
 
             # Redirect to message sent
             return redirect('message_sent')

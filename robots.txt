@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /checkout/
+Disallow: /profile/
+Disallow: /admin/
+Sitemap: https://shop-1up-growkits-e6669e001bb1.herokuapp.com/sitemap.xml
