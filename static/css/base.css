@@ -333,6 +333,13 @@ hr {
     min-height: 80vh;
 }
 
+.contact-panel {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
 
 /* bootstrap toasts */
 .message-container {
