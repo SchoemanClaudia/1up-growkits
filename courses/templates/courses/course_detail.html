@@ -47,19 +47,31 @@
             </small>
             {% endif %}
 
-            <p class="mt-3">{{ course.description }}</p>
-            <p><strong>Location:</strong> {{ course.location }}</p>
-
-            {% if course.duration %}
-            <p><strong>Duration:</strong> {{ course.duration }}</p>
-            {% endif %}
-
             {% if course.spaces_left == 0 %}
             <p class="text-danger font-weight-bold mt-2">Fully Booked</p>
             {% elif course.spaces_left <= 5 %}
             <p class="text-warning font-weight-bold mt-2">Only {{ course.spaces_left }} spots left!</p>
             {% else %}
             <p class="text-success mt-2">Spaces Available</p>
+            {% endif %}
+
+            <small class="d-block text-muted">
+                <strong>Location:</strong> {{ course.location }}
+            </small>
+
+            {% if course.start_datetime %}
+            <small class="d-block text-muted">
+                <strong>Date:</strong> {{ course.start_datetime|date:"jS F Y" }}
+            </small>
+            <small class="d-block text-muted">
+                <strong>Time:</strong> {{ course.start_datetime|date:"g:i A" }}
+            </small>
+            {% endif %}
+
+            {% if course.duration %}
+            <small class="d-block text-muted">
+                <strong>Duration:</strong> {{ course.duration }}
+            </small>
             {% endif %}
 
             <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
@@ -77,12 +89,6 @@
                         </div>
                     </div>
 
-                    <div id="delivery-banner" class="row text-left">
-                        <div class="col">
-                            <h6 class="my-1">We have limited space, so sign up for events early.</h6>
-                        </div>
-                    </div>
-
                     <div class="col-12">
                         <a href="{% url 'courses' %}" class="btn btn-shop-return rounded-0 mt-5">
                             <span class="icon">
@@ -90,14 +96,14 @@
                             </span>
                             <span class="text-uppercase">Keep Shopping</span>
                         </a>
-                    
+
                         {% if course.spaces_left == 0 %}
                         <button class="btn btn-secondary rounded-0 text-uppercase mt-5" disabled>Fully Booked</button>
                         {% else %}
                         <input type="submit" class="btn btn-shop rounded-0 text-uppercase mt-5" value="Book your Spot!">
                         {% endif %}
                     </div>
-                    
+
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </div>
             </form>

@@ -153,6 +153,12 @@ i:hover {
     margin-top: 10px;
 }
 
+.btn[disabled]:hover {
+    background-color: #6c757d !important; 
+    color: #ffffff !important;
+    cursor: not-allowed;
+}
+
 .btn-shop {
     background-color: #f5b201;
     color: #ffffff;

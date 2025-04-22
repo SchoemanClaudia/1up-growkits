@@ -10,7 +10,7 @@ class Course(models.Model):
     code = models.CharField(max_length=254, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    start_date = models.DateField(null=True, blank=True, help_text="The date the course starts")
+    start_datetime = models.DateTimeField(null=True, blank=True, help_text="The date and time the course starts")
     location = models.CharField(max_length=255, help_text="Physical location of the course", null=True, blank=True)
     duration = models.DurationField(help_text="Duration in hours and minutes")
     image = models.ImageField(upload_to='course_images/', null=True, blank=True)
@@ -62,7 +62,7 @@ class Enrollment(models.Model):
                 f"Hello There Fungi Fan,\n\n"
                 f"Thank you for registering for our {self.course.title}!\n"
                 f"Your course details summary:\n\n"
-                f"Start Date - {self.course.start_date}\n\n"
+                f"Start Date - {self.course.start_datetime}\n\n"
                 f"Location - {self.course.location}\n\n"
                 f"Duration - {self.course.duration}\n\n"
                 f"Please confirm your attendance by email to courses@1up-growkits.com\n\n"
