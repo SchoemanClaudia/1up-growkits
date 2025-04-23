@@ -10,10 +10,12 @@ from courses.models import Course
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ('full_name', 'email', 'phone_number',
-                  'street_address1', 'street_address2',
-                  'town_or_city', 'postcode', 'country',
-                  'county',)
+        fields = (
+            'full_name', 'email', 'phone_number',
+            'street_address1', 'street_address2',
+            'town_or_city', 'postcode', 'country',
+            'county',
+        )
 
     def __init__(self, *args, **kwargs):
         """
@@ -56,8 +58,14 @@ class OrderLineItemForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
 
         # Combined dropdown options
-        product_choices = [(f'product_{p.id}', f'Product: {p.name}') for p in Product.objects.all()]
-        course_choices = [(f'course_{c.id}', f'Course: {c.title}') for c in Course.objects.all()]
+        product_choices = [
+            (f'product_{p.id}', f'Product: {p.name}')
+            for p in Product.objects.all()
+        ]
+        course_choices = [
+            (f'course_{c.id}', f'Course: {c.title}')
+            for c in Course.objects.all()
+        ]
         self.fields['item'].choices = product_choices + course_choices
 
         instance = kwargs.get('instance')

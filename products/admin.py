@@ -1,7 +1,6 @@
 from django.contrib import admin
 from .models import Product
 
-# Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
@@ -12,9 +11,10 @@ class ProductAdmin(admin.ModelAdmin):
         'featured',
         'image',
     )
-    
+
     list_filter = ('featured',)
     search_fields = ('name', 'sku', 'description')
     ordering = ('sku',)
+
 
 admin.site.register(Product, ProductAdmin)

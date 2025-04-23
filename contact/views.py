@@ -1,12 +1,9 @@
-
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
-from django.contrib import messages
 from django.conf import settings
+
 from .forms import ContactForm
 from .models import ContactMessage
-
-# Create your views here.
 
 
 def contact_view(request):
@@ -26,7 +23,12 @@ def contact_view(request):
 
             # Send email
             subject = f"Contact Form Message from {name}"
-            send_mail(subject, message, email, [settings.DEFAULT_FROM_EMAIL or 'noreply@1up-growkits.com'])
+            send_mail(
+                subject,
+                message,
+                email,
+                [settings.DEFAULT_FROM_EMAIL or 'noreply@1up-growkits.com']
+            )
 
             # Redirect to message sent
             return redirect('message_sent')
@@ -38,4 +40,3 @@ def contact_view(request):
 
 def message_sent(request):
     return render(request, 'contact/message_sent.html')
-

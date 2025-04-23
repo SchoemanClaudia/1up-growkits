@@ -1,8 +1,11 @@
 from decimal import Decimal
+
 from django.conf import settings
 from django.shortcuts import get_object_or_404
+
 from products.models import Product
 from courses.models import Course
+
 
 def bag_contents(request):
     bag_items = []
@@ -18,16 +21,16 @@ def bag_contents(request):
                 item_id = int(item_id)
                 product = get_object_or_404(Product, pk=item_id)
             except (ValueError, Product.DoesNotExist):
-                continue # Skip invalid product id
+                continue  # Skip invalid product id
 
-            subtotal = quantity * product.price 
+            subtotal = quantity * product.price
             total += subtotal
             product_count += quantity
             bag_items.append({
                 'item_id': item_id,
                 'quantity': quantity,
                 'product': product,
-                'subtotal': subtotal, 
+                'subtotal': subtotal,
                 'type': 'product',
             })
 
@@ -40,22 +43,26 @@ def bag_contents(request):
             except (ValueError, Course.DoesNotExist):
                 continue  # Skip invalid course id
 
-            subtotal = quantity * course.price 
+            subtotal = quantity * course.price
             total += subtotal
             product_count += quantity
             bag_items.append({
                 'item_id': item_id,
                 'quantity': quantity,
                 'product': course,
-                'subtotal': subtotal, 
+                'subtotal': subtotal,
                 'type': 'course',
             })
 
     # Only calculate delivery for physical products
-    physical_total = sum(item['subtotal'] for item in bag_items if item['type'] == 'product')
+    physical_total = sum(
+        item['subtotal'] for item in bag_items if item['type'] == 'product'
+    )
 
     if 0 < physical_total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = physical_total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        delivery = physical_total * Decimal(
+            settings.STANDARD_DELIVERY_PERCENTAGE / 100
+        )
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - physical_total
     else:
         delivery = Decimal('0.00')

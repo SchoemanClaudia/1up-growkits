@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
-    import env
+    import env  # noqa: F401
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -30,9 +30,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
-    '127.0.0.1', #local preview
-    'shop-1up-growkits-e6669e001bb1.herokuapp.com', #heroku app
-    'localhost', #listen for stripe wh
+    '127.0.0.1',  # local preview
+    'shop-1up-growkits-e6669e001bb1.herokuapp.com',  # heroku app
+    'localhost',  # listen for stripe wh
 ]
 
 
@@ -90,7 +90,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', #required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -134,7 +134,7 @@ if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-else: 
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',

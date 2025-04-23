@@ -1,6 +1,7 @@
 from django import forms
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Field, Submit, Div
+from crispy_forms.layout import Layout, Field, Submit
+
 
 class ContactForm(forms.Form):
     name = forms.CharField(max_length=100, label="Your Name")
@@ -18,5 +19,9 @@ class ContactForm(forms.Form):
             Field('name', css_class='mb-3'),
             Field('email', css_class='mb-3'),
             Field('message', css_class='mb-4'),
-            Submit('submit', 'Send Message', css_class='btn btn-shop btn-lg w-100 rounded-0 text-uppercase')
+            Submit(
+                'submit',
+                'Send Message',
+                css_class='btn btn-shop btn-lg w-100 rounded-0 text-uppercase'
+            )
         )

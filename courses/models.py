@@ -9,22 +9,43 @@ class Course(models.Model):
     description = models.TextField()
     code = models.CharField(max_length=254, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    start_datetime = models.DateTimeField(null=True, blank=True, help_text="The date and time the course starts")
-    location = models.CharField(max_length=255, help_text="Physical location of the course", null=True, blank=True)
-    duration = models.DurationField(help_text="Duration in hours and minutes")
-    image = models.ImageField(upload_to='course_images/', null=True, blank=True)
-    attendee_qty = models.IntegerField(default=0)  # allowed attendees
+    rating = models.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        null=True,
+        blank=True
+    )
+    start_datetime = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="The date and time the course starts"
+    )
+    location = models.CharField(
+        max_length=255,
+        help_text="Physical location of the course",
+        null=True,
+        blank=True
+    )
+    duration = models.DurationField(
+        help_text="Duration in hours and minutes"
+    )
+    image = models.ImageField(
+        upload_to='course_images/',
+        null=True,
+        blank=True
+    )
+    attendee_qty = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     @property
     def spaces_left(self):
-        """Return number of available spots based on confirmed, paid enrollments"""
+        """
+        Return number of available spots based on paid enrollments
+        """
         valid_enrollments = self.enrollments.filter(is_paid=True)
         total_enrolled = sum(e.spots_booked for e in valid_enrollments)
         return max(0, self.attendee_qty - total_enrolled)
-
 
     def __str__(self):
         return self.title
@@ -40,11 +61,21 @@ class Enrollment(models.Model):
         (ENROLLED, 'Enrolled'),
         (COMPLETED, 'Completed'),
     ]
- 
-    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="enrollments")
+
+    course = models.ForeignKey(
+        Course,
+        on_delete=models.CASCADE,
+        related_name="enrollments"
+    )
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     spots_booked = models.PositiveIntegerField(default=1)
-    order = models.ForeignKey('checkout.Order', on_delete=models.SET_NULL, null=True, blank=True, related_name="enrollments")
+    order = models.ForeignKey(
+        'checkout.Order',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="enrollments"
+    )
     enrolled_at = models.DateTimeField(default=timezone.now)
     is_paid = models.BooleanField(default=False)
     confirmed = models.BooleanField(default=False)
@@ -55,7 +86,9 @@ class Enrollment(models.Model):
     )
 
     def send_course_email(self):
-        """Send course access email to user after payment confirmation"""
+        """
+        Send course access email to user after payment confirmation
+        """
         if self.is_paid and not self.confirmed:
             subject = f"Access to {self.course.title}"
             message = (
@@ -65,7 +98,8 @@ class Enrollment(models.Model):
                 f"Start Date - {self.course.start_datetime}\n\n"
                 f"Location - {self.course.location}\n\n"
                 f"Duration - {self.course.duration}\n\n"
-                f"Please confirm your attendance by email to courses@1up-growkits.com\n\n"
+                f"Please confirm your attendance by email to "
+                f"courses@1up-growkits.com\n\n"
                 f"Fungi Greetings - 1up GrowKit Team"
             )
             send_mail(
@@ -77,5 +111,7 @@ class Enrollment(models.Model):
             )
 
     def __str__(self):
-        return f"{self.user.username} - {self.course.title} ({self.spots_booked} spot{'s' if self.spots_booked > 1 else ''})"
-
+        return (
+            f"{self.user.username} - {self.course.title} "
+            f"({self.spots_booked} spot{'s' if self.spots_booked > 1 else ''})"
+        )

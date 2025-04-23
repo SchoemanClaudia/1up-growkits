@@ -1,5 +1,6 @@
 from profiles.models import UserProfile
 
+
 def save_bag_on_logout(request, user):
     """
     Store current session bag to user's profile
