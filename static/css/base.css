@@ -269,6 +269,17 @@ hr {
     border: .5px solid #f5b201;
 }
 
+#mc_embed_signup {
+    background: #000000;
+    clear: both;
+    width: 300px !important;
+    margin: 0 auto;
+  }
+
+#mc-embedded-subscribe {
+    background-color: #f5b201 !important;
+    }
+
 .footer-text-small {
     font-size: small;
     color: rgba(255, 255, 255, 0.5)
@@ -277,6 +288,11 @@ hr {
 .text-light {
     color: #ffffff !important;
     font-weight: lighter;
+}
+
+.external-link {
+    text-decoration: underline !important;
+    color: #ffffff;
 }
 
 .bg-dark {
