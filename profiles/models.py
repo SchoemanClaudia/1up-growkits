@@ -42,13 +42,17 @@ class UserProfile(models.Model):
     saved_bag = models.JSONField(null=True, blank=True, default=dict)
 
     def __str__(self):
+        """
+        Return username as the string representation.
+        """
         return self.user.username
 
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
-    Create or update the user profile
+    Create new user profile when user is created,
+    or save profile when existing user is updated.
     """
     if created:
         UserProfile.objects.create(user=instance)

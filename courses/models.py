@@ -41,7 +41,8 @@ class Course(models.Model):
     @property
     def spaces_left(self):
         """
-        Return number of available spots based on paid enrollments
+        Return number of available spots based on paid enrollments.
+        Only enrollments marked as paid reduce availability.
         """
         valid_enrollments = self.enrollments.filter(is_paid=True)
         total_enrolled = sum(e.spots_booked for e in valid_enrollments)
@@ -87,7 +88,8 @@ class Enrollment(models.Model):
 
     def send_course_email(self):
         """
-        Send course access email to user after payment confirmation
+        Send course details via email to user after payment confirmation.
+        Only send email if enrollment is paid and not yet confirmed.
         """
         if self.is_paid and not self.confirmed:
             subject = f"Access to {self.course.title}"

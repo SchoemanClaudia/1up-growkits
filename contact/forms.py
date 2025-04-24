@@ -9,6 +9,11 @@ class ContactForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea, label="Your Message")
 
     def __init__(self, *args, **kwargs):
+        """
+        Initialize contact form with Crispy Forms helper:
+        - Set form method and classes
+        - Apply layout styling with Bootstrap spacing
+        """
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_method = 'post'

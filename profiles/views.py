@@ -10,6 +10,11 @@ from checkout.models import Order
 
 @login_required
 def profile(request):
+    """
+    Display and handle updates to user profile.
+    Allows users to update their default delivery information
+    and display user's order history.
+    """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
@@ -44,6 +49,10 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """
+    Display past order info from the user profile page.
+    Allows users to view order history details.
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(

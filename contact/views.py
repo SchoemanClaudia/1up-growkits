@@ -7,6 +7,11 @@ from .models import ContactMessage
 
 
 def contact_view(request):
+    """
+    Handle contact form submission. On POST, validates the form,
+    save message to database, send notification email,
+    and redirect user to success message page.
+    """
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -39,4 +44,7 @@ def contact_view(request):
 
 
 def message_sent(request):
+    """
+    Display confirmation page after successful message submit
+    """
     return render(request, 'contact/message_sent.html')

@@ -15,6 +15,10 @@ class ProductForm(forms.ModelForm):
     )
 
     def __init__(self, *args, **kwargs):
+        """
+        Customize the form on initialization.
+        Apply consistent styling to fields with CSS classes.
+        """
         super().__init__(*args, **kwargs)
 
         # Apply the class to the fields

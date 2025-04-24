@@ -8,6 +8,10 @@ from courses.models import Course
 
 
 def bag_contents(request):
+    """
+    Return contents of bag for product/course data, subtotals, 
+    delivery costs for physical items only, and final total.
+    """
     bag_items = []
     total = 0
     product_count = 0

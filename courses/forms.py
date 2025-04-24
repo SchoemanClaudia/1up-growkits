@@ -4,6 +4,10 @@ from .models import Course
 
 
 class CourseForm(forms.ModelForm):
+    """
+    Form for creating and editing Course instances.
+    Uses a custom widget for image input.
+    """
     class Meta:
         model = Course
         fields = '__all__'
@@ -15,6 +19,9 @@ class CourseForm(forms.ModelForm):
     )
 
     def __init__(self, *args, **kwargs):
+        """
+        Add consistent styling to all fields using CSS classes
+        """
         super().__init__(*args, **kwargs)
 
         # Apply the class to the fields

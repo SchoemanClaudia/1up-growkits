@@ -55,6 +55,10 @@ class OrderLineItemForm(forms.ModelForm):
         fields = ('item', 'quantity')
 
     def __init__(self, *args, **kwargs):
+        """
+        Update item field to include both product and course items.
+        Sets the initial value if editing an existing instance.
+        """
         super().__init__(*args, **kwargs)
 
         # Combined dropdown options
@@ -76,6 +80,10 @@ class OrderLineItemForm(forms.ModelForm):
                 self.fields['item'].initial = f'course_{instance.course.id}'
 
     def save(self, commit=True):
+        """
+        Divide selected item into type and ID, clear previous fields,
+        assign correct related product/course before saving.
+        """
         item_type, item_id = self.cleaned_data['item'].split('_')
 
         # Clear fields before allocating item

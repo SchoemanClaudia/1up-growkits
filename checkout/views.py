@@ -22,6 +22,10 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    Store checkout data in payment intent metadata
+    to access it during webhook handling.
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -41,6 +45,13 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    Handle checkout process:
+    - Display order form
+    - Validate and save order
+    - Create line items for products and courses
+    - Initiate Stripe payment intent
+    """
     if not request.user.is_authenticated:
         messages.warning(
             request,
@@ -171,6 +182,13 @@ def checkout(request):
 
 
 def checkout_success(request, order_number):
+    """
+    Handle successful checkout:
+    - Update user profile if save_info = True
+    - Decrease stock or add course enrollment
+    - Send confirmation emails
+    - Clear session bag
+    """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 

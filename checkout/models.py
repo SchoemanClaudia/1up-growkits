@@ -152,6 +152,10 @@ class OrderLineItem(models.Model):
     )
 
     def save(self, *args, **kwargs):
+        """
+        Calculate the total for line item,
+        update the parent order totals.
+        """
         if self.product:
             price = self.product.price
         elif self.course:
@@ -164,6 +168,9 @@ class OrderLineItem(models.Model):
         self.order.update_total()
 
     def __str__(self):
+        """
+        Indicate whether it's a product or course.
+        """
         if self.product:
             return (
                 f'SKU {self.product.sku} on order {self.order.order_number}'

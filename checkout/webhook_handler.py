@@ -16,7 +16,7 @@ class StripeWH_Handler:
     """
     Handle Stripe webhook
     """
-
+    
     def __init__(self, request):
         self.request = request
 

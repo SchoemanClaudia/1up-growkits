@@ -27,7 +27,8 @@ class Product(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Auto-update a low stock flag to user
+        Auto update low stock indicator,
+        based on current stock quantity.
         """
         if self.stock_quantity == 0:
             # mark if out of stock
