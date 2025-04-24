@@ -252,47 +252,91 @@ a.text-info:hover {
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
-    margin-top: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    margin-bottom: 5rem;
+}
+
+footer .form-control {
+    max-width: 250px;
+    margin: 0;
 }
 
 footer a {
     text-decoration: none !important;
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #f5b201 !important;
+    text-decoration: underline;
+}
+
+.footer-text-small {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 2rem;
+}
+
+.footer-left-content p:first-of-type {
+    margin-bottom: 2rem;
 }
 
 footer i:hover {
     color: #f5b201;
 }
 
+footer a.external-link:hover {
+    color: #f5b201 !important;
+    text-decoration: underline !important;
+}
+
 hr {
     border: .5px solid #f5b201;
 }
 
+#mc_embed_signup .form-group,
+#mc_embed_signup .mc-field-group {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#mc_embed_signup .form-control {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 #mc_embed_signup {
-    background: #000000;
-    clear: both;
-    width: 300px !important;
-    margin: 0 auto;
-  }
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
+}
 
-#mc-embedded-subscribe {
-    background-color: #f5b201 !important;
-    }
+#mc_embed_signup button {
+    display: block;
+    margin: 0;
+}
 
-.footer-text-small {
-    font-size: small;
-    color: rgba(255, 255, 255, 0.5)
+.btn-subscribe {
+    background-color: #000000;
+    color: #ffffff;
+    border: solid 2px #f5b201;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-subscribe:hover {
+    background: #f5b201;
+    color: #000000;
+    text-decoration: none;
 }
 
 .text-light {
     color: #ffffff !important;
     font-weight: lighter;
-}
-
-.external-link {
-    text-decoration: underline !important;
-    color: #ffffff;
 }
 
 .bg-dark {
@@ -676,6 +720,10 @@ a.text-info:hover {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    footer .form-control {
+        width: 100%;
     }
   }
   

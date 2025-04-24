@@ -162,61 +162,68 @@
   <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top of page">↑</button>
 
   <!-- Footer -->
-  <footer class="bg-dark text-light text-center py-3" role="contentinfo">
-    <p>
-      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-light"
-        aria-label="Share your grow progress on Facebook">Share your grow progress &nbsp;
-        <i class="fa-brands fa-facebook"></i> &nbsp; 1upGrowKits</a>
-    </p>
-
-    <!-- Mailchimp signup form -->
-    <div id="mc_embed_shell">
-      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-      <div id="mc_embed_signup">
+<footer class="footer bg-dark text-light py-4" role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <!-- Left Aligned -->
+      <div class="col-md-6 text-md-left text-center mb-4 mb-md-0 mt-md-3">
+        <p class="mb-4">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-light">
+            Share your grow progress <i class="fa-brands fa-facebook ml-2"></i> 1upGrowKits
+          </a>
+        </p>
+        <p class="mb-4">
+          Curious about the health perks of mushrooms? Check out
+          <a href="https://www.fungi.com/blogs/articles" target="_blank" rel="noopener noreferrer"
+            aria-label="Visit Fungi Perfecti for mushroom growing articles" class="text-light external-link">
+            <strong>Fungi Perfecti</strong>
+          </a> for expert tips and insights.
+        </p>
         <hr>
-        <form
-          action="https://herokuapp.us13.list-manage.com/subscribe/post?u=a8b9b1efbfefff2ad29d2d219&amp;id=5815c09d10&amp;f_id=00dfc3e1f0"
-          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-          target="_blank">
-          <div id="mc_embed_signup_scroll">
-            <h3>Subscribe</h3>
-            <p class="text-light">Get exclusive offers and discount codes by subscribing to our monthly newsletter</p>
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
-                  class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email"
-                id="mce-EMAIL" required="" value=""></div>
-            <div id="mce-responses" class="clear foot">
-              <div class="response" id="mce-error-response" style="display: none;"></div>
-              <div class="response" id="mce-success-response" style="display: none;"></div>
-            </div>
-            <div aria-hidden="true" style="position: absolute; left: -5000px;">
-              /* real people should not fill this in and expect good things - do not remove this or risk form bot
-              signups */
-              <input type="text" name="b_a8b9b1efbfefff2ad29d2d219_5815c09d10" tabindex="-1" value="">
-            </div>
-            <div class="optionalParent">
-              <div class="clear foot">
-                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+        <p class="footer-text-small mb-4">
+          This website has been created for education purposes &nbsp; | &nbsp; 2025 Code Institute PP5
+        </p>
+      </div>
+
+      <!-- Right Aligned -->
+      <div class="col-md-6 text-md-right text-center">
+        <div class="d-flex justify-content-md-end justify-content-center">
+          <div id="mc_embed_signup">
+
+            <form
+              action="https://herokuapp.us13.list-manage.com/subscribe/post?u=a8b9b1efbfefff2ad29d2d219&amp;id=5815c09d10&amp;f_id=00dfc3e1f0"
+              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+              target="_blank" novalidate>
+              <h5 class="mb-2">Sign up here:</h5>
+              <p class="small text-light mb-3">
+                Get exclusive offers by subscribing to our newsletter
+              </p>
+              <div class="mc-field-group form-group">
+                <input type="email" name="EMAIL" class="form-control mb-3" placeholder="Email address" required>
               </div>
-            </div>
+
+              <!-- Response messages -->
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none;"></div>
+                <div class="response" id="mce-success-response" style="display:none;"></div>
+              </div>
+
+              <div aria-hidden="true" style="position:absolute; left:-5000px;">
+                <input type="text" name="b_a8b9b1efbfefff2ad29d2d219_5815c09d10" tabindex="-1" value="">
+              </div>
+              <div class="form-group">
+                <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-sm btn-subscribe">
+                  Subscribe
+                </button>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     </div>
+  </div>
+</footer>
 
-    <p>
-      Curious about the health perks of mushrooms? Check out
-      <a href="https://www.fungi.com/blogs/articles" target="_blank" rel="noopener noreferrer"
-        aria-label="Visit Fungi Perfecti for mushroom growing articles" class="text-light external-link">
-        <strong>Fungi Perfecti</strong>
-      </a> for expert tips and insights.
-    </p>
-
-    <p class="footer-text-small">
-      2025 Code Institute PP5 &nbsp; | &nbsp; This website has been created for
-      education purposes only
-    </p>
-  </footer>
 
   {% block postloadjs %}
   <script type="text/javascript">
