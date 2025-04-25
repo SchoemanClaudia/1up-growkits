@@ -11,7 +11,7 @@ In a world where people crave organic, homegrown food, our platform offers a sea
 Let’s grow together!
 
 
-Live Link: 
+Live Link: https://shop-1up-growkits-e6669e001bb1.herokuapp.com/
 
 ![Screen Mock-up](static/documentation/readme/responsive-mockup.png)
 
@@ -21,12 +21,14 @@ Live Link:
 1up GrowKits is an e-commerce platform for purchasing mushroom grow kits and educational courses on mushroom cultivation. The website offers a seamless shopping experience, with secure Stripe payments, AWS-backed media hosting, and a scalable e-commerce system. Customers can also subscribe to the Mailchimp newsletter for updates and promotions.
 
 - [x] A modern and user-friendly e-commerce store.
+- [x] Featured products visible on landing page with links to products.
 - [x] A dedicated course booking system for scheduled training.
 - [x] Secure payment processing via Stripe.
 - [x] Admin product management with CRUD functionality.
-- [x] AWS S3 for media storage (product images).
+- [x] AWS S3 for assets & media storage (product & course images).
 - [x] Newsletter subscription integration with Mailchimp.
-- [x] Facebook social links in the header and footer.
+- [x] Facebook link to easily navigate social page.
+- [x] Extra external site link for SEO optimisation.
 
 
 ## Web Marketing Strategy
@@ -155,6 +157,22 @@ Targeted keywords to improve organic traffic and reach the right audience:
   - spring indoor growing kits
 
 
+## Marketing - Facebook Social
+
+**Target audience**: Urban hobbyists, health-conscious individuals, & sustainability minded consumers in Ireland & beyond.
+
+**Brand voice**: Friendly, informative, slightly playful — aligned with the ethos of learning & growing with nature.
+
+The Facebook page for **1up GrowKits** serves as a key channel for community building, product education, & brand awareness. The content strategy is focused on:
+
+- **Educational Posts**: Informative & engaging content about mushrooms, such as posts explaining what *mycelium* is, or showcasing the benefits of local sourcing (e.g., "Gold Goodness" with oyster mushrooms).
+- **Visual Storytelling**: High-quality photos of grow kits & harvested mushrooms highlight the product lifecycle, helping customers visualize success.
+- **Community Engagement**: Posts are designed to invite comments & shares. Local sourcing stories & fun mushroom facts create conversation.
+- **Call-to-Actions**: "Learn More" & "Shop Now" buttons direct traffic to the website to drive conversions.
+
+![Facebook Mock-up](static/documentation/readme/ci-facebook-mockup.webp)
+
+
 ## Features
 
 __Existing features:__
@@ -166,7 +184,7 @@ __Existing features:__
   - **Shopping Cart & Checkout:** Add products, update quantity, and proceed to payment.
   - **User Authentication:** Secure login & registration via Django AllAuth.
   - **Order Tracking:** View order history and purchase details.
-  - **Newsletter Subscription:** Subscribe to Mailchimp for promotions.
+  - **Newsletter Subscription:** Subscribe to Newsletter via embedded form for promotions.
 
 
 - **Admin Features:**
@@ -313,10 +331,13 @@ Please see [TESTING.md](TESTING.md) document.
 ## UX/UI Wireframing
 
 - **Key wireframes include:**
-  - Landing Page – Featured products & promotions.
+  - Landing Page – Shop products access on hero & featured product cards.
   - Product Page – Individual product details & "Add to Cart" button.
+  - Grow Guide Page - A step-by-step guide to growing mushrooms with grow kit.
+  - Course Booking Page – Available courses with dates and registration & "Book Spot" button.
+  - Contact Page - Form field to send messages to admin via email & admin panel.
   - Cart & Checkout – Item list, total price, and Stripe integration.
-  - Course Booking Page – Available courses with dates and registration.
+  - Profile Page – Manage user delivery details & previous orders visible.
   - Admin Panel – CRUD functionality for product & order management.
 
 ### Wireframe
@@ -438,6 +459,13 @@ __Application Structure__
 - Images downloaded under licensed user
   - Adobe Stock: https://stock.adobe.com/
 
+- Free images downloaded 
+  - Pexels: https://www.pexels.com/search/mushroom%20grow%20kit/
+
+- Grow kit box products orignal
+  - Northspore: https://northspore.com/
+  - Version with 1up GrowKit logo - edited with Adobe Photoshop
+
 - Turning FontAwesome icon into sized favicons
   - Favicon: https://favicon.io/
 
@@ -450,7 +478,13 @@ __Application Structure__
   - Reduce Images: https://www.reduceimages.com/
 
 - Assisted problem solving sites:
-  - 
+  - [Django Official Documentation](https://docs.djangoproject.com/en/stable/)
+  - [Simple is Better Than Complex](https://simpleisbetterthancomplex.com/)
+  - [Django Email Settings Docs](https://docs.djangoproject.com/en/stable/topics/email/)
+  - [Django Allauth GitHub Repo](https://github.com/pennersr/django-allauth)
+  - [Django Allauth Documentation](https://django-allauth.readthedocs.io/en/latest/)
+  - [Stack Overflow](https://stackoverflow.com/questions/tagged/django)
+  - [robots.txt Guide](https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt)
 
 
 ## Django Project Setup
