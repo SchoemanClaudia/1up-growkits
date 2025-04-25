@@ -157,6 +157,25 @@ Targeted keywords to improve organic traffic and reach the right audience:
   - spring indoor growing kits
 
 
+## Marketing - Mailchimp Newsletter
+
+We use **Mailchimp** to manage our newsletter campaigns and mailing lists, helping us stay connected with customers and nurture leads. The newsletter is an essential tool in our ongoing marketing efforts, used to inform, engage, and drive repeat purchases.
+
+__Setup__
+
+- **Audience Segmentation**: Subscribers are tagged based on interests (e.g., gourmet mushrooms, grow kits, courses) to enable tailored messaging.
+- **Automated Welcome Series**: New subscribers receive a welcome email introducing the brand, core products, and a discount incentive.
+- **Monthly Newsletter**: Includes educational content (e.g., mushroom facts, growing tips), product highlights, course updates, and seasonal promotions.
+- **Cart Abandonment Emails**: Auto remind users of unpurchased items and recover potential lost sales.
+- **After Sales Follow Up**: Auto emails to encourage reviews, offer helpful grow tips, and upsell relevant accessories.
+
+__Form Integration__
+
+- Mailchimp API is connected to the Django backend to sync users and trigger automation events.
+- Forms on footer of site feeds directly into the Mailchimp 1up GrowKit audience list.
+- GDPR-compliant opt-in mechanisms are in place to ensure email consent and unsubscribe functionality within emails recieved in inbox upon subscription.
+
+
 ## Marketing - Facebook Social
 
 **Target audience**: Urban hobbyists, health-conscious individuals, & sustainability minded consumers in Ireland & beyond.
@@ -294,12 +313,12 @@ User stories were used to keep track of the MOSCOW framework and project MVP as 
 ![Agile](static/documentation/readme/agile.webp)
 
 ### EPICS:
-- [ ] **EPIC 1:** User Authentication & Account Management
-- [ ] **EPIC 2:** Product Listings & E-commerce
-- [ ] **EPIC 3:** Checkout & Payment System
-- [ ] **EPIC 4:** Booking a Course Feature
-- [ ] **EPIC 5:** Subscription & Email Marketing
-- [ ] **EPIC 6:** UI / UX Enhancements & Social Links
+- [x] **EPIC 1:** User Authentication & Account Management
+- [x] **EPIC 2:** Product Listings & E-commerce
+- [x] **EPIC 3:** Checkout & Payment System
+- [x] **EPIC 4:** Booking a Course Feature
+- [x] **EPIC 5:** Subscription & Email Marketing
+- [x] **EPIC 6:** UI / UX Enhancements & Social Links
 
 | **USER STORY** | **DETAILS** | **ACCEPTANCE CRITERIA** |
 | -------------- | ----------- | ----------------------- |
@@ -431,18 +450,92 @@ A detailed first look at ERD & database models below:
 __Application Structure__
 
 - **Frontend:**
-  - HTML5/CSS3: Provides structure and styling for reviews and user interactions.
-  - Bootstrap: Responsive design for easy navigation on various screen sizes.
-  - JavaScript: Enhances interactivity (dynamically toggling comments visibility).
+  - **HTML** – For the main site content and structure
+  - **CSS** – For styling and layout of the site
+  - **JavaScript** – For user interaction and dynamic behavior
+  - **Bootstrap** – CSS framework for responsiveness and pre-built components
+  - **Crispy Forms** – Formats Django forms with Bootstrap styles
 
 - **Backend:**
-  - Django Framework (Python): Handles routing, user authentication etc.
-  - Stripe API – Secure payment processing.
-  - PostgreSQL – Relational database.
+  - **Python** – Core backend programming language
+  - **Django** – High-level Python web framework
+  - **PostgreSQL** – Relational database management system
+  - **psycopg2** – PostgreSQL adapter for Python
+  - **Stripe** – Secure payment gateway for products and services
+  - **Django Allauth** – Handles user authentication and registration
+  - **Pillow** – Image processing for handling product/course images
+
+- **Development Tools:**
+  - **Git** – Version control system (`git add`, `git commit`, `git push`)
+  - **GitHub** – Remote code repository and collaboration platform
+  - **VS Code** – Integrated development environment (IDE)
+
+- **Hosting & Deployment:**
+  - **Heroku** – Cloud platform for app hosting and deployment
+  - **AWS S3** – Cloud storage for static and media files
+  - **Gunicorn** – WSGI HTTP server for running Django apps in production
+
 
 ### Libraries & Frameworks
 
-- 
+The following libraries and frameworks were used to enhance functionality, improve user experience, and support deployment:
+
+- **Backend & Django:**
+  - `Django` – Core web framework
+  - `django-allauth` – User authentication, registration, and social login
+  - `django-crispy-forms` – Bootstrap-styled form rendering
+  - `django-storages` – AWS S3 integration for static/media file storage
+  - `dj-database-url` – Simplifies database configuration for Heroku
+  - `whitenoise` – Serves static files in production
+  - `gunicorn` – WSGI server for deployment
+  - `pillow` – Image handling for uploaded content
+
+- **Frontend:**
+  - `Bootstrap` (via CDN) – Responsive front-end framework
+  - `jQuery` (via CDN) – DOM manipulation and cart interactivity
+
+- **Payment Integration:**
+  - `stripe` – Secure online payments
+  - `PyJWT` – Token-based authentication (used by Stripe and others)
+
+- **AWS Integration:**
+  - `boto3` – AWS SDK for Python
+  - `botocore` – Dependency of boto3
+  - `s3transfer` – Helper for file transfer management in S3
+
+- **Database:**
+  - `psycopg2-binary` – PostgreSQL driver
+  - `sqlparse` – SQL formatting for Django migrations
+
+- **Security & Email:**
+  - `cryptography`, `cffi`, `pycparser` – Secure cryptographic operations
+  - `requests`, `requests-oauthlib` – Secure API/OAuth integrations
+  - `python3-openid`, `oauthlib` – Social login support
+  - `defusedxml` – XML security
+
+- **Utilities & Linting:**
+  - `flake8`, `pyflakes`, `pycodestyle`, `mccabe` – Code quality checks
+  - `setuptools`, `typing_extensions` – Development utilities and type hinting support
+
+
+### Sitemap
+I used XML-Sitemaps to generate a sitemap.xml file. This was generated using my deployed site URL: https://shop-1up-growkits-e6669e001bb1.herokuapp.com/
+
+After it finished crawling the entire site, it created a sitemap.xml which I've downloaded and included in the repository.
+
+### Robots
+I've created the robots.txt file at the root-level. Inside, I've included the default settings:
+
+`User-agent: *`
+`Disallow:`
+`Sitemap: https://shop-1up-growkits-e6669e001bb1.herokuapp.com/sitemap.xml`
+
+- **Further links for future implementation::**
+  - [Google search console](https://search.google.com/search-console/welcome)
+  - [Creating and submitting a sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
+  - [Managing your sitemaps and using sitemaps reports](https://support.google.com/webmasters/answer/7451001)
+  - [Testing the robots.txt file](https://support.google.com/webmasters/answer/6062598)
+
 
 ### Other Sites
 
@@ -462,9 +555,13 @@ __Application Structure__
 - Free images downloaded 
   - Pexels: https://www.pexels.com/search/mushroom%20grow%20kit/
 
-- Grow kit box products orignal
+- Grow kit box products original
   - Northspore: https://northspore.com/
   - Version with 1up GrowKit logo - edited with Adobe Photoshop
+
+- Facebook Mockup Template 
+  - CI Supplied template: https://code-institute-org.github.io/5P-Assessments-Handbook/files/Facebook_Mockups.zip
+  - Version with 1up GrowKit details - edited with Adobe Photoshop
 
 - Turning FontAwesome icon into sized favicons
   - Favicon: https://favicon.io/
@@ -488,6 +585,106 @@ __Application Structure__
 
 
 ## Django Project Setup
+
+##### (1) Install Django and Supporting Libraries
+```bash
+pip3 install 'django<4' gunicorn
+pip3 install dj_database_url psycopg2
+```
+
+Once the relevant dependencies are installed, generate a `requirements.txt` file to track them:
+
+```bash
+pip3 freeze --local > requirements.txt
+```
+
+##### (2) Create Your Django Project and App
+```bash
+django-admin startproject growkits .
+python3 manage.py startapp home
+```
+
+Add your new app to `INSTALLED_APPS` in `settings.py`:
+
+```python
+'home',
+```
+
+##### (3) Create a Superuser
+To enable admin access:
+
+```bash
+python3 manage.py createsuperuser
+```
+
+##### (4) Run Migrations
+```bash
+python3 manage.py migrate
+```
+
+##### (5) Set Up Environment Variables
+Create an `env.py` file to store sensitive information like `DATABASE_URL` and `SECRET_KEY`.
+
+```python
+import os
+
+os.environ["DATABASE_URL"] = "<copiedURLfromPostgres/SQLite>"
+os.environ["SECRET_KEY"] = "my_super^secret@key"
+```
+
+Add `env.py` to your `.gitignore` to keep it out of version control.
+##### (6) Update `settings.py` to Use Environment Variables
+
+```python
+import os
+import dj_database_url
+
+if os.path.exists("env.py"):
+    import env
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+```
+
+##### (7) Set Up the Templates Directory
+In `settings.py`, add:
+
+```python
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+```
+
+Update the `DIRS` section of `TEMPLATES`:
+
+```python
+'DIRS': [
+    os.path.join(BASE_DIR, 'templates'),
+    os.path.join(BASE_DIR, 'templates', 'allauth'),
+],
+```
+
+##### (8) Create Media, Static, and Templates Directories
+Inside the top-level project directory (same level as `manage.py`), create:
+
+- `media/`
+- `static/`
+- `templates/`
+
+##### (9) Prepare for Heroku Deployment
+Create a `Procfile` in the root of your project and add:
+
+```
+web: gunicorn growkits.wsgi
+```
+
+##### (10) Finalize Setup
+Make any necessary migrations:
+
+```bash
+python3 manage.py migrate
+```
 
 
 ## Deployment
