@@ -17,18 +17,18 @@ Testing file for 1up GrowKits [README.md](README.md).
 - [x] Manage user accounts
 - [x] Browse products & courses
 - [x] Detailed product & course view
-- [] Add featured items
+- [x] Add featured items
 - [x] Add to shopping cart
 - [x] Update items in cart
 - [x] Secure card payment checkout
 - [x] Order summary display
 - [x] Order management
-- [] Successful order email
+- [x] Successful order email
 - [x] Product & course management
-- [] Auto low-stock warning
+- [x] Auto low-stock warning
 - [x] Booking a course
-- [] Social media profile
-- [] Optimize with Google SEO
+- [x] Social media profile
+- [x] Optimize with Google SEO
 
 
 ## Validation
@@ -167,17 +167,36 @@ Manual testing by checking the following:
 
 | **TEST INPUT**| **CORRECT OUTCOME** | **MEET REQUIREMENTS** |
 | ------------- |:-------------------:|-----------------------|
-| **Navbar Logo and Icons** | PASS | Logo takes user to home page, nav bar links take user to intended location, highlight mouse over for better accessibility. Nav bar toggle opens and closes in mobile view | 
-| **Login Link** | PASS | Opens Login page |
-| **Log into Account** | PASS | Username & password fields. Fields must be exactly as registered originally in either lowercase/uppercase or mixture. Empty fields deliver prompt to user, email field demands '@' symbols. Login is successful, pop up below navbar message to confirm you are logged in.|
-| **Register Link** | PASS | Opens Register page |
-| **Register Account** | PASS | Username, email(optional) and password fields. Empty fields deliver prompt to user, email field demands '@' symbols, username/password too similar, password too short, username already in use. Account is registered, message to confirm successful sign up |
-| **Home Page Shop Now** | PASS | Shop now button directs to the correct products view page |
-| **Grow Kits Page Link** | PASS | Grow Kits page loaded |
-| **Grow Guide Page Link** | PASS | Grow Guide page loaded |
-| **Courses Page Link** | PASS | Courses page loaded |
-| **Logout** | PASS | Redirects to log out confirmation page, and user is logged out message confirmed with display as pop up below navbar. |
-| **Social Links** | PASS | External link open in a new windows to correct sites |
+**Navbar Logo and Icons** | PASS | Logo takes user to home page, nav bar links (Home, Grow Kits, Grow Guide, Courses) work, hover effect present. Mobile menu opens/closes and links work.
+**Login Link** | PASS | Clicking 'Login' in nav opens the Login page correctly.
+**Log into Account** | PASS | Username and password fields present. Empty fields trigger validation. Correct login shows confirmation pop-up below navbar.
+**Register Link** | PASS | Clicking 'Register' opens the Register page correctly.
+**Register Account** | PASS | Username, email (optional), and password fields. Validation for empty fields, invalid email format, password length, etc. Successful registration shows confirmation.
+**Home Page Shop Now** | PASS | 'Shop Now' button directs user to the Products page successfully.
+**Mushroom Kits Page Link** | PASS | Grow Kits page loads correctly with product listings.
+**Grow Guide Page Link** | PASS | Grow Guide page loads properly with educational content.
+**Courses Page Link** | PASS | Courses page loads properly with course offerings.
+**Logout** | PASS | Clicking 'Logout' redirects to logout confirmation page and displays logout success message under navbar.
+**Social Links** | PASS | Footer social links open in new tabs and direct to correct sites.
+**Add Product to Bag** | PASS | Product detail page allows quantity selection and 'Add to Bag' updates bag correctly with success message.
+**Add Course to Bag** | PASS | Course detail page allows quantity (spots) selection and 'Add to Bag' updates bag correctly with success message.
+**View Bag Page** | PASS | Clicking Bag icon or 'View Bag' link opens bag page showing all items, images, quantities, subtotals, and totals accurately.
+**Update Quantity in Bag** | PASS | Quantity field can be updated directly and recalculates totals live.
+**Remove Item from Bag** | PASS | Clicking remove (trash) icon deletes item from bag and updates totals with success message.
+**Proceed to Checkout** | PASS | Bag 'Secure Checkout' button directs correctly to checkout page with bag summary displayed.
+**Checkout Form Validation** | PASS | Empty required fields show validation errors. Email must be valid format. Fields like name, address, and postcode are required before submission.
+**Payment Card Input** | PASS | Stripe card input fields load correctly (card number, expiry, CVC). Only valid card formats allowed.
+**Place Order with Valid Card** | PASS | Entering valid test card (e.g., Stripe test card 4242 4242 4242 4242) and correct billing info allows checkout to complete, shows success page, and sends confirmation email.
+**Place Order with Invalid Card** | PASS | Using invalid test card numbers causes Stripe to reject payment and show error without submitting form.
+**Order Confirmation Page** | PASS | After successful checkout, order confirmation page displays order number, email, and bag summary clearly.
+**Order History in Profile** | PASS | Logged-in users can view past orders correctly via profile page ('Order History'), showing order number, date, items, and total.
+**Checkout Save Info Toggle** | PASS | Toggling "Save this delivery information to your profile" saves user delivery info for future purchases (if logged in).
+**Save Cart on Logout and Restore on Login** | PASS | Bag contents are saved automatically to the user's profile if they logout with items still in bag. After re-logging in, the saved bag is restored exactly as left (products, courses, quantities all correct).
+**Courses Don't Charge Delivery (Standalone / Mixed Cart)** | PASS | Courses added alone in bag = no delivery fee charged. Courses added with products = only the product(s) calculate delivery fee; courses still do not add delivery cost.
+**Contact Form Submission** | PASS | Contact form validates required fields (name, email, message). Empty fields cause validation errors. Successful submission shows confirmation message.
+**Footer Subscribe Form** | PASS | Footer email subscription form validates email format. Empty or invalid email triggers error. Successful valid email submission shows confirmation.
+**Stock/Course Adjustment After Checkout** | PASS | After successful checkout, purchased products & courses have their stock & spots available correctly reduced by the purchased amount. No over-selling possible.
+**Enrollment Creation for Courses** | PASS | After successful checkout, user is automatically enrolled into purchased course(s) with correct number of spots. Enrollment records appear in database.
 
 
 ## Bugs Encountered 
@@ -190,7 +209,8 @@ The below are bugs that I spent more time investigating, most of these encounter
 | **2.** | Admin OrderLineItem user error | YES | Prevent deleting of line items from the order admin panel, by hiding extra item panels until needed. | [Django Docs](https://docs.djangoproject.com/en/5.1/ref/contrib/admin/) | 44e8f9f |
 | **3.**| Delete message prompt in OrderAdmin | YES | Re-activating delete function to modify orders, but prevent deleting accidentally by adding a delete message prompt to admin. Deletion of order items to be confirmed before action proceeds when saved. | [Stack Overflow](https://stackoverflow.com/questions/4661074/delete-confirmation/) | a0bd3de |
 | **4.** | Admin OrderLineItem confusing UI logic | YES | Modify product & course fields from side-by-side layout, to a single dropdown field labeled “Item” | [Stack Overflow](https://stackoverflow.com/questions/18265023/self-instance-in-django-modelform/) | e5cb149 |
-| **5.** | Course charging delivery cost | NO | xx | xx | xx |
+| **5.** | Course charging delivery cost | YES | The bag was calculating delivery based on the entire total, which included courses. Modifying delivery logic to be consistent between checkout display & order save logic allows the courses to not factor a delivery cost and still allows physical products within mixed orders calculate delivery as expected. | [Stack Overflow](https://stackoverflow.com/questions/46007047/how-do-you-handle-shipping-rates-when-cart-has-both-physical-and-digital-items) | 808b273 |
+
 
 ### Unfixed Bugs
 
