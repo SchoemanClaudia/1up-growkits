@@ -371,15 +371,26 @@ Please see [TESTING.md](TESTING.md) document.
 
 __User Feedback__
 
-Site was deployed after all styling and error handling was in place. An up-to-date URL was sent to a small group of users to gather feedback on navigation, layout structure, and potential issues they might encounter as while working through the site. 
-- This feedback was actioned and added for better user experience.
+Site was deployed after all styling & error handling was in place. An up-to-date URL was sent to a small group of users to gather feedback on navigation, layout structure, & potential issues they might encounter as while working through the site. 
+- This feedback was actioned & added for better user experience.
 
   - Users were asked to:
-    - [x] xxxx
+  - [x] Navigate from homepage to product & course pages
+  - [x] Add items to the shopping bag & proceed through checkout
+  - [x] Confirm receipt of real emails for order & course enrollment
+  - [x] Test mobile responsiveness & layout on smaller screens
+  - [x] Send a message via contact form, confirm success page
+  - [x] Try subscribing to the newsletter
+  - [x] Report any broken links or unexpected errors
 
 
 | **FEEDBACK** | **ACTION** | **OUTCOME** |
 | ------------ | ---------- | ----------- |
+| (1) Mobile view of the shopping bag was cluttered | Restructured layout for smaller screens | Clearer mobile interface, with product/course & total info easier to read |
+| (2) Button styling inconsistent between bag & checkout | Unified button classes & layout across pages | Improved visual consistency & professionalism |
+| (3) Course details page missing availability indicator | Added "Spaces Left" | Users better informed before adding to bag |
+| (4) Product images were too large on mobile | Adjusted image sizing with responsive CSS rules | Improved load times & visual clarity on smaller screens |
+| (5) Users overlooked course start dates & durations | Enhanced course cards with date, time, & duration info | Improved clarity, leading to more informed bookings |
 
 
 ## Solution Model
@@ -519,7 +530,8 @@ The following libraries and frameworks were used to enhance functionality, impro
 
 
 ### Sitemap
-I used XML-Sitemaps to generate a sitemap.xml file. This was generated using my deployed site URL: https://shop-1up-growkits-e6669e001bb1.herokuapp.com/
+I used XML-Sitemaps to generate a sitemap.xml file. This was generated using my deployed site URL:
+  - https://shop-1up-growkits-e6669e001bb1.herokuapp.com/
 
 After it finished crawling the entire site, it created a sitemap.xml which I've downloaded and included in the repository.
 
@@ -531,9 +543,9 @@ I've created the robots.txt file at the root-level. Inside, I've included the de
 `Sitemap: https://shop-1up-growkits-e6669e001bb1.herokuapp.com/sitemap.xml`
 
 - **Further links for future implementation::**
-  - [Google search console](https://search.google.com/search-console/welcome)
-  - [Creating and submitting a sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
   - [Managing your sitemaps and using sitemaps reports](https://support.google.com/webmasters/answer/7451001)
+  - [Creating and submitting a sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
+  - [Google search console](https://search.google.com/search-console/welcome)
   - [Testing the robots.txt file](https://support.google.com/webmasters/answer/6062598)
 
 
@@ -576,10 +588,10 @@ I've created the robots.txt file at the root-level. Inside, I've included the de
 
 - Assisted problem solving sites:
   - [Django Official Documentation](https://docs.djangoproject.com/en/stable/)
+  - [Django Allauth Documentation](https://django-allauth.readthedocs.io/en/latest/)
   - [Simple is Better Than Complex](https://simpleisbetterthancomplex.com/)
   - [Django Email Settings Docs](https://docs.djangoproject.com/en/stable/topics/email/)
   - [Django Allauth GitHub Repo](https://github.com/pennersr/django-allauth)
-  - [Django Allauth Documentation](https://django-allauth.readthedocs.io/en/latest/)
   - [Stack Overflow](https://stackoverflow.com/questions/tagged/django)
   - [robots.txt Guide](https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt)
 
@@ -859,5 +871,50 @@ git clone https://github.com/your-username/repo-name.git
 
 ## Credits 
 
-- Stock Images (licensed):
-  - 
+- Boutique Ado Walkthrough Project:
+  - Various code sections throughout the site were adapted from the Code Institute's Boutique Ado walkthrough project as a basis to build 1up GrowKits.
+
+- Product images & info within site:
+  - [Northspore](https://northspore.com/)
+
+- Course images & info used within site:
+  - [Siolta Chroi](https://sioltachroi.ie/product/mushroomcultivationworkshop/)
+  - [irish Seed Savers](https://irishseedsavers.ie/product/mushroom-foraging-saturday-11th-october/)
+  - [Hips & Haws Wildcrafts](https://hipsandhaws.com/medicinal-mushrooms-workshop/)
+  - [Black Mountains College](https://blackmountainscollege.uk/short-courses/introduction-to-mushroom-cultivation-short-course/) 
+  - [The Herbal Academy](https://theherbalacademy.com/product/the-mushroom-course/?srsltid=AfmBOor4pwi7dPUG66oYasLRtTEr99ij-YvRp16W8Whl9_6Hhf-WtWhS) 
+  - [GroCycle](https://grocycle.com/mushroom-cultivation-courses/) 
+  - [Pexels](https://www.pexels.com/) 
+  - [Unsplash](https://unsplash.com/)
+
+- Logo Mushroom Icon:
+  - [Freepik](https://www.freepik.com/)
+
+- Adobe Stock Images (licensed): 
+  - https://stock.adobe.com/ie/images/indoor-mushroom-grow-kit-with-fresh-pink-oyster-mushrooms-on-a-kitchen-table-concept-home-gardening-sustainable-living-diy-culinary-modern-trendy-healthy-food/873123243?prev_url=detail
+
+- Used throughout the site to compress and optimize images for faster loading times and improved performance:
+  - [TinyPNG](https://tinypng.com/)
+
+- Helped reinforce concepts used to build modern, responsive Flexbox-based layouts across the site:
+  - [Flexbox Froggy](https://flexboxfroggy.com/)
+
+- Resources used for resolving specific Django issues:
+  -  [Code Institute Full Stack Development course materials](https://codeinstitute.net/global/full-stack-software-development-diploma/) 
+  - [Simple is Better Than Complex](https://simpleisbetterthancomplex.com/)
+  - [Django documentation](https://www.djangoproject.com/)
+  - [Crispy forms docs](https://django-crispy-forms.readthedocs.io/en/latest/)
+  - [Bootstrap docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+  - [Stack overflow](https://stackoverflow.com/)
+  - [Slack](https://slack.com/intl/en-ie/)
+
+
+## Acknowledgements
+
+- A huge thanks to my husband for his continued support during this project & the year of getting through the Diploma.
+
+- Tutor Assist for the support when debugging became overwhelming.
+
+- My mentor & facilitator for the support and knowledge shared.
+
+- Slack channel peers for their feedback and support with errors.
