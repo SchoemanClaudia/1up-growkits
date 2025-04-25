@@ -211,6 +211,7 @@ The Facebook page for **1up GrowKits** serves as a key channel for community bui
   A full-width image featuring gourmet mushrooms with a CTA button 'Shop Now' to immediately engage users & drive traffic to the product page.
 
 ![Landing Page](static/documentation/readme/landing-page.webp)
+![Landing Mobile](static/documentation/readme/landing-mobile.webp)
 
 - **Navigation Bar:**  
   A navbar gives users quick access to key areas of the site including:
@@ -222,12 +223,17 @@ The Facebook page for **1up GrowKits** serves as a key channel for community bui
   - Profile/Login
   - Manage Products/Courses (Admin Only)
 
-  ![Nav Desktop](static/documentation/readme/nav-desktop.webp)  |  ![Nav Mobile](static/documentation/readme/nav-mobile.webp)  |  ![Nav Dropdown](static/documentation/readme/nav-dropdown.webp)
+![Nav Desktop](static/documentation/readme/nav-desktop.webp)
+
+![Nav Mobile](static/documentation/readme/nav-mobile.webp)
+  
+![Nav Dropdown](static/documentation/readme/nav-dropdown.webp)
 
 - **Featured Products Section:**  
   Highlights selected mushroom grow kits marked as 'Featured' by admin. This card section updates dynamically based on admin settings.
 
-  ![Featured Products](static/documentation/readme/featured-products.webp) 
+![Featured Products](static/documentation/readme/featured-products.webp)
+![Featured Mobile](static/documentation/readme/featured-mobile.webp) 
 
 - **Footer:**
   - The footer appears consistently across all pages
@@ -236,7 +242,8 @@ The Facebook page for **1up GrowKits** serves as a key channel for community bui
   - Font sizes and icon touch areas optimized for accessibility
   - Scroll-to-top arrow for easy accessibility
 
-  ![Footer Desktop](static/documentation/readme/footer-desktop.webp)  |  ![Footer Mobile](static/documentation/readme/footer-mobile.webp)
+![Footer Desktop](static/documentation/readme/footer-desktop.webp)
+![Footer Mobile](static/documentation/readme/footer-mobile.webp)
 
 **Product Listings**
 - Users can browse a variety of gourmet mushroom grow kits with:
@@ -245,14 +252,19 @@ The Facebook page for **1up GrowKits** serves as a key channel for community bui
   - Detailed product pages featuring pricing, stock status & product descriptions
   - Add to cart buttons for quick purchasing
 
-  ![Product Page](static/documentation/readme/product-page.webp)  |  ![Product Detail](static/documentation/readme/product-detail.webp)
+![Product Page](static/documentation/readme/product-page.webp)
+![Product Detail](static/documentation/readme/product-detail.webp)
+
+![Product Mobile](static/documentation/readme/product-mobile.webp)
+![Product Detail Mobile](static/documentation/readme/product-detail-mobile.webp)
 
 **Grow Guide**
 - Informational page to assist beginners & understand how to grow with kits
 - Educational content related to mushroom grow kits & cultivation practices
 - Visual aids, tips & troubleshooting guides
 
-  ![Guide Page](static/documentation/readme/guide-page.webp)
+![Guide Page](static/documentation/readme/guide-page.webp)
+![Guide Mobile](static/documentation/readme/guide-mobile.webp)
 
 **Course Registration**
 - Courses are listed with:
@@ -261,7 +273,11 @@ The Facebook page for **1up GrowKits** serves as a key channel for community bui
   - Real-time availability showing Spaces Left / Fully Booked
   - Booking system that reflects session-based enrollments with confirmation email
 
-  ![Course Page](static/documentation/readme/course-page.webp)  |  ![Course Detail](static/documentation/readme/course-detail.webp)
+![Course Page](static/documentation/readme/course-page.webp)
+![Course Detail](static/documentation/readme/course-detail.webp)
+
+![Course Mobile](static/documentation/readme/course-mobile.webp)
+![Course Detail Mobile](static/documentation/readme/course-detail-mobile.webp)
 
 **Shopping Bag & Checkout**
  - Users can:
@@ -269,14 +285,27 @@ The Facebook page for **1up GrowKits** serves as a key channel for community bui
   - Remove items, adjust quantities, or clear the bag
   - Proceed to secure checkout using Stripe integration via the `checkout` app
   - See a real-time order summary and confirmation
+  - Receive email with order confirmation & course details if booked
 
-  ![Bag Desktop](static/documentation/readme/bag-desktop.webp)  |  ![Bag Mobile](static/documentation/readme/bag-mobile.webp)
+![Added to Bag Pop Up](static/documentation/readme/added-to-bag.webp)
+![Delete Message](static/documentation/readme/delete-bag.webp)
+![Update Bag Message](static/documentation/readme/update-bag.webp)
 
-  ![Checkout Desktop](static/documentation/readme/checkout-desktop.webp)  |  ![Checkout Mobile](static/documentation/readme/checkout-mobile.webp)
+![Bag Desktop](static/documentation/readme/bag-desktop.webp)
+![Checkout Desktop](static/documentation/readme/checkout-desktop.webp)
 
-  ![Order Email](static/documentation/readme/order-email.webp)
+![Payment Processing Desktop](static/documentation/readme/payment-processing-desktop.webp)
+![Confirmation Desktop](static/documentation/readme/confirmation-desktop.webp)
 
-  ![Course Email](static/documentation/readme/course-email.webp)
+![Bag Mobile](static/documentation/readme/bag-mobile.webp)
+![Checkout Mobile](static/documentation/readme/checkout-mobile.webp)
+
+![Payment Processing Mobile](static/documentation/readme/payment-processing-mobile.webp)
+![Confirmation Mobile](static/documentation/readme/confirmation-mobile.webp)
+
+![Order Email](static/documentation/readme/order-email.webp)
+
+![Course Email](static/documentation/readme/course-email.webp)
 
 **User Authentication**
 - Features include:
@@ -284,27 +313,27 @@ The Facebook page for **1up GrowKits** serves as a key channel for community bui
   - Password reset functionality
   - Email confirmation on sign-up
 
-  ![Signup Desktop](static/documentation/readme/signup-desktop.webp)  |  ![Signup Mobile](static/documentation/readme/signup-mobile.webp)
+![Nav Signup](static/documentation/readme/nav-dropdown-signup.webp) 
 
-  ![Register Email](static/documentation/readme/register-email.webp)
+![Signup Page](static/documentation/readme/signup-page.webp)
 
-  ![Login Desktop](static/documentation/readme/login-desktop.webp)  |  ![Login Mobile](static/documentation/readme/login-mobile.webp)
+![Verify Page](static/documentation/readme/verify-page.webp)
 
-  ![Reset Desktop](static/documentation/readme/reset-desktop.webp)  |  ![Reset Mobile](static/documentation/readme/reset-mobile.webp)
+![Confirm Email](static/documentation/readme/email-confirm.webp)
 
-  ![Confirmation Desktop](static/documentation/readme/confirmation-desktop.webp)  |  ![Confirmation Mobile](static/documentation/readme/confirmation-mobile.webp)
+![Login page](static/documentation/readme/login-page.webp) 
 
-  ![Login Desktop](static/documentation/readme/login-desktop.webp)  |  ![Login Mobile](static/documentation/readme/login-mobile.webp)
-
+![Reset Page](static/documentation/readme/reset-page.webp)  
 
 **Order History**
 - Account profile page to view personal details & order history:
   - View past order summaries with full line-item detail
   - Update personal deatils & delivery information
 
-  ![Profile Desktop](static/documentation/readme/profile-desktop.webp)  |  ![Profile Mobile](static/documentation/readme/profile-mobile.webp)
+![Order Alert](static/documentation/readme/order-alert.webp)
 
-  ![History Desktop](static/documentation/readme/history-desktop.webp)  |  ![History Mobile](static/documentation/readme/history-mobile.webp)
+![Profile Desktop](static/documentation/readme/profile-desktop.webp)
+
 
 **Newsletter Subscription**
   An embedded Mailchimp form in the footer invites users to subscribe and stay updated with new product drops and educational content:
@@ -313,18 +342,18 @@ The Facebook page for **1up GrowKits** serves as a key channel for community bui
   - User emails are captured with opt-in GDPR compliance
   - Confirmation & automated welcome sequence (via Mailchimp)
 
-  ![Newsletter Signup](static/documentation/readme/newsleter-signup.webp)
-
-  ![Newsletter Confirm](static/documentation/readme/newsleter-confirm.webp)
+![Newsletter Signup](static/documentation/readme/newsleter-signup.webp)
+![Newsletter Confirm](static/documentation/readme/newsleter-confirm.webp)
+![Newsletter Alert](static/documentation/readme/newsleter-alert.webp)
 
 **Contact Form**
 - Users can:
   - Submit inquiries through contact form routed via email & admin panel
   - Use the contact page to request product support, booking help, or general feedback
 
-  ![Contact Form](static/documentation/readme/contact-form.webp)
+![Contact Form](static/documentation/readme/contact-form.webp)
 
-  ![Contact Confirm](static/documentation/readme/contact-confirm.webp)
+![Contact Confirm](static/documentation/readme/contact-confirm.webp)
 
 **Error Pages:**
 - Redirects users to an error page template set up for relevant error type, and prompts users to return to the home page with 'Go Back to Home' button.
@@ -344,25 +373,32 @@ Admin users can manage the entire ecosystem of products, courses & customer inte
   - Maintain grow guide content without code changes.
     - Easily add new categories, images & content blocks to gtow guides.
   
-  ![Admin Products](static/documentation/readme/admin-products.webp)
+![Admin Products](static/documentation/readme/admin-products.webp)
 
-  ![Admin Courses](static/documentation/readme/admin-courses.webp)
+![Admin Courses](static/documentation/readme/admin-courses.webp)
 
-  ![Manage Products](static/documentation/readme/manage-products.webp)
+![Admin guide](static/documentation/readme/admin-guide.webp)
 
-  ![Manage Courses](static/documentation/readme/manage-courses.webp)
+![Nav Admin](static/documentation/readme/nav-dropdown-admin.webp) 
+
+![Manage Products](static/documentation/readme/manage-products.webp)
+![Manage Courses](static/documentation/readme/manage-courses.webp)
 
 **Stock Alerts**
 - Custom admin views or indicators show when product stock / course availability drops below a threshold
 - Prevents out-of-stock orders by monitoring live inventory & course enrollments
 
-  ![Stock Counter](static/documentation/readme/low-stock.webp)
+![Stock Counter](static/documentation/readme/stock-counter.webp)
 
-  ![Stock Available](static/documentation/readme/stock-available.webp)  |  ![Low Stock](static/documentation/readme/low-stock.webp)  |  ![Out of Stock](static/documentation/readme/out-of-stock.webp)
+![Stock Available](static/documentation/readme/stock-available.webp)
+![Low Stock](static/documentation/readme/low-stock.webp)
+![Out of Stock](static/documentation/readme/out-of-stock.webp)
 
-  ![Course counter](static/documentation/readme/course-counter.webp)
+![Course counter](static/documentation/readme/course-counter.webp)
 
-  ![Spots Available](static/documentation/readme/spots-available.webp)  |  ![Low Availability](static/documentation/readme/low-availability.webp)  |  ![Fully Booked](static/documentation/readme/fully-booked.webp)
+![Spots Available](static/documentation/readme/spots-available.webp)
+![Low Availability](static/documentation/readme/low-availability.webp)
+![Fully Booked](static/documentation/readme/fully-booked.webp)
 
 **Order Management**
 - Access all customer orders via the admin interface
@@ -370,17 +406,15 @@ Admin users can manage the entire ecosystem of products, courses & customer inte
 - Update order statuses (e.g., pending, processed, shipped & course booked)
 - Auto enroll users for purchased courses, mark as paid
 
-  ![Admin Orders](static/documentation/readme/admin-users.webp)
+![Admin Orders](static/documentation/readme/admin-orders.webp)
 
-  ![Course Enrollments](static/documentation/readme/course-enrollments.webp)
+![Course Enrollments](static/documentation/readme/course-enrollments.webp)
 
 **User Management**
 - View registered users, profile data & filters
 - Review & handle submitted contact forms in the admin panel
 
-  ![Admin Users](static/documentation/readme/admin-users.webp)
-
-  ![Admin messages](static/documentation/readme/admin-messages.webp)
+![Admin messages](static/documentation/readme/admin-messages.webp)
 
 
 ### Future Features:
