@@ -96,6 +96,11 @@ nav ul li a:hover {
     background-image: none;
 }
 
+.nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .dropdown-item {
     color: #000000;
 }

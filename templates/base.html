@@ -78,16 +78,20 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}"
-                aria-label="View Mushroom Kits">Mushroom Kits</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'grow_guide' %}" aria-label="View Grow Guide">Grow
-                Guide</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'courses' %}" aria-label="View Courses">Courses</a>
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.url_name == 'products' %}active{% endif %}" href="{% url 'products' %}" aria-label="View Mushroom Kits">Mushroom Kits</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}" aria-label="Contact Us">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.url_name == 'grow_guide' %}active{% endif %}" href="{% url 'grow_guide' %}" aria-label="View Grow Guide">Grow Guide</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.url_name == 'courses' %}active{% endif %}" href="{% url 'courses' %}" aria-label="View Courses">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %}" aria-label="Contact Us">Contact</a>
+            </li>
           </ul>
-        </div>
-      </div>
+        </div>        
 
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
