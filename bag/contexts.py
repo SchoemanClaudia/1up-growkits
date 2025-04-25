@@ -53,7 +53,7 @@ def bag_contents(request):
             bag_items.append({
                 'item_id': item_id,
                 'quantity': quantity,
-                'product': course,
+                'course': course,
                 'subtotal': subtotal,
                 'type': 'course',
             })

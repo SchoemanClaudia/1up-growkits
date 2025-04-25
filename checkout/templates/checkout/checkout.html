@@ -47,8 +47,12 @@
                                 {% endif %}
                             </a>
                         {% elif item.type == 'course' %}
-                            <a href="{% url 'course_detail' item.product.id %}">
-                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.title }}">
+                            <a href="{% url 'course_detail' item.course.id %}">
+                                {% if item.course.image %}
+                                    <img class="w-100" src="{{ item.course.image.url }}" alt="{{ item.course.title }}">
+                                {% else %}
+                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="No image">
+                                {% endif %}
                             </a>
                         {% endif %}
                     </div>
@@ -58,7 +62,7 @@
                                 {% if item.type == 'product' %}
                                     {{ item.product.name }}
                                 {% elif item.type == 'course' %}
-                                    {{ item.product.title }}
+                                    {{ item.course.title }}
                                 {% endif %}
                             </strong>
                         </p>
@@ -106,16 +110,16 @@
                         {{ order_form.county | as_crispy_field }}
                         {{ order_form.country | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0">
-							{% if user.is_authenticated %}
-								<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                            {% if user.is_authenticated %}
+                                <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-							{% else %}
-								<label class="form-check-label" for="id-save-info">
+                            {% else %}
+                                <label class="form-check-label" for="id-save-info">
                                     <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
                                     <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                                 </label>
-							{% endif %}
-						</div>
+                            {% endif %}
+                        </div>
                     </fieldset>
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
@@ -126,26 +130,26 @@
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
                     <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'view_bag' %}" class="btn btn-shop-return rounded-0">
-							<span class="icon">
-								<i class="fas fa-chevron-left"></i>
-							</span>
-							<span class="font-weight-bold">Adjust Bag</span>
-						</a>
-						<button id="submit-button" class="btn btn-shop rounded-0">
-							<span class="font-weight-bold">Complete Order</span>
-							<span class="icon">
-								<i class="fas fa-lock"></i>
-							</span>
-						</button>
-						<p class="small text-danger my-0">
+                        <a href="{% url 'view_bag' %}" class="btn btn-shop-return rounded-0">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="font-weight-bold">Adjust Bag</span>
+                        </a>
+                        <button id="submit-button" class="btn btn-shop rounded-0">
+                            <span class="font-weight-bold">Complete Order</span>
+                            <span class="icon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </button>
+                        <p class="small text-danger my-0">
                             <br>
-							<span class="icon">
-								<i class="fas fa-exclamation-circle"></i>
-							</span>
-							<span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
-						</p>
-					</div>
+                            <span class="icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </span>
+                            <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
+                        </p>
+                    </div>
                 </form>
             </div>
         </div>
