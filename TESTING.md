@@ -46,6 +46,7 @@ Testing file for 1up GrowKits [README.md](README.md).
 - No `<label>` explicitly for the form fields
 - Empty `<br>` tag inside `<p>`
 - Misplaced closing `<div>`
+- Trailing slash on void elements
 
 ### HTML Validation Corrected
 

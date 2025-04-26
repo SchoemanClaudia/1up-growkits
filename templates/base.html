@@ -6,13 +6,11 @@
 <head>
   <!-- Required meta tags -->
   {% block meta %}
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description"
-    content="1up GrowKits - Premium mushroom grow kits and courses. Learn, grow, and harvest your own mushrooms at home." />
-  <meta name="keywords"
-    content="mushroom kits, mushroom growing, mushroom grow kits, fungi, home growing, mycology courses, grow mushrooms, step-by-step guide, grow your own gourmet mushrooms at home" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1up GrowKits - Premium mushroom grow kits and courses. Learn, grow, and harvest your own mushrooms at home.">
+  <meta name="keywords" content="mushroom kits, mushroom growing, mushroom grow kits, fungi, home growing, mycology courses, grow mushrooms, step-by-step guide, grow your own gourmet mushrooms at home">
   {% endblock %}
 
   {% block extra_meta %}
@@ -26,28 +24,22 @@
 
   <!-- Stylesheets -->
   {% block corecss %}
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %}
 
   {% block extra_css %}
-  <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet">
   {% endblock %}
 
   <!-- JavaScript -->
   {% block corejs %}
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/49f8c5c44f.js" crossorigin="anonymous"></script>
   <script src="https://js.stripe.com/v3/"></script>
   {% endblock %}
@@ -60,38 +52,32 @@
 
 <body>
 
-  <header class="bg-light" role="banner">
-    <nav class="navbar navbar-expand-lg navbar-light" role="navigation" aria-label="Main site navigation">
+  <header class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light" aria-label="Main site navigation">
       <div class="container">
         <a class="navbar-brand" href="{% url 'home' %}" aria-label="1up GrowKits homepage">
           1up
-          <img src="{% static 'assets/logo-icon.png' %}" alt="1up GrowKits Logo" width="40" height="40"
-            class="d-inline-block align-center">
+          <img src="{% static 'assets/logo-icon.png' %}" alt="1up GrowKits Logo" width="40" height="40" class="d-inline-block align-center">
           GrowKits
         </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span><i class="fa-solid fa-bars"></i></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link {% if request.resolver_match.url_name == 'products' %}active{% endif %}"
-                href="{% url 'products' %}" aria-label="View Mushroom Kits">Mushroom Kits</a>
+              <a class="nav-link {% if request.resolver_match.url_name == 'products' %}active{% endif %}" href="{% url 'products' %}" aria-label="View Mushroom Kits">Mushroom Kits</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if request.resolver_match.url_name == 'grow_guide' %}active{% endif %}"
-                href="{% url 'grow_guide' %}" aria-label="View Grow Guide">Grow Guide</a>
+              <a class="nav-link {% if request.resolver_match.url_name == 'grow_guide' %}active{% endif %}" href="{% url 'grow_guide' %}" aria-label="View Grow Guide">Grow Guide</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if request.resolver_match.url_name == 'courses' %}active{% endif %}"
-                href="{% url 'courses' %}" aria-label="View Courses">Courses</a>
+              <a class="nav-link {% if request.resolver_match.url_name == 'courses' %}active{% endif %}" href="{% url 'courses' %}" aria-label="View Courses">Courses</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
-                href="{% url 'contact' %}" aria-label="Contact Us">Contact</a>
+              <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %}" aria-label="Contact Us">Contact</a>
             </li>
           </ul>
         </div>
@@ -99,8 +85,7 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item dropdown">
-              <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false" aria-label="User account options">
+              <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="User account options">
                 <div class="text-center">
                   <div><i class="fa-solid fa-user"></i></div>
                   <p class="my-0">My Profile</p>
@@ -108,29 +93,28 @@
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
-                <a href="{% url 'add_product' %}" class="dropdown-item">Manage Products</a>
-                <a href="{% url 'add_course' %}" class="dropdown-item">Manage Courses</a>
-                {% endif %}
-                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                  {% if request.user.is_superuser %}
+                    <a href="{% url 'add_product' %}" class="dropdown-item">Manage Products</a>
+                    <a href="{% url 'add_course' %}" class="dropdown-item">Manage Courses</a>
+                  {% endif %}
+                  <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                 {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                 {% endif %}
               </div>
             </li>
 
             <li class="list-inline-item">
-              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                href="{% url 'view_bag' %}" aria-label="View shopping bag">
+              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}" aria-label="View shopping bag">
                 <div class="text-center">
                   <div><i class="fa-solid fa-cart-shopping"></i></div>
                   <p class="my-0">
                     {% if grand_total %}
-                    €{{ grand_total|floatformat:2 }}
+                      €{{ grand_total|floatformat:2 }}
                     {% else %}
-                    €0.00
+                      €0.00
                     {% endif %}
                   </p>
                 </div>
@@ -138,41 +122,38 @@
             </li>
           </ul>
         </div>
+      </div>
     </nav>
   </header>
 
   {% if messages %}
   <div class="message-container" role="alert">
     {% for message in messages %}
-    {% with message.level as level %}
-    {% if level == 40 %}
-    {% include 'includes/toasts/toast_error.html' %}
-    {% elif level == 30 %}
-    {% include 'includes/toasts/toast_warning.html' %}
-    {% elif level == 25 %}
-    {% include 'includes/toasts/toast_success.html' %}
-    {% else %}
-    {% include 'includes/toasts/toast_info.html' %}
-    {% endif %}
-    {% endwith %}
+      {% with message.level as level %}
+        {% if level == 40 %}
+          {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+          {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+          {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+          {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+      {% endwith %}
     {% endfor %}
   </div>
   {% endif %}
 
-  <!-- Page Content -->
-  <main class="container my-5" role="main">
+  <main class="container my-5">
     {% block content %}
     {% endblock %}
   </main>
 
-  <!-- Scroll to Top Button -->
   <button id="scrollToTopBtn" type="button" title="Go to top" aria-label="Scroll to top of page">↑</button>
 
-  <!-- Footer -->
-  <footer class="footer bg-dark text-light py-4" role="contentinfo">
+  <footer class="footer bg-dark text-light py-4">
     <div class="container">
       <div class="row">
-        <!-- Left Aligned -->
         <div class="col-md-6 text-md-left text-center mb-4 mb-md-0 mt-md-3">
           <p class="mb-4">
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-light">
@@ -181,8 +162,7 @@
           </p>
           <p class="mb-4">
             Curious about the health perks of mushrooms? Check out
-            <a href="https://www.fungi.com/blogs/articles" target="_blank" rel="noopener noreferrer"
-              aria-label="Visit Fungi Perfecti for mushroom growing articles" class="text-light external-link">
+            <a href="https://www.fungi.com/blogs/articles" target="_blank" rel="noopener noreferrer" aria-label="Visit Fungi Perfecti for mushroom growing articles" class="text-light external-link">
               <strong>Fungi Perfecti</strong>
             </a> for expert tips and insights.
           </p>
@@ -192,24 +172,16 @@
           </p>
         </div>
 
-        <!-- Right Aligned -->
         <div class="col-md-6 text-md-right text-center">
           <div class="d-flex justify-content-md-end justify-content-center">
             <div id="mc_embed_signup">
-
-              <form
-                action="https://herokuapp.us13.list-manage.com/subscribe/post?u=a8b9b1efbfefff2ad29d2d219&amp;id=5815c09d10&amp;f_id=00dfc3e1f0"
-                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-                target="_blank" novalidate>
+              <form action="https://herokuapp.us13.list-manage.com/subscribe/post?u=a8b9b1efbfefff2ad29d2d219&amp;id=5815c09d10&amp;f_id=00dfc3e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <h5 class="mb-2">Sign up here:</h5>
-                <p class="small text-light mb-3">
-                  Get exclusive offers by subscribing to our newsletter
-                </p>
+                <p class="small text-light mb-3">Get exclusive offers by subscribing to our newsletter</p>
                 <div class="mc-field-group form-group">
                   <input type="email" name="EMAIL" class="form-control mb-3" placeholder="Email address" required>
                 </div>
 
-                <!-- Response messages -->
                 <div id="mce-responses" class="clear">
                   <div class="response" id="mce-error-response" style="display:none;"></div>
                   <div class="response" id="mce-success-response" style="display:none;"></div>
@@ -232,10 +204,9 @@
   </footer>
 
   {% block postloadjs %}
-  <script type="text/javascript">
+  <script>
     $('.toast').toast('show');
 
-    // Scroll to top button behavior
     window.onscroll = function () {
       const btn = document.getElementById("scrollToTopBtn");
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -249,34 +220,24 @@
       const scrollBtn = document.getElementById("scrollToTopBtn");
       if (scrollBtn) {
         scrollBtn.addEventListener("click", () => {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       }
     });
   </script>
 
-  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-  <script type="text/javascript">
+  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+  <script>
     (function ($) {
       window.fnames = new Array();
       window.ftypes = new Array();
-      fnames[0] = 'EMAIL';
-      ftypes[0] = 'email';
-      fnames[1] = 'FNAME';
-      ftypes[1] = 'text';
-      fnames[2] = 'LNAME';
-      ftypes[2] = 'text';
-      fnames[3] = 'ADDRESS';
-      ftypes[3] = 'address';
-      fnames[4] = 'PHONE';
-      ftypes[4] = 'phone';
-      fnames[5] = 'BIRTHDAY';
-      ftypes[5] = 'birthday';
-      fnames[6] = 'COMPANY';
-      ftypes[6] = 'text';
+      fnames[0] = 'EMAIL'; ftypes[0] = 'email';
+      fnames[1] = 'FNAME'; ftypes[1] = 'text';
+      fnames[2] = 'LNAME'; ftypes[2] = 'text';
+      fnames[3] = 'ADDRESS'; ftypes[3] = 'address';
+      fnames[4] = 'PHONE'; ftypes[4] = 'phone';
+      fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday';
+      fnames[6] = 'COMPANY'; ftypes[6] = 'text';
     }(jQuery));
     var $mcj = jQuery.noConflict(true);
   </script>
