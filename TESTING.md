@@ -297,10 +297,11 @@ __Test coverage includes:__
     **Contact Page**  
     ![Lighthouse Report Logout](static/documentation/testing/lh-contact.webp)
 
-- [] Mobile view:
-    - Performance 
+- [x] Mobile view:
 
-    **Home**  
+    Performance was lower than preferred on mobile view due to the site being image heavy on landing page with hero & featured products. Images used in the sites design were compressed to offer the best chance for a decent performance score.
+
+    **Mobile Home Page**  
     ![Lighthouse Report Home Mobile](static/documentation/testing/lh-mobile.webp)
 
 
