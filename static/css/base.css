@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -19,7 +20,7 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5);
     z-index: -1;
     pointer-events: none;
 }
@@ -29,7 +30,7 @@ main {
 }
 
 a {
-    text-decoration-style: none;
+    text-decoration: none;
 }
 
 header {
@@ -159,7 +160,7 @@ i:hover {
 }
 
 .btn[disabled]:hover {
-    background-color: #6c757d !important; 
+    background-color: #6c757d !important;
     color: #ffffff !important;
     cursor: not-allowed;
 }
@@ -175,7 +176,6 @@ i:hover {
 }
 
 .btn-shop-return:hover {
-    border-color: #000000;
     background-color: #000000;
     color: #ffffff;
 }
@@ -388,7 +388,7 @@ hr {
 }
 
 .error-panel {
-    background-color: rgba(0, 0, 0, 0.85); 
+    background-color: rgba(0, 0, 0, 0.85);
     color: #ffffff;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
@@ -548,7 +548,7 @@ a.text-info:hover {
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
-    border-color: #dc3545;
+    border-color: #c82333;
     border-radius: 0;
 }
 
@@ -595,92 +595,92 @@ a.text-info:hover {
 /* Mobile bag view */
 @media (max-width: 768px) {
     .mobile-bag-summary .btn {
-      width: 100%;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
     }
-  
+
     .mobile-bag-summary h6,
     .mobile-bag-summary h5 {
-      margin-bottom: 0.25rem;
+        margin-bottom: 0.25rem;
     }
-  
+
     .mobile-bag-summary p.text-delivery {
-      font-size: 0.9rem;
-      margin-top: 0.25rem;
+        font-size: 0.9rem;
+        margin-top: 0.25rem;
     }
-  
+
     .mobile-bag-item {
-      border-top: 1px solid #aab7c4;
-      padding-top: 1rem;
-      margin-top: 1rem;
+        border-top: 1px solid #aab7c4;
+        padding-top: 1rem;
+        margin-top: 1rem;
     }
-  
+
     .mobile-bag-img {
-      width: 100px !important;
-      height: auto !important;
-      object-fit: contain;
-      display: block;
-      padding-right: 20px;
+        width: 100px !important;
+        height: auto !important;
+        object-fit: contain;
+        display: block;
+        padding-right: 20px;
     }
-  
+
     .mobile-bag-item p {
-      margin-bottom: 0.25rem;
-      font-size: 0.9rem;
+        margin-bottom: 0.25rem;
+        font-size: 0.9rem;
     }
-  
+
     .mobile-bag-item .small {
-      font-size: 0.85rem;
+        font-size: 0.85rem;
     }
-  
+
     .qty_input {
-      max-width: 70px;
-      padding: 0.25rem 0.4rem;
+        max-width: 70px;
+        padding: 0.25rem 0.4rem;
     }
-  
+
     .mobile-bag-item .button-link {
-      padding: 0.25rem 0.4rem;
-      font-size: 0.85rem;
+        padding: 0.25rem 0.4rem;
+        font-size: 0.85rem;
     }
-  
+
     .empty-bag {
-      text-align: left !important;
+        text-align: left !important;
     }
-  }
-  
+}
+
 
 @media (max-width: 576px) {
     .bag-item-form input.qty_input {
-      width: 100% !important;
-      margin-bottom: 10px;
+        width: 100% !important;
+        margin-bottom: 10px;
     }
-  
+
     .bag-item-form .button-link {
-      width: 100%;
-      text-align: center;
-      padding: 6px 0;
+        width: 100%;
+        text-align: center;
+        padding: 6px 0;
     }
-  
+
     .bag-item-form .d-flex.flex-sm-row {
-      flex-direction: column !important;
-      gap: 5px;
+        flex-direction: column !important;
+        gap: 5px;
     }
-  
+
     .table td,
     .table th {
-      font-size: 0.9rem;
-      white-space: normal;
-      padding: 0.5rem;
+        font-size: 0.9rem;
+        white-space: normal;
+        padding: 0.5rem;
     }
-  
+
     .table img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
     }
-  
+
     .text-right {
-      text-align: center !important;
+        text-align: center !important;
     }
 
     .navbar-brand {
@@ -694,21 +694,22 @@ a.text-info:hover {
     .text-delivery {
         font-size: .8rem;
     }
-  
+
     .btn.btn-shop.rounded-0,
     .btn.btn-shop-return.rounded-0 {
-      padding: 0.5rem 0.75rem;
-      font-size: 0.85rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
     }
-  
+
     .btn.btn-shop.rounded-0.btn-lg,
     .btn.btn-shop-return.rounded-0.btn-lg {
-      padding: 0.5rem 0.75rem;
-      font-size: 0.85rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
     }
-  
-    .increment-qty, .decrement-qty {
-      padding: 0.25rem 0.5rem !important;
+
+    .increment-qty,
+    .decrement-qty {
+        padding: 0.25rem 0.5rem !important;
     }
 
     .bag-buttons {
@@ -720,15 +721,14 @@ a.text-info:hover {
     .bag-buttons .btn {
         width: 100%;
     }
-  
+
     .product-info-cell {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     footer .form-control {
         width: 100%;
     }
-  }
-  
+}

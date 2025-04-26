@@ -34,21 +34,24 @@ Testing file for 1up GrowKits [README.md](README.md).
 ## Validation
 
 ### Validation Errors
-- Duplicate attribute `rel` on `<link>` tags
-- Missing `type="button"` on non-form `<button>`
-- Using `<div>` inside a `<ul>` directly
-- Button missing `type="submit"`
-- Empty `<a href="">` if no image exists
-- `<p>` inside `<strong>` not valid
-- No `alt` fallback if `product.image` missing
-- Empty `<div class="row mt-1 mb-2"></div>`
-- Missing closing `</div>` for the button container
-- No `<label>` explicitly for the form fields
-- Empty `<br>` tag inside `<p>`
-- Misplaced closing `<div>`
-- Trailing slash on void elements
-- No `<p>` element in scope but a `</p>` end tag
-- Stray end tag `</div>`
+__HTML__
+    - Duplicate attribute `rel` on `<link>` tags
+    - Missing `type="button"` on non-form `<button>`
+    - Using `<div>` inside a `<ul>` directly
+    - Button missing `type="submit"`
+    - Empty `<a href="">` if no image exists
+    - `<p>` inside `<strong>` not valid
+    - No `alt` fallback if `product.image` missing
+    - Empty `<div class="row mt-1 mb-2"></div>`
+    - Missing closing `</div>` for the button container
+    - No `<label>` explicitly for the form fields
+    - Empty `<br>` tag inside `<p>`
+    - Misplaced closing `<div>`
+    - Trailing slash on void elements
+    - No `<p>` element in scope but a `</p>` end tag
+    - Stray end tag `</div>`
+__CSS__
+    - `text-decoration-style: none;` is invalid
 
 ### HTML Validation Corrected
 
@@ -117,7 +120,7 @@ Testing file for 1up GrowKits [README.md](README.md).
 
 ### CSS Validation Corrected
 
-- [] CSS validation all passed.
+- [x] CSS validation all passed.
 
 **Home page**  
 ![CSS Validation](static/documentation/testing/css-home.webp)
