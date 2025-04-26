@@ -29,11 +29,11 @@
                         <img class="img-fluid" src="{{ step.image.url }}" alt="{{ step.guide_title }}">
                     </div>
                     <div class="col-12 col-md-7">
-                        <p>{{ step.instructions|linebreaks }}</p>
+                        {{ step.instructions|linebreaks }}
                     </div>
                     {% else %}
                     <div class="col-12">
-                        <p>{{ step.instructions|linebreaks }}</p>
+                        {{ step.instructions|linebreaks }}
                     </div>
                     {% endif %}
                 </div>

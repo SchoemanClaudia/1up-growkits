@@ -47,6 +47,7 @@ Testing file for 1up GrowKits [README.md](README.md).
 - Empty `<br>` tag inside `<p>`
 - Misplaced closing `<div>`
 - Trailing slash on void elements
+- No `<p>` element in scope but a `</p>` end tag
 
 ### HTML Validation Corrected
 
