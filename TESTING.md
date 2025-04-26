@@ -34,22 +34,25 @@ Testing file for 1up GrowKits [README.md](README.md).
 ## Validation
 
 ### Validation Errors
-__HTML__
-- Duplicate attribute `rel` on `<link>` tags
-- Missing `type="button"` on non-form `<button>`
-- Using `<div>` inside a `<ul>` directly
-- Button missing `type="submit"`
-- Empty `<a href="">` if no image exists
-- `<p>` inside `<strong>` not valid
-- No `alt` fallback if `product.image` missing
-- Empty `<div class="row mt-1 mb-2"></div>`
-- Missing closing `</div>` for the button container
-- No `<label>` explicitly for the form fields
-- Empty `<br>` tag inside `<p>`
-- Misplaced closing `<div>`
-- Trailing slash on void elements
-- No `<p>` element in scope but a `</p>` end tag
-- Stray end tag `</div>`
+
+| **HTML Validation Issue** | **Description** |
+|:---------------------------|:----------------|
+| Duplicate attribute `rel` on `<link>` tags | Multiple `rel` attributes found on the same `<link>` element |
+| Missing `type="button"` on non-form `<button>` | Buttons not inside forms should explicitly declare `type="button"` |
+| Using `<div>` directly inside a `<ul>` | Invalid HTML structure; `<ul>` should only contain `<li>` elements |
+| Button missing `type="submit"` | Form submit buttons missing an explicit `type="submit"` attribute |
+| Empty `<a href="">` if no image exists | Empty anchor tags if an image is missing from inside the link |
+| `<p>` inside `<strong>` not valid | Block-level `<p>` tags incorrectly placed inside inline `<strong>` tags |
+| No `alt` fallback if `product.image` is missing | Missing descriptive text for images when `product.image` is not available |
+| Empty `<div class="row mt-1 mb-2"></div>` | Empty `<div>` without meaningful content |
+| Missing closing `</div>` for button container | Unclosed `<div>` leading to HTML structure errors |
+| No `<label>` explicitly for form fields | Form inputs missing associated `<label>` elements |
+| Empty `<br>` tag inside `<p>` | Improper use of empty `<br>` tag within a paragraph |
+| Misplaced closing `</div>` | Closing a `</div>` tag at the wrong location, breaking layout |
+| Trailing slash on void elements | Unnecessary trailing `/` on self-closing tags in HTML5 |
+| No `<p>` element in scope but a `</p>` end tag | `</p>` tag used without an open `<p>` tag |
+| Stray end tag `</div>` | Extra or misplaced `</div>` without a matching open tag |
+
 
 ### HTML Validation Corrected
 Testing using the recommended [HTML W3C Validator](https://validator.w3.org/) to validate all of my HTML files.
@@ -117,8 +120,11 @@ Testing using the recommended [HTML W3C Validator](https://validator.w3.org/) to
 
 
 ### Validation Errors
-__CSS__
-- `text-decoration-style: none;` is invalid
+
+| **CSS Validation Issue** | **Description** |
+|:-------------------------|:----------------|
+| Invalid CSS property `text-decoration-style: none;` | `text-decoration-style` does not accept `none`; corrected |
+
 
 ### CSS Validation Corrected
 Testing using the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator/) to validate all of my CSS files.
@@ -136,8 +142,11 @@ Testing using the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-v
 ### JSHint
 
 ### Validation Errors
-__JavaScript__
-- `console` undefined. Add `/* global console */`
+
+| **JavaScript Validation Issue** | **Description** |
+|:---------------------------------|:----------------|
+| `console` undefined | Added `/* global console */` comment to declare `console` as a global variable |
+
 
 ### JavaScript Validation Corrected
 Testing using the recommended [JShint Validator](https://jshint.com/) to validate all of my JavaScript files.
@@ -161,15 +170,18 @@ Testing using the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.c
 
 During development, code quality was maintained by following the [PEP8](https://peps.python.org/pep-0008/) style guide for Python. Errors & warnings were detected & corrected accross apps by running flake8.
     
-- Common issues that were identified and resolved included:
-    - Lines exceeding 79 characters (E501) – fixed by breaking long lines into multiple lines where necessary.
-    - Trailing whitespace (W291) and blank lines with whitespace (W293) – cleaned up for clarity and consistency.
-    - Missing or insufficient blank lines after class or function definitions (E302, E305) – added to improve code structure and readability.
-    - Unused imports (F401) and unused variables (F841) – removed to maintain a clean and efficient codebase.
-    - Missing newlines at the end of files (W292, W391) – added to meet formatting standards.
+Common issues that were identified and resolved included:
+| **Issue** | **Action Taken** |
+|:----------|:-----------------|
+| Lines exceeding 79 characters (E501) | Broken into multiple lines for readability |
+| Trailing whitespace (W291) and blank lines with whitespace (W293) | Cleaned up for clarity and consistency |
+| Missing or insufficient blank lines after class or function definitions (E302, E305) | Added blank lines to improve code structure |
+| Unused imports (F401) and unused variables (F841) | Removed unused code for a cleaner, efficient codebase |
+| Missing newlines at end of files (W292, W391) | Added newlines to meet formatting standards |
 
-All Python files containing the project's code have been tested, and the errors were fixed.
-- After running the CI Python Linter, it shows there are no errors.
+
+    All Python files containing the project's code have been tested, and the errors were fixed.
+    After running the CI Python Linter, it shows there are no errors.
 
 ![Python Tests Clear](static/documentation/testing/py-clear.webp)
 
@@ -250,28 +262,40 @@ __Test coverage includes:__
 
 ## Lighthouse Test
 
-- [] Desktop view:
+- [x] Desktop view:
 
-    **Home**  
+    **Home Page**  
     ![Lighthouse Report Home](static/documentation/testing/lh-home.webp)
 
-    **Grow Kit page**  
-    ![Lighthouse Report Review Post Page](static/documentation/testing/lh-products.webp)
+    **Products page**  
+    ![Lighthouse Report Products](static/documentation/testing/lh-products.webp)
 
     **Grow Guide Page**  
-    ![Lighthouse Report About](static/documentation/testing/lh-guide.webp)
+    ![Lighthouse Report Grow Guide](static/documentation/testing/lh-guide.webp)
 
-    **CoursesPage**  
-    ![Lighthouse Report About](static/documentation/testing/lh-courses.webp)
+    **Courses Page**  
+    ![Lighthouse Report Courses](static/documentation/testing/lh-courses.webp)
 
-    **Register Page**  
-    ![Lighthouse Report Register](static/documentation/testing/lh-signup.webp)
+    **Bag Page**  
+    ![Lighthouse Report Bag](static/documentation/testing/lh-bag.webp)
+
+    **Checkout Page**  
+    ![Lighthouse Report Checkout](static/documentation/testing/lh-checkout.webp)
+
+    **Profiles Page**  
+    ![Lighthouse Report Courses](static/documentation/testing/lh-profiles.webp)
+
+    **Signup Page**  
+    ![Lighthouse Report Signup](static/documentation/testing/lh-signup.webp)
 
     **Login Page**  
     ![Lighthouse Report Login](static/documentation/testing/lh-login.webp)
 
     **Logout Page**  
     ![Lighthouse Report Logout](static/documentation/testing/lh-logout.webp)
+
+    **Contact Page**  
+    ![Lighthouse Report Logout](static/documentation/testing/lh-contact.webp)
 
 - [] Mobile view:
     - Performance 
