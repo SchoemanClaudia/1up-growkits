@@ -35,26 +35,24 @@ Testing file for 1up GrowKits [README.md](README.md).
 
 ### Validation Errors
 __HTML__
-    - Duplicate attribute `rel` on `<link>` tags
-    - Missing `type="button"` on non-form `<button>`
-    - Using `<div>` inside a `<ul>` directly
-    - Button missing `type="submit"`
-    - Empty `<a href="">` if no image exists
-    - `<p>` inside `<strong>` not valid
-    - No `alt` fallback if `product.image` missing
-    - Empty `<div class="row mt-1 mb-2"></div>`
-    - Missing closing `</div>` for the button container
-    - No `<label>` explicitly for the form fields
-    - Empty `<br>` tag inside `<p>`
-    - Misplaced closing `<div>`
-    - Trailing slash on void elements
-    - No `<p>` element in scope but a `</p>` end tag
-    - Stray end tag `</div>`
-__CSS__
-    - `text-decoration-style: none;` is invalid
+- Duplicate attribute `rel` on `<link>` tags
+- Missing `type="button"` on non-form `<button>`
+- Using `<div>` inside a `<ul>` directly
+- Button missing `type="submit"`
+- Empty `<a href="">` if no image exists
+- `<p>` inside `<strong>` not valid
+- No `alt` fallback if `product.image` missing
+- Empty `<div class="row mt-1 mb-2"></div>`
+- Missing closing `</div>` for the button container
+- No `<label>` explicitly for the form fields
+- Empty `<br>` tag inside `<p>`
+- Misplaced closing `<div>`
+- Trailing slash on void elements
+- No `<p>` element in scope but a `</p>` end tag
+- Stray end tag `</div>`
 
 ### HTML Validation Corrected
-
+Testing using the recommended [HTML W3C Validator](https://validator.w3.org/) to validate all of my HTML files.
 - [x] HTML validation all passed:
 
 **Home page**  
@@ -118,33 +116,44 @@ __CSS__
 ![Order History HTML Validation](static/documentation/testing/html-order-history.webp)
 
 
-### CSS Validation Corrected
+### Validation Errors
+__CSS__
+- `text-decoration-style: none;` is invalid
 
+### CSS Validation Corrected
+Testing using the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator/) to validate all of my CSS files.
 - [x] CSS validation all passed.
 
-**Home page**  
-![CSS Validation](static/documentation/testing/css-home.webp)
+**base.css**  
+![base.css Validation](static/documentation/testing/css-base.webp)
 
-**Login Page**  
-![CSS Validation](static/documentation/testing/css-login.webp)
+**profile.css**  
+![profile.css Validation](static/documentation/testing/css-profile.webp)
 
-**Signup Page**  
-![CSS Validation](static/documentation/testing/css-signup.webp)
-
-**Logout Page**  
-![CSS Validation](static/documentation/testing/css-logout.webp)
-
-**Review Post Page**  
-![CSS Validation](static/documentation/testing/css-products.webp)
-
-**About Page**  
-![CSS Validation](static/documentation/testing/css-courses.webp)
+**checkout.css**  
+![checkout.css Validation](static/documentation/testing/css-checkout.webp)
 
 ### JSHint
 
-- [] JavaScript tests all passed.
+### Validation Errors
+__JavaScript__
+- `console` undefined. Add `/* global console */`
 
-![JSHint](static/documentation/testing/jshint.webp)
+### JavaScript Validation Corrected
+Testing using the recommended [JShint Validator](https://jshint.com/) to validate all of my JavaScript files.
+- [x] JavaScript tests all passed.
+
+**bag.js**  
+![bag.js Validation](static/documentation/testing/js-bag.webp)
+
+**countryfield.js**  
+![countryfield.js Validation](static/documentation/testing/js-countryfield.webp)
+
+**admin_message.js**  
+![admin_message.js Validation](static/documentation/testing/js-admin-message.webp)
+
+**stripe_element.js**  
+![stripe_element.js Validation](static/documentation/testing/js-stripe-element.webp)
 
 ### CI Python Linter
 

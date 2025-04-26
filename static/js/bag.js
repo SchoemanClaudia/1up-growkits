@@ -1,3 +1,4 @@
+/* global console */
 function submitRemoveItem(itemType, itemId) {
     const form = document.querySelector(`.bag-item-form-${itemType}-${itemId}`);
     if (form) {
