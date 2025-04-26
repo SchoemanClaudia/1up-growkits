@@ -279,17 +279,33 @@ __Test coverage includes:__
     **Home**  
     ![Lighthouse Report Home Mobile](static/documentation/testing/lh-mobile.webp)
 
+
 ### Accessibility
 
 Accessibility was included in every planning stage for 1up Grow Kits, through the use of the [WAVE report tool](https://wave.webaim.org/) I could ensure that any necessary changes were made to make the website as accessible as it could be.
 
-- 
 
-    ![Errors encountered](static/documentation/testing/errors.webp)
+__Accessibility Fixes__
 
--  [Webaim Contrast Checker](https://webaim.org/resources/contrastchecker/), all errors were resolved successfully.
+**Accessibility Issue**| **Items Affected** |
+|----------------------|-------------------|
+| Missing form labels | Newsletter signup input, quantity inputs (products/courses) |
+| Duplicate input IDs | Multiple inputs using `id="email"` |
+| Hidden honeypot field missing accessible name | Mailchimp honeypot input |
+| Incorrect Bootstrap class usage | Navbar (`ms-auto` used instead of `ml-auto` for Bootstrap 4) |
+| Insufficient color contrast | Buttons, footer links, minor text elements |
 
-    ![No errors](static/documentation/testing/clear.webp)  ![Contrast Checker](static/documentation/testing/contrast.webp)
+![Errors encountered](static/documentation/testing/wave-errors.webp)
+
+
+    All errors were resolved successfully.
+
+![No errors](static/documentation/testing/wave-clear.webp)
+
+During accessibility testing, some text & button elements lacked color contrast against their backgrounds, making it harder to read for users with visual impairments. These issues were identified using the [Webaim Contrast Checker](https://webaim.org/resources/contrastchecker/). Adjustments were made to text & button style elements to ensure all contrast ratios met WCAG 2.1 AA standard.
+
+![Contrast Checker 01](static/documentation/testing/contrast-01.webp)
+![Contrast Checker 02](static/documentation/testing/contrast-02.webp)
 
 
 ## Manual Testing
@@ -329,13 +345,14 @@ Testing was carried out on desktop using a Chrome browser to ensure all forms ta
 **Courses Don't Charge Delivery (Standalone / Mixed Cart)** | PASS | Courses added alone in bag = no delivery fee charged. Courses added with products = only the product(s) calculate delivery fee; courses still do not add delivery cost.
 **Contact Form Submission** | PASS | Contact form validates required fields (name, email, message). Empty fields cause validation errors. Successful submission shows confirmation message.
 **Footer Subscribe Form** | PASS | Footer email subscription form validates email format. Empty or invalid email triggers error. Successful valid email submission shows confirmation.
-**Stock/Course Adjustment After Checkout** | PASS | After successful checkout, purchased products & courses have their stock & spots available correctly reduced by the purchased amount. No over-selling possible.
+**Stock / Course Adjustment After Checkout** | PASS | After successful checkout, purchased products & courses have their stock & spots available correctly reduced by the purchased amount. No over-selling possible.
 **Enrollment Creation for Courses** | PASS | After successful checkout, user is automatically enrolled into purchased course(s) with correct number of spots. Enrollment records appear in database.
 
 
 ## Bugs Encountered 
   
 The below are bugs that I spent more time investigating, most of these encountered were learning curves. 
+See record of [bugs encountered here](https://github.com/users/SchoemanClaudia/projects/5/views/6)
 
 | **No.** | **Bug** | **Solved** | **Fix** | **Solution Credit** | **Commit No.** |
 | ------- | ------- |:----------:| ------- | ------------------- |:--------------:|
@@ -344,10 +361,11 @@ The below are bugs that I spent more time investigating, most of these encounter
 | **3.**| Delete message prompt in OrderAdmin | YES | Re-activating delete function to modify orders, but prevent deleting accidentally by adding a delete message prompt to admin. Deletion of order items to be confirmed before action proceeds when saved. | [Stack Overflow](https://stackoverflow.com/questions/4661074/delete-confirmation/) | a0bd3de |
 | **4.** | Admin OrderLineItem confusing UI logic | YES | Modify product & course fields from side-by-side layout, to a single dropdown field labeled “Item” | [Stack Overflow](https://stackoverflow.com/questions/18265023/self-instance-in-django-modelform/) | e5cb149 |
 | **5.** | Course charging delivery cost | YES | The bag was calculating delivery based on the entire total, which included courses. Modifying delivery logic to be consistent between checkout display & order save logic allows the courses to not factor a delivery cost and still allows physical products within mixed orders calculate delivery as expected. | [Stack Overflow](https://stackoverflow.com/questions/46007047/how-do-you-handle-shipping-rates-when-cart-has-both-physical-and-digital-items) | 808b273 |
+| **6.** | Accessibility test, missing input label | YES | An aria-label attribute was added directly to the hidden honeypot input, providing an accessible name without introducing unnecessary visible labels. As a result, the accessibility validation now passes without warnings or errors. | [Stack Overflow](https://stackoverflow.com/questions/34026253/aria-hidden-on-a-honey-pot-field) | 4b2690b |
 
 
 ### Unfixed Bugs
 
-- 
+No unfixed bugs, app running with no errors
 
-    ![Django-Allauth Bug](static/documentation/testing/bug.webp)
+![No More Bugs Here](static/documentation/testing/bug-free.webp)
