@@ -156,35 +156,97 @@ Testing using the recommended [JShint Validator](https://jshint.com/) to validat
 ![stripe_element.js Validation](static/documentation/testing/js-stripe-element.webp)
 
 ### CI Python Linter
+Testing using the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) to validate all of my Python files.
+- [x] Python tests all passed.
 
-- [] Python tests all passed.
+During development, code quality was maintained by following the [PEP8](https://peps.python.org/pep-0008/) style guide for Python. Errors & warnings were detected & corrected accross apps by running flake8.
+    
+- Common issues that were identified and resolved included:
+    - Lines exceeding 79 characters (E501) – fixed by breaking long lines into multiple lines where necessary.
+    - Trailing whitespace (W291) and blank lines with whitespace (W293) – cleaned up for clarity and consistency.
+    - Missing or insufficient blank lines after class or function definitions (E302, E305) – added to improve code structure and readability.
+    - Unused imports (F401) and unused variables (F841) – removed to maintain a clean and efficient codebase.
+    - Missing newlines at the end of files (W292, W391) – added to meet formatting standards.
 
-    All Python files containing the project's code have been tested. 
-    All the errors were fixed, and after running the CI Python Linter, it shows there are no errors.
-
-| **Feature** | **admin.py** | **apps.py** | **models.py** | **urls.py** | **views.py** | **forms.py** | **tests.py** | 
-| ----------- |:------------:|:-----------:|:-------------:|:-----------:|:------------:|:------------:|:------------:|
-| 1up GrowKits main app | n/a | n/a | n/a | [no errors](static/documentation/testing/main-urls.webp) | n/a | n/a | n/a |
-| home | [no errors](static/documentation/testing/home-admin.webp) | [no errors](static/documentation/testing/home-apps.webp) |  [no errors](static/documentation/testing/home-models.webp) | [no errors](static/documentation/testing/home-urls.webp) | [no errors](static/documentation/testing/bag-views.webp) | n/a | [no errors](static/documentation/testing/home-tests.webp) |
-| products | [no errors](static/documentation/testing/products-admin.webp) | [no errors](static/documentation/testing/products-apps.webp) | [no errors](static/documentation/testing/products-models.webp) | [no errors](static/documentation/testing/products-urls.webp) | [no errors](static/documentation/testing/products-views.webp) | n/a | [no errors](static/documentation/testing/products-tests.webp) |
-| guide | [no errors](static/documentation/testing/guide-admin.webp) | [no errors](static/documentation/testing/guide-apps.webp) | [no errors](static/documentation/testing/guide-models.webp) | [no errors](static/documentation/testing/guide-urls.webp) | [no errors](static/documentation/testing/guide-views.webp) | n/a | [no errors](static/documentation/testing/guide-tests.webp) |
-| courses | [no errors](static/documentation/testing/courses-admin.webp) | [no errors](static/documentation/testing/courses-apps.webp) | [no errors](static/documentation/testing/courses-models.webp) | [no errors](static/documentation/testing/courses-urls.webp) | [no errors](static/documentation/testing/courses-views.webp) | n/a | [no errors](static/documentation/testing/courses-tests.webp) |
-| bag | [no errors](static/documentation/testing/bag-admin.webp) | [no errors](static/documentation/testing/bag-apps.webp) | [no errors](static/documentation/testing/bag-models.webp) | [no errors](static/documentation/testing/bag-urls.webp) | [no errors](static/documentation/testing/bag-views.webp) | n/a | [no errors](static/documentation/testing/bag-tests.webp) |
-| checkout | [no errors](static/documentation/testing/checkout-admin.webp) | [no errors](static/documentation/testing/checkout-apps.webp) | [no errors](static/documentation/testing/checkout-forms.webp) | [no errors](static/documentation/testing/checkout-models.webp) | [no errors](static/documentation/testing/checkout-urls.webp) | [no errors](static/documentation/testing/checkout-views.webp) | [no errors](static/documentation/testing/checkout-tests.webp) |
-| profiles | [no errors](static/documentation/testing/profiles-admin.webp) | [no errors](static/documentation/testing/profiles-apps.webp) | [no errors](static/documentation/testing/profiles-models.webp) | [no errors](static/documentation/testing/profiles-urls.webp) | [no errors](static/documentation/testing/profiles-views.webp) | n/a | [no errors](static/documentation/testing/profiles-tests.webp) |
-
-
-| **Feature** | **contexts.py** | **signals.py** | **webhook_handler.py** | **webhooks.py** |
-|-------------|:---------------:|:--------------:|:----------------------:|:---------------:|
-| bag | [no errors](static/documentation/testing/bag-contexts.webp) | n/a | n/a | n/a |
-| checkout | n/a | [no errors](static/documentation/testing/checkout-signals.webp) | [no errors](static/documentation/testing/checkout-webhook-handler.webp) | [no errors](static/documentation/testing/checkout-webhooks.webp)
-
+All Python files containing the project's code have been tested, and the errors were fixed.
+- After running the CI Python Linter, it shows there are no errors.
 
 ![Python Tests Clear](static/documentation/testing/py-clear.webp)
 
-    NOTE: `settings.py` Stock Django code gives E501 error, left unchanged to keep app from breaking.
+| **Feature** | **admin.py** | **apps.py** | **models.py** | **urls.py** | **views.py** | **forms.py** | **tests.py** | 
+| ----------- |:------------:|:-----------:|:-------------:|:-----------:|:------------:|:------------:|:------------:|
+| 1up GrowKits main app | n/a | n/a | n/a | [no errors](static/documentation/testing/main-urls.webp) | [no errors](static/documentation/testing/main-views.webp) | n/a | n/a |
+| home | n/a | [no errors](static/documentation/testing/home-apps.webp) | n/a | [no errors](static/documentation/testing/home-urls.webp) | [no errors](static/documentation/testing/home-views.webp) | n/a | [no errors](static/documentation/testing/home-test.webp) |
+| products | [no errors](static/documentation/testing/products-admin.webp) | [no errors](static/documentation/testing/products-apps.webp) | [no errors](static/documentation/testing/products-models.webp) | [no errors](static/documentation/testing/products-urls.webp) | [no errors](static/documentation/testing/products-views.webp) | [no errors](static/documentation/testing/products-forms.webp) | [no errors](static/documentation/testing/products-test.webp) |
+| guide | [no errors](static/documentation/testing/guide-admin.webp) | [no errors](static/documentation/testing/guide-apps.webp) | [no errors](static/documentation/testing/guide-models.webp) | [no errors](static/documentation/testing/guide-urls.webp) | [no errors](static/documentation/testing/guide-views.webp) | n/a | [no errors](static/documentation/testing/guide-test.webp) |
+| courses | [no errors](static/documentation/testing/courses-admin.webp) | [no errors](static/documentation/testing/courses-apps.webp) | [no errors](static/documentation/testing/courses-models.webp) | [no errors](static/documentation/testing/courses-urls.webp) | [no errors](static/documentation/testing/courses-views.webp) | [no errors](static/documentation/testing/courses-forms.webp) | [no errors](static/documentation/testing/courses-test.webp) |
+| bag | n/a | [no errors](static/documentation/testing/bag-apps.webp) | n/a | [no errors](static/documentation/testing/bag-urls.webp) | [no errors](static/documentation/testing/bag-views.webp) | n/a | [no errors](static/documentation/testing/bag-test.webp) |
+| checkout | [no errors](static/documentation/testing/checkout-admin.webp) | [no errors](static/documentation/testing/checkout-apps.webp) | [no errors](static/documentation/testing/checkout-forms.webp) | [no errors](static/documentation/testing/checkout-models.webp) | [no errors](static/documentation/testing/checkout-urls.webp) | [no errors](static/documentation/testing/checkout-views.webp) | [no errors](static/documentation/testing/checkout-test.webp) |
+| profiles | n/a | [no errors](static/documentation/testing/profiles-apps.webp) | [no errors](static/documentation/testing/profiles-models.webp) | [no errors](static/documentation/testing/profiles-urls.webp) | [no errors](static/documentation/testing/profiles-views.webp) | n/a | [no errors](static/documentation/testing/profiles-test.webp) |
+| contact | [no errors](static/documentation/testing/contact-admin.webp) | [no errors](static/documentation/testing/contact-apps.webp) | [no errors](static/documentation/testing/contact-models.webp) | [no errors](static/documentation/testing/contact-urls.webp) | [no errors](static/documentation/testing/contact-views.webp) | [no errors](static/documentation/testing/contact-forms.webp) | [no errors](static/documentation/testing/contact-test.webp) |
 
-![Python Test Settings](static/documentation/testing/settings.webp)
+
+| **Feature** | **contexts.py** | **signals.py** | **webhook_handler.py** | **webhooks.py** | **utils.py** |
+|-------------|:---------------:|:--------------:|:----------------------:|:---------------:|:-------------:|
+| bag | [no errors](static/documentation/testing/bag-contexts.webp) | n/a | n/a | n/a | [no errors](static/documentation/testing/bag-utils.webp)
+| checkout | n/a | [no errors](static/documentation/testing/checkout-signals.webp) | [no errors](static/documentation/testing/checkout-webhook-handler.webp) | [no errors](static/documentation/testing/checkout-webhooks.webp)| n/a
+
+
+## Backend Testing
+Automated backend testing has been implemented across all apps using Django’s built-in TestCase framework. Each app has its own test.py file containing unit and view tests. All tests are [PEP8](https://peps.python.org/pep-0008/) compliant & validate the critical functionality of models, forms, views & session handling.
+
+__Apps tested:__
+- home
+- products
+- guide
+- courses
+- bag
+- checkout
+- profiles
+- contact
+
+__Test coverage includes:__
+- Model string representations (__str__)
+- Model properties & methods (spaces_left, stock management)
+- Form validations
+- View responses & template rendering
+- Access control for restricted views (admin-only access)
+- Bag session behavior (adding, adjusting & removing items)
+- Checkout process & order creation
+- Stripe webhook handling & order confirmation
+- User profile updates & order history retrieval
+
+### Running Tests
+
+    NOTE: To run all tests across the project:
+    run `python3 manage.py test` in console
+    OR
+    run `python3 manage.py test app_name` in console for specific app testing
+
+**Home Test Results**  
+![bag.js Validation](static/documentation/testing/console-home-test.webp)
+
+**Products Test Results**  
+![bag.js Validation](static/documentation/testing/console-product-test.webp)
+
+**Guide Test Results**  
+![bag.js Validation](static/documentation/testing/console-guide-test.webp)
+
+**Courses Test Results**  
+![bag.js Validation](static/documentation/testing/console-courses-test.webp)
+
+**Bag Test Results**  
+![bag.js Validation](static/documentation/testing/console-bag-test.webp)
+
+**Checkout Test Results**  
+![bag.js Validation](static/documentation/testing/console-checkout-test.webp)
+
+**Profiles Test Results**  
+![bag.js Validation](static/documentation/testing/console-profiles-test.webp)
+
+**Contact Test Results**  
+![bag.js Validation](static/documentation/testing/console-contact-test.webp)
+
 
 ## Lighthouse Test
 
@@ -259,6 +321,7 @@ Testing was carried out on desktop using a Chrome browser to ensure all forms ta
 **Payment Card Input** | PASS | Stripe card input fields load correctly (card number, expiry, CVC). Only valid card formats allowed.
 **Place Order with Valid Card** | PASS | Entering valid test card (e.g., Stripe test card 4242 4242 4242 4242) and correct billing info allows checkout to complete, shows success page, and sends confirmation email.
 **Place Order with Invalid Card** | PASS | Using invalid test card numbers causes Stripe to reject payment and show error without submitting form.
+**Place Order with Insufficient Funds Card** | PASS | Entering insufficient funds card (e.g., 4000 0000 0000 9995) triggers payment error; checkout blocked, error message shown & bag items are still available in summary.
 **Order Confirmation Page** | PASS | After successful checkout, order confirmation page displays order number, email, and bag summary clearly.
 **Order History in Profile** | PASS | Logged-in users can view past orders correctly via profile page 'Order History', showing order number, date, items, and total.
 **Checkout Save Info Toggle** | PASS | Toggling "Save this delivery information to your profile" saves user delivery info for future purchases (if logged in).

@@ -440,6 +440,12 @@ The following features are planned for possible future development to enhance us
   - 'Save Items' option on checkout page
   - Wishlist accessible from the user's account dashboard
 
+**Browse & Filter Products / Courses**
+(Help users easily find relevant items)
+  - Users can browse all available products & courses
+  - Filtering options for category, price & availability
+  - Option to clear filters & reset browsing view
+
 **Rewards Program**
 (Incentivise repeat purchases)
   - Users earn points for purchases, referrals, reviews or social shares
