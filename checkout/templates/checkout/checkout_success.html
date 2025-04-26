@@ -2,15 +2,15 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -77,21 +77,23 @@
                 <h6>Items:</h6>
 
                 {% for item in order.lineitems.all %}
-                    <div class="mb-3">
-                        <p class="my-0">
-                            <strong>
-                                {% if item.product %}
-                                    Product: {{ item.product.name }}
-                                    <span class="small text-muted">(SKU: {{ item.product.sku|upper }})</span>
-                                {% elif item.course %}
-                                    Course: {{ item.course.title }}
-                                    {% if item.course.code %}<span class="small text-muted">(Code: {{ item.course.code }})</span>{% endif %}
-                                {% endif %}
-                            </strong>
-                        </p>
-                        <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                        <p class="my-0 small">Subtotal: €{{ item.lineitem_total|floatformat:2 }}</p>
-                    </div>
+                <div class="mb-3">
+                    <p class="my-0">
+                        <strong>
+                            {% if item.product %}
+                            Product: {{ item.product.name }}
+                            <span class="small text-muted">(SKU: {{ item.product.sku|upper }})</span>
+                            {% elif item.course %}
+                            Course: {{ item.course.title }}
+                            {% if item.course.code %}
+                            <span class="small text-muted">(Code: {{ item.course.code }})</span>
+                            {% endif %}
+                            {% endif %}
+                        </strong>
+                    </p>
+                    <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                    <p class="my-0 small">Subtotal: €{{ item.lineitem_total|floatformat:2 }}</p>
+                </div>
                 {% endfor %}
 
                 <hr>
@@ -99,23 +101,21 @@
                 <p class="mb-0"><strong>Delivery:</strong> €{{ order.delivery_cost|floatformat:2 }}</p>
                 <p class="mb-0"><strong>Grand Total:</strong> €{{ order.grand_total|floatformat:2 }}</p>
             </div>
-            <div class="col-12 text-right">
 
+            <div class="col-12 text-right">
                 {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn btn-shop-return rounded-0 my-2">
-                        <span class="icon mr-2">
-                            <i class="fas fa-angle-left"></i>
-                        </span>
-                        <span class="text-uppercase">Back to Profile</span>
-                    </a>
+                <a href="{% url 'profile' %}" class="btn btn-shop-return rounded-0 my-2">
+                    <span class="icon mr-2"><i class="fas fa-angle-left"></i></span>
+                    <span class="text-uppercase">Back to Profile</span>
+                </a>
                 {% else %}
                 <a href="{% url 'products' %}" class="btn btn-shop-return rounded-0 my-2">
                     <span class="icon mr-2"><i class="fa-solid fa-tag"></i></span>
                     <span class="text-uppercase">Now check out the latest deals!</span>
                 </a>
                 {% endif %}
-                
             </div>
+
         </div>
     </div>
 </div>

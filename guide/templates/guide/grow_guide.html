@@ -13,31 +13,31 @@
     <div class="row">
         <div class="product-container col-10 offset-1 py-4 px-3 px-md-5">
 
-            {% for guide in guide %}
+            {% for step in guide %}
             <div class="mb-5">
                 <!-- Steps -->
                 <div class="text-left mt-5 pt-4">
-                    <h2 class="mb-2">{{ guide.step_no }}. {{ guide.guide_title }}</h2>
+                    <h2 class="mb-2">{{ step.step_no }}. {{ step.guide_title }}</h2>
                     <hr>
                 </div>
 
                 <!-- Instructions -->
                 <div class="row">
-                    {% if guide.image %}
+                    {% if step.image %}
                     <!-- Centered image container -->
                     <div class="col-12 col-md-5 d-flex align-items-center justify-content-center mb-3 mb-md-0">
-                        <img class="img-fluid" src="{{ guide.image.url }}" alt="{{ guide.guide_title }}">
+                        <img class="img-fluid" src="{{ step.image.url }}" alt="{{ step.guide_title }}">
                     </div>
                     <div class="col-12 col-md-7">
-                        <p>{{ guide.instructions|linebreaks }}</p>
+                        <p>{{ step.instructions|linebreaks }}</p>
                     </div>
                     {% else %}
                     <div class="col-12">
-                        <p>{{ guide.instructions|linebreaks }}</p>
+                        <p>{{ step.instructions|linebreaks }}</p>
                     </div>
                     {% endif %}
                 </div>
-                
+
             </div>
             {% endfor %}
 

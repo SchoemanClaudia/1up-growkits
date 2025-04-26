@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% block content %}
 <div class="container py-5">
     <div class="row justify-content-center">
@@ -6,9 +7,9 @@
             <div class="p-4 rounded shadow-lg text-center contact-panel text-light">
                 <h2 class="mb-3 logo-font">Thanks for getting in touch!</h2>
                 <hr class="mb-4">
-                <p>Your message has been received & we will get back to you as soon as possible.</p>
+                <p>Your message has been received &amp; we will get back to you as soon as possible.</p>
                 <div class="mt-4">
-                    <a href="{% url 'products' %}" class="btn btn-shop btn-lg rounded-0 text-uppercase">
+                    <a href="{% url 'products' %}" class="btn btn-shop btn-lg rounded-0 text-uppercase" role="button">
                         Return to Shop
                     </a>
                 </div>

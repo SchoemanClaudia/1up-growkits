@@ -19,16 +19,14 @@
                 <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
             </a>
             {% else %}
-            <a href="">
-                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-            </a>
+            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
             {% endif %}
         </div>
     </div>
 
     <div class="col-12 col-md-6 col-lg-4">
         <div class="product-details-container mb-5 mt-md-5">
-            <p class="mb-0">{{ product.name }}</p>
+            <h2 class="mb-0">{{ product.name }}</h2>
             <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
 
             {% if product.rating %}
@@ -51,11 +49,11 @@
 
             {# Stock level message #}
             {% if product.stock_quantity == 0 %}
-                <p class="text-danger font-weight-bold mt-2">Out of Stock</p>
+            <p class="text-danger font-weight-bold mt-2">Out of Stock</p>
             {% elif product.stock_quantity < 5 %}
-                <p class="text-warning font-weight-bold mt-2">Only {{ product.stock_quantity }} left in stock!</p>
+            <p class="text-warning font-weight-bold mt-2">Only {{ product.stock_quantity }} left in stock!</p>
             {% else %}
-                <p class="text-success mt-2">In Stock</p>
+            <p class="text-success mt-2">In Stock</p>
             {% endif %}
 
             <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
@@ -67,7 +65,8 @@
                         <div class="form-group w-50">
                             <div class="input-group">
                                 <input class="form-control qty_input" type="number" name="quantity" value="1" min="1"
-                                    max="{{ product.stock_quantity }}" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}"
+                                    max="{{ product.stock_quantity }}" data-item_id="{{ product.id }}"
+                                    id="id_qty_{{ product.id }}"
                                     {% if product.stock_quantity == 0 %}disabled{% endif %}>
                             </div>
                         </div>
@@ -82,9 +81,10 @@
                         </a>
 
                         {% if product.stock_quantity == 0 %}
-                            <button class="btn btn-secondary rounded-0 text-uppercase mt-5" disabled>Out of Stock</button>
+                        <button type="button" class="btn btn-secondary rounded-0 text-uppercase mt-5" disabled>Out of
+                            Stock</button>
                         {% else %}
-                            <input type="submit" class="btn btn-shop rounded-0 text-uppercase mt-5" value="Add to bag">
+                        <input type="submit" class="btn btn-shop rounded-0 text-uppercase mt-5" value="Add to bag">
                         {% endif %}
                     </div>
 

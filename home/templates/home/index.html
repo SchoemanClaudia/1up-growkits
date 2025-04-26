@@ -24,7 +24,11 @@
         {% for product in featured_products %}
         <div class="col-12 col-sm-6 col-md-4 mb-4 d-flex align-items-stretch">
             <div class="card product-card text-center">
+                {% if product.image %}
                 <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                {% else %}
+                <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="{{ product.name }}">
+                {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                     <p class="card-text">€{{ product.price }}</p>
@@ -33,7 +37,7 @@
             </div>
         </div>
         {% endfor %}
-    </div>    
+    </div>
 </section>
 
 {% endblock %}

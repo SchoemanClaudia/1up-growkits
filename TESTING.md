@@ -34,11 +34,22 @@ Testing file for 1up GrowKits [README.md](README.md).
 ## Validation
 
 ### Validation Errors
-- 
+- Duplicate attribute `rel` on `<link>` tags
+- Missing `type="button"` on non-form `<button>`
+- Using `<div>` inside a `<ul>` directly
+- Button missing `type="submit"`
+- Empty `<a href="">` if no image exists
+- `<p>` inside `<strong>` not valid
+- No `alt` fallback if `product.image` missing
+- Empty `<div class="row mt-1 mb-2"></div>`
+- Missing closing `</div>` for the button container
+- No `<label>` explicitly for the form fields
+- Empty `<br>` tag inside `<p>`
+- Misplaced closing `<div>`
 
 ### HTML Validation Corrected
 
-- [] HTML validation all passed:
+- [x] HTML validation all passed:
 
 **Home page**  
 ![Home Page HTML Validation](static/documentation/testing/html-home.webp)
@@ -162,8 +173,7 @@ Accessibility was included in every planning stage for 1up Grow Kits, through th
 
 ### User Input / Form Validation
 
-Testing was carried out on desktop using a Chrome browser to ensure all forms take the intended input and process the input appropriately.
-Manual testing by checking the following:
+Testing was carried out on desktop using a Chrome browser to ensure all forms take the intended input and process the input appropriately. Manual testing by checking the following:
 
 | **TEST INPUT**| **CORRECT OUTCOME** | **MEET REQUIREMENTS** |
 | ------------- |:-------------------:|-----------------------|
@@ -189,7 +199,7 @@ Manual testing by checking the following:
 **Place Order with Valid Card** | PASS | Entering valid test card (e.g., Stripe test card 4242 4242 4242 4242) and correct billing info allows checkout to complete, shows success page, and sends confirmation email.
 **Place Order with Invalid Card** | PASS | Using invalid test card numbers causes Stripe to reject payment and show error without submitting form.
 **Order Confirmation Page** | PASS | After successful checkout, order confirmation page displays order number, email, and bag summary clearly.
-**Order History in Profile** | PASS | Logged-in users can view past orders correctly via profile page ('Order History'), showing order number, date, items, and total.
+**Order History in Profile** | PASS | Logged-in users can view past orders correctly via profile page 'Order History', showing order number, date, items, and total.
 **Checkout Save Info Toggle** | PASS | Toggling "Save this delivery information to your profile" saves user delivery info for future purchases (if logged in).
 **Save Cart on Logout and Restore on Login** | PASS | Bag contents are saved automatically to the user's profile if they logout with items still in bag. After re-logging in, the saved bag is restored exactly as left (products, courses, quantities all correct).
 **Courses Don't Charge Delivery (Standalone / Mixed Cart)** | PASS | Courses added alone in bag = no delivery fee charged. Courses added with products = only the product(s) calculate delivery fee; courses still do not add delivery cost.
