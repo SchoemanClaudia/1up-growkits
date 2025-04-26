@@ -48,6 +48,7 @@ Testing file for 1up GrowKits [README.md](README.md).
 - Misplaced closing `<div>`
 - Trailing slash on void elements
 - No `<p>` element in scope but a `</p>` end tag
+- Stray end tag `</div>`
 
 ### HTML Validation Corrected
 
@@ -56,17 +57,63 @@ Testing file for 1up GrowKits [README.md](README.md).
 **Home page**  
 ![Home Page HTML Validation](static/documentation/testing/html-home.webp)
 
+**Signup Page**  
+![Signup Page HTML Validation](static/documentation/testing/html-signup.webp)
+
 **Login Page**  
 ![Login Page HTML Validation](static/documentation/testing/html-login.webp)
 
 **Logout Page**  
 ![Logout Page HTML Validation](static/documentation/testing/html-logout.webp)
 
-**Review Post Page**  
-![Review Post Page HTML Validation](static/documentation/testing/html-products.webp)
+**Products Page**  
+![Products Page Page HTML Validation](static/documentation/testing/html-products.webp)
 
-**About Page**  
-![About Page HTML Validation](static/documentation/testing/html-courses.webp)
+**Product Detail Page**  
+![Product Detail Page HTML Validation](static/documentation/testing/html-product-detail.webp)
+
+**Add Product Page**  
+![Add Product Page HTML Validation](static/documentation/testing/html-add-product.webp)
+
+**Edit Product Page**  
+![Edit Product Page HTML Validation](static/documentation/testing/html-edit-product.webp)
+
+**Grow Guide Page**  
+![Grow Guide HTML Validation](static/documentation/testing/html-grow-guide.webp)
+
+**Course Page**  
+![Course Page HTML Validation](static/documentation/testing/html-courses.webp)
+
+**Course Detail Page**  
+![Course Detail Page HTML Validation](static/documentation/testing/html-course-detail.webp)
+
+**Add Course Page**  
+![Review Post Page HTML Validation](static/documentation/testing/html-add-course.webp)
+
+**Edit Course Page**  
+![Edit Course Page HTML Validation](static/documentation/testing/html-edit-course.webp)
+
+**Contact Page**  
+![Contact Page HTML Validation](static/documentation/testing/html-contact.webp)
+
+**Message Sent Page**  
+![Message Sent HTML Validation](static/documentation/testing/html-message-sent.webp)
+
+**Bag Page**  
+![Bag Page HTML Validation](static/documentation/testing/html-bag.webp)
+
+**Checkout Page**  
+![Checkout Page HTML Validation](static/documentation/testing/html-checkout.webp)
+
+**Checkout Success Page**  
+![Checkout Success HTML Validation](static/documentation/testing/html-checkout-success.webp)
+
+**Profile Page**  
+![Profile Page HTML Validation](static/documentation/testing/html-profile.webp)
+
+**Order History Page**  
+![Order History HTML Validation](static/documentation/testing/html-order-history.webp)
+
 
 ### CSS Validation Corrected
 
