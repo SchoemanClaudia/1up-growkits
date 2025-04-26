@@ -82,10 +82,11 @@
                         <p class="mt-3"><strong>Number of guests:</strong></p>
                         <div class="form-group w-50">
                             <div class="input-group">
+                                <label for="id_qty_{{ course.id }}" class="sr-only">Quantity</label>
                                 <input class="form-control qty_input" type="number" name="quantity" value="1" min="1"
-                                    max="{{ course.spaces_left }}" data-item_id="{{ course.id }}"
-                                    id="id_qty_{{ course.id }}" {% if course.spaces_left == 0 %}disabled{% endif %}>
-                            </div>
+                                  max="{{ course.spaces_left }}" data-item_id="{{ course.id }}"
+                                  id="id_qty_{{ course.id }}" {% if course.spaces_left == 0 %}disabled{% endif %}>
+                              </div>                              
                         </div>
                     </div>
 

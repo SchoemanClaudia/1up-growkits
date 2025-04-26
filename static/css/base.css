@@ -20,7 +20,7 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     z-index: -1;
     pointer-events: none;
 }
@@ -61,6 +61,7 @@ nav ul li a:hover {
 #delivery-banner {
     font-style: italic;
     color: #f5b201;
+    background: #ffffff01;
 }
 
 .bg-light {
@@ -121,11 +122,13 @@ a.dropdown-item:hover {
 
 .hero h1 {
     font-size: 2.5rem;
+    background: #ffffff01;
 }
 
 .hero p {
     font-weight: lighter;
     font-size: 1.1rem;
+    background: #ffffff01;
 }
 
 .featured-container {
@@ -140,7 +143,7 @@ i:hover {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: none;
+    background: #ffffff01;
     border-color: #f5b201;
     border-width: 2px;
     color: #ffffff;
@@ -155,8 +158,7 @@ i:hover {
     background: #f5b201;
     color: #000000;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
+    font-weight: 600;
 }
 
 .btn[disabled]:hover {
@@ -167,12 +169,13 @@ i:hover {
 
 .btn-shop {
     background-color: #f5b201;
-    color: #ffffff;
+    color: #000000;
 }
 
 .btn-shop-return {
     border-color: #000000;
     color: #000000;
+    background: #ffffff01;
 }
 
 .btn-shop-return:hover {
@@ -374,7 +377,7 @@ hr {
     border: none;
     outline: none;
     background-color: #f5b201;
-    color: #ffffff;
+    color: #000000;
     cursor: pointer;
     padding: 10px 15px;
     border-radius: 50%;
@@ -403,6 +406,16 @@ hr {
     color: #ffffff;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(4px);
+}
+
+.text-success {
+    color: #28a745 !important;
+    background: #ffffff01;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+    background: #ffffff01;
 }
 
 
