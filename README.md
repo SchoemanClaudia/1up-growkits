@@ -1,12 +1,12 @@
 # 1up GrowKits
 
-It's more than just an e-commerce store, it's a gateway to sustainable living, self-sufficiency, and hands-on learning.
+It's more than just an e-commerce store, it's a gateway to sustainable living, self-sufficiency & hands-on learning.
 
-We are on a mission to empower people, from hobbyists to urban farmers, by providing premium mushroom grow kits and expert-led courses that bring the magic of mushroom cultivation to homes and businesses.
+We are on a mission to empower people, from hobbyists to urban farmers, by providing premium mushroom grow kits & expert-led courses that bring the magic of mushroom cultivation to homes & businesses.
 
-In a world where people crave organic, homegrown food, our platform offers a seamless, educational, and rewarding experience. Customers can purchase high-quality grow kits, book hands-on courses, and access expert knowledge, all through an intuitive and beautifully designed online store.
+In a world where people crave organic, homegrown food, our platform offers a seamless, educational & rewarding experience. Customers can purchase high-quality grow kits, book hands-on courses & access expert knowledge, all through an intuitive and beautifully designed online store.
 
-1up GrowKits is not just a store, it’s a community-driven movement toward sustainability, self-reliance, and the joy of growing your own food.
+1up GrowKits is not just a store, it’s a community-driven movement toward sustainability, self-reliance & the joy of growing your own food.
 
 Let’s grow together!
 
@@ -18,9 +18,9 @@ Live Link: https://shop-1up-growkits-e6669e001bb1.herokuapp.com/
 
 ## Overview
 
-1up GrowKits is an e-commerce platform for purchasing mushroom grow kits and educational courses on mushroom cultivation. The website offers a seamless shopping experience, with secure Stripe payments, AWS-backed media hosting, and a scalable e-commerce system. Customers can also subscribe to the Mailchimp newsletter for updates and promotions.
+1up GrowKits is an e-commerce platform for purchasing mushroom grow kits & educational courses on mushroom cultivation. The website offers a seamless shopping experience, with secure Stripe payments, AWS-backed media hosting & a scalable e-commerce system. Customers can also subscribe to the Mailchimp newsletter for updates & promotions.
 
-- [x] A modern and user-friendly e-commerce store.
+- [x] A modern & user-friendly e-commerce store.
 - [x] Featured products visible on landing page with links to products.
 - [x] A dedicated course booking system for scheduled training.
 - [x] Secure payment processing via Stripe.
@@ -88,7 +88,7 @@ __Audience Sales Model__
 - Direct-to-consumer sales (grow kits & course via website)
 - Service sales (courses, mini workshops)
 - Bundled kits & courses at a discount
-- Upsells and cross-sells (advanced kits, build your own resources)
+- Upsells & cross-sells (advanced kits, build your own resources)
 
 **Secondary Opportunities:**
 - Affiliate marketing with influencers
@@ -101,11 +101,11 @@ __Audience Sales Model__
 | Competitor         | Strengths                        | Weaknesses                              |
 |--------------------|----------------------------------|-----------------------------------------|
 | North Spore        | Strong brand, wide product line  | Can feel too advanced for beginners     |
-| Midwest Grow Kits  | Affordable, functional products  | Outdated branding and user experience   |
+| Midwest Grow Kits  | Affordable, functional products  | Outdated branding & user experience   |
 | YouTube Creators   | Great free content               | No product ecosystem or structured path |
 
 **1up GrowKits Advantage:** 
-- Combines aesthetics, simplicity, and community with education and product quality
+- Combines aesthetics, simplicity & community with education & product quality
 
 
 __Launch Goal Timeline__
@@ -120,7 +120,7 @@ __Launch Goal Timeline__
 
 ## SEO Keyword Strategy
 
-Targeted keywords to improve organic traffic and reach the right audience:
+Targeted keywords to improve organic traffic & reach the right audience:
 
 - **High intent product keywords:**
   - buy mushroom grow kit  
@@ -159,11 +159,11 @@ Targeted keywords to improve organic traffic and reach the right audience:
 
 ## Marketing - Mailchimp Newsletter
 
-1up GrowKits makes use of **Mailchimp** to manage newsletter campaigns & mailing lists, helping us stay connected with customers and nurture leads. The newsletter is an essential tool in our ongoing marketing efforts, used to inform, engage, and drive repeat purchases.
+1up GrowKits makes use of **Mailchimp** to manage newsletter campaigns & mailing lists, helping us stay connected with customers & nurture leads. The newsletter is an essential tool in our ongoing marketing efforts, used to inform, engage, & drive repeat purchases.
 
 | **Setup** | **Description** |
 |:----------|:----------------|
-| Audience Segmentation | Subscribers are tagged based on interests (e.g., gourmet mushrooms, grow kits, courses) to enable tailored messaging |
+| Audience Segmentation | Subscribers are tagged based on interests (eg. gourmet mushrooms, grow kits, courses) to enable tailored messaging |
 | Automated Welcome Series | New subscribers receive a welcome email introducing the brand, core products & a discount incentive |
 | Monthly Newsletter | Includes educational content (eg. mushroom facts, growing tips), product highlights, course updates & seasonal promotions |
 | Cart Abandonment Emails | Auto remind users of unpurchased items & recover potential lost sales |
@@ -171,9 +171,9 @@ Targeted keywords to improve organic traffic and reach the right audience:
 
 
 __Form Integration__
-- Mailchimp API is connected to the Django backend to sync users and trigger automation events.
+- Mailchimp API is connected to the Django backend to sync users & trigger automation events.
 - Forms on footer of site feeds directly into the Mailchimp 1up GrowKit audience list.
-- GDPR-compliant opt-in mechanisms are in place to ensure email consent and unsubscribe functionality within emails recieved in inbox upon subscription.
+- GDPR-compliant opt-in mechanisms are in place to ensure email consent & unsubscribe functionality within emails recieved in inbox upon subscription.
 
 
 ## Marketing - Facebook Social
@@ -182,7 +182,7 @@ The Facebook page for **1up GrowKits** serves as a key channel for community bui
 
 | **Setup** | **Description** |
 |:----------|:----------------|
-| Educational Posts | Informative & engaging content about mushrooms, such as posts explaining mycelium or benefits of local sourcing (e.g., "Gold Goodness" oyster mushrooms) |
+| Educational Posts | Informative & engaging content about mushrooms, such as posts explaining mycelium or benefits of local sourcing (eg. 'Gold Goodness' oyster mushrooms) |
 | Visual Storytelling | High-quality photos of grow kits & harvested mushrooms highlight the product lifecycle & help customers visualize success |
 | Community Engagement | Posts invite comments & shares; local sourcing stories & fun mushroom facts spark conversation |
 | Call-to-Actions | 'Learn More' & 'Shop Now' buttons are used to direct traffic to the website & drive conversions |
@@ -195,7 +195,7 @@ The Facebook page for **1up GrowKits** serves as a key channel for community bui
 ## Features
  
 ### Existing User Features:
-1upGrowKits is designed for a smooth and informative shopping and learning experience. Below is a breakdown of the features available in this version.
+1upGrowKits is designed for a smooth & informative, shopping & learning experience. Below is a breakdown of the features available in this version.
 
 **Key user experience objectives:**
 - Immediately communicate the purpose of the site 
@@ -208,43 +208,43 @@ The Facebook page for **1up GrowKits** serves as a key channel for community bui
 | **Feature** | **Screenshot** |
 |:------------|:---------------|
 | **Hero Banner Desktop**  
-The landing page acts as the main entry point to the 1up GrowKits site, featuring a full-width hero image that builds trust, communicates the brand’s purpose, and guides visitors toward shopping or learning. A 'Shop Now' CTA encourages engagement, supported by a responsive layout optimized for desktop browsing. | ![Landing Page](static/documentation/readme/landing-page.webp) |
+The landing page acts as the main entry point to the 1up GrowKits site, featuring a full-width hero image that builds trust, communicates the brand’s purpose & guides visitors toward shopping or learning. A 'Shop Now' CTA encourages engagement, supported by a responsive layout optimized for desktop browsing. | ![Landing Page](static/documentation/readme/landing-page.webp) |
 | **Hero Banner Mobile**  
-The mobile landing page adapts the hero banner for smaller screens without losing impact, ensuring fast loading, touch-friendly navigation, and clear CTA visibility. It maintains the brand’s core goals while delivering a smooth, fully responsive user journey on mobile devices. | ![Landing Mobile](static/documentation/readme/landing-mobile.webp) |
+The mobile landing page adapts the hero banner for smaller screens without losing impact, ensuring fast loading, touch-friendly navigation & clear CTA visibility. It maintains the brand’s core goals while delivering a smooth, fully responsive user journey on mobile devices. | ![Landing Mobile](static/documentation/readme/landing-mobile.webp) |
 | **Navigation Bar**  
-Primary navigation bar offering intuitive access to key site areas, including Products, Grow Guide, Courses, Contact, Shopping Bag, and User Profile. | ![Nav Desktop](static/documentation/readme/nav-desktop.webp) |
+Primary navigation bar offering intuitive access to key site areas, including Products, Grow Guide, Courses, Contact, Shopping Bag & User Profile. | ![Nav Desktop](static/documentation/readme/nav-desktop.webp) |
 | **Navigation Bar Mobile**  
-Responsive hamburger menu ensuring smooth navigation on smartphones and tablets. | ![Nav Mobile](static/documentation/readme/nav-mobile.webp) |
+Responsive hamburger menu ensuring smooth navigation on smartphones & tablets. | ![Nav Mobile](static/documentation/readme/nav-mobile.webp) |
 | **Navigation Dropdown**  
-User account management dropdown with links to login, signup, profile management, and admin-only areas (for superusers). | ![Nav Dropdown](static/documentation/readme/nav-dropdown.webp) |
+User account management dropdown with links to login, signup, profile management & admin-only areas (for superusers). | ![Nav Dropdown](static/documentation/readme/nav-dropdown.webp) |
 | **Featured Products Section**  
 Highlighted mushroom kits selected by admin, encouraging users to explore premium or promoted products easily from the homepage. | ![Featured Products](static/documentation/readme/featured-products.webp) |
 | **Featured Products Section Mobile**  
 A clean, responsive featured section for mobile users, maintaining focus on special products. | ![Featured Mobile](static/documentation/readme/featured-mobile.webp) |
 | **Footer**  
-A consistent footer across all pages, featuring external SEO links, social media integration, and an accessible scroll-to-top button. | ![Footer Desktop](static/documentation/readme/footer-desktop.webp) |
+A consistent footer across all pages, featuring external SEO links, social media integration & an accessible scroll-to-top button. | ![Footer Desktop](static/documentation/readme/footer-desktop.webp) |
 | **Footer Mobile**  
-Mobile-optimized footer maintaining usability, visibility, and accessibility compliance. | ![Footer Mobile](static/documentation/readme/footer-mobile.webp) |
+Mobile-optimized footer maintaining usability, visibility & accessibility compliance. | ![Footer Mobile](static/documentation/readme/footer-mobile.webp) |
 | **Product Listings**  
-Responsive product grid layout allowing users to browse available grow kits with pricing, images, and stock status easily. | ![Product Page](static/documentation/readme/product-page.webp) |
+Responsive product grid layout allowing users to browse available grow kits with pricing, images & stock status easily. | ![Product Page](static/documentation/readme/product-page.webp) |
 | **Product Detail**  
-Detailed single-product page offering pricing, description, stock availability, and direct add-to-cart functionality. | ![Product Detail](static/documentation/readme/product-detail.webp) |
+Detailed single-product page offering pricing, description, stock availability & direct add-to-cart functionality. | ![Product Detail](static/documentation/readme/product-detail.webp) |
 | **Product Listings Mobile**  
 Responsive mobile-friendly product grid to ensure seamless shopping on small devices. | ![Product Mobile](static/documentation/readme/product-mobile.webp) |
 | **Product Detail Mobile**  
-Optimized mobile view of product details with easy add-to-cart access and product descriptions. | ![Product Detail Mobile](static/documentation/readme/product-detail-mobile.webp) |
+Optimized mobile view of product details with easy add-to-cart access & product descriptions. | ![Product Detail Mobile](static/documentation/readme/product-detail-mobile.webp) |
 | **Grow Guide**  
-Informational page providing detailed growing instructions, troubleshooting help, and expert tips for beginners. | ![Guide Page](static/documentation/readme/guide-page.webp) |
+Informational page providing detailed growing instructions, troubleshooting help & expert tips for beginners. | ![Guide Page](static/documentation/readme/guide-page.webp) |
 | **Grow Guide Mobile**  
 Streamlined, mobile-friendly version of the Grow Guide for easy reference on smaller screens. | ![Guide Mobile](static/documentation/readme/guide-mobile.webp) |
 | **Course Registration**  
 Course overview page listing available educational sessions with real-time space availability indicators. | ![Course Page](static/documentation/readme/course-page.webp) |
 | **Course Detail**  
-In-depth course details including date, time, location, attendee limits, and space left for registration. | ![Course Detail](static/documentation/readme/course-detail.webp) |
+In-depth course details including date, time, location, attendee limits & space left for registration. | ![Course Detail](static/documentation/readme/course-detail.webp) |
 | **Course Registration Mobile**  
-Mobile-optimized course listings allowing booking and viewing of upcoming course details. | ![Course Mobile](static/documentation/readme/course-mobile.webp) |
+Mobile-optimized course listings allowing booking & viewing of upcoming course details. | ![Course Mobile](static/documentation/readme/course-mobile.webp) |
 | **Course Detail Mobile**  
-Mobile-friendly detailed course view showcasing session details and live availability. | ![Course Detail Mobile](static/documentation/readme/course-detail-mobile.webp) |
+Mobile-friendly detailed course view showcasing session details & live availability. | ![Course Detail Mobile](static/documentation/readme/course-detail-mobile.webp) |
 | **Shopping Bag**  
 Session-based shopping bag allowing users to adjust quantities, remove items, or proceed to checkout with real-time updates. | ![Bag Desktop](static/documentation/readme/bag-desktop.webp) |
 | **Add to Bag Alert**  
@@ -254,27 +254,27 @@ Alert message confirming an item’s removal from the bag. | ![Delete Message](s
 | **Update Bag Alert**  
 Real-time notification after changing item quantities within the shopping bag. | ![Update Bag Message](static/documentation/readme/update-bag.webp) |
 | **Checkout Desktop**  
-Secure checkout flow integrated with Stripe, displaying billing, delivery details, and an order summary. | ![Checkout Desktop](static/documentation/readme/checkout-desktop.webp) |
+Secure checkout flow integrated with Stripe, displaying billing, delivery details & an order summary. | ![Checkout Desktop](static/documentation/readme/checkout-desktop.webp) |
 | **Shopping Bag Mobile**  
-Mobile-optimized shopping bag allowing easy quantity adjustment and checkout progression. | ![Bag Mobile](static/documentation/readme/bag-mobile.webp) |
+Mobile-optimized shopping bag allowing easy quantity adjustment & checkout progression. | ![Bag Mobile](static/documentation/readme/bag-mobile.webp) |
 | **Checkout Mobile**  
 Streamlined Stripe checkout experience designed for mobile users. | ![Checkout Mobile](static/documentation/readme/checkout-mobile.webp) |
 | **User Authentication**  
-Full authentication system allowing users to register, login, reset passwords, and verify email addresses securely. | ![Nav Signup](static/documentation/readme/nav-dropdown-signup.webp) |
+Full authentication system allowing users to register, login, reset passwords & verify email addresses securely. | ![Nav Signup](static/documentation/readme/nav-dropdown-signup.webp) |
 | **Signup Page**  
-New user registration form requesting username, email, and password. | ![Signup Page](static/documentation/readme/signup-page.webp) |
+New user registration form requesting username, email & password. | ![Signup Page](static/documentation/readme/signup-page.webp) |
 | **Email Verification Prompt**  
 Instruction page guiding new users to verify their email addresses. | ![Verify Page](static/documentation/readme/verify-page.webp) |
 | **Email Confirmation Success**  
 Confirmation message once a user's email address has been successfully verified. | ![Confirm Email](static/documentation/readme/email-confirm.webp) |
 | **Login Page**  
-User login form for account access using username and password. | ![Login Page](static/documentation/readme/login-page.webp) |
+User login form for account access using username & password. | ![Login Page](static/documentation/readme/login-page.webp) |
 | **Password Reset Request**  
 Password reset form allowing users to recover accounts securely. | ![Reset Page](static/documentation/readme/reset-page.webp) |
 | **Order History**  
 Account section showing users a summary of previous orders with downloadable confirmations. | ![Order Alert](static/documentation/readme/order-alert.webp) |
 | **Profile Page**  
-Profile management page where users can update personal details and delivery addresses. | ![Profile Desktop](static/documentation/readme/profile-desktop.webp) |
+Profile management page where users can update personal details & delivery addresses. | ![Profile Desktop](static/documentation/readme/profile-desktop.webp) |
 | **Newsletter Subscription**  
 Mailchimp subscription form allowing users to opt-in for marketing emails, with GDPR-compliant consent. | ![Newsletter Signup](static/documentation/readme/newsleter-signup.webp) |
 | **Newsletter Confirmation Page**  
@@ -291,72 +291,72 @@ Custom-designed 404 error page guiding users back to the homepage if they reach 
 
 ### Existing Admin Features
 
-Admin users can manage the entire ecosystem of products, courses, and customer interactions through both the Django admin panel and the site interface. The system is designed for efficient backend management while also offering fast frontend editing tools for ease of use.
+Admin users can manage the entire ecosystem of products, courses, & customer interactions through both the Django admin panel & the site interface. The system is designed for efficient backend management while also offering fast frontend editing tools for ease of use.
 
 **Key Administrative Objectives:**
-- Enable full CRUD (Create, Read, Update, Delete) control over products, courses, orders, and users
+- Enable full CRUD (Create, Read, Update, Delete) control over products, courses, orders & users
 - Allow dynamic content management, including Grow Guide updates without code changes
-- Provide quick-access frontend management tools for products and courses
-- Monitor stock levels and course availability through visual indicators
-- Prevent out-of-stock sales and manage course enrollment limits proactively
-- Streamline order fulfillment processes and customer communications
-- Maintain full control over user profiles and submitted customer inquiries
+- Provide quick-access frontend management tools for products & courses
+- Monitor stock levels & course availability through visual indicators
+- Prevent out-of-stock sales & manage course enrollment limits proactively
+- Streamline order fulfillment processes & customer communications
+- Maintain full control over user profiles & submitted customer inquiries
 
 
 | **Feature** | **Screenshot** |
 |:------------|:---------------|
 | **Admin Panel Overview**  
-The Django admin dashboard provides secure, streamlined access to manage products, courses, orders, users, and site content. Admins can perform all key actions through an intuitive interface without needing direct access to the database or codebase. | ![Admin Main](static/documentation/readme/admin-main.webp) |
+The Django admin dashboard provides secure, streamlined access to manage products, courses, orders, users & site content. Admins can perform all key actions through an intuitive interface without needing direct access to the database or codebase. | ![Admin Main](static/documentation/readme/admin-main.webp) |
 | **Product Management via Admin**  
-Admins can easily create, update, or delete mushroom grow kits directly through the admin interface, keeping the shop inventory dynamic and up-to-date. | ![Admin Products](static/documentation/readme/admin-products.webp) |
+Admins can easily create, update, or delete mushroom grow kits directly through the admin interface, keeping the shop inventory dynamic & up-to-date. | ![Admin Products](static/documentation/readme/admin-products.webp) |
 | **Course Management via Admin**  
-Admins can manage available courses, edit course dates, attendee limits, pricing, and visibility from a central dashboard. | ![Admin Courses](static/documentation/readme/admin-courses.webp) |
+Admins can manage available courses, edit course dates, attendee limits, pricing & visibility from a central dashboard. | ![Admin Courses](static/documentation/readme/admin-courses.webp) |
 | **Grow Guide Content Management**  
-Growing resources can be easily expanded by admins without coding, allowing new guides, tips, categories, and images to be added dynamically through the CMS. | ![Admin guide](static/documentation/readme/admin-guide.webp) |
+Growing resources can be easily expanded by admins without coding, allowing new guides, tips, categories & images to be added dynamically through the CMS. | ![Admin guide](static/documentation/readme/admin-guide.webp) |
 | **Admin Links in Navbar**  
-Admin users have quick frontend access to manage products and courses via special links visible only when logged in with superuser privileges. | ![Nav Admin](static/documentation/readme/nav-dropdown-admin.webp) |
+Admin users have quick frontend access to manage products & courses via special links visible only when logged in with superuser privileges. | ![Nav Admin](static/documentation/readme/nav-dropdown-admin.webp) |
 | **Manage Products via Site Interface**  
 For fast updates, admins can modify existing products or add new kits directly through the site frontend without using the admin backend. | ![Manage Products](static/documentation/readme/manage-products.webp) |
 | **Manage Courses via Site Interface**  
 Frontend access also enables admins to edit course details quickly, ideal for live changes like updating available seats or changing dates. | ![Manage Courses](static/documentation/readme/manage-courses.webp) |
 | **Stock Alerts - Products**  
-Custom stock counters alert admins visually when product inventory drops below pre-set thresholds, preventing overselling and managing customer expectations. | ![Stock Counter](static/documentation/readme/stock-counter.webp) |
+Custom stock counters alert admins visually when product inventory drops below pre-set thresholds, preventing overselling & managing customer expectations. | ![Stock Counter](static/documentation/readme/stock-counter.webp) |
 | **Stock Available**  
 Green visual indicators confirm that stock levels are healthy, providing reassurance that products or courses are ready for sale. | ![Stock Available](static/documentation/readme/stock-available.webp) |
 | **Low Stock Warning**  
-Yellow warnings appear for products or courses nearing low stock levels, prompting timely restocks and stock planning. | ![Low Stock](static/documentation/readme/low-stock.webp) |
+Yellow warnings appear for products or courses nearing low stock levels, prompting timely restocks & stock planning. | ![Low Stock](static/documentation/readme/low-stock.webp) |
 | **Out of Stock Warning**  
 Red alerts flag products or courses that are completely out of stock, helping admins prevent further sales or manage waitlists. | ![Out of Stock](static/documentation/readme/out-of-stock.webp) |
 | **Courses Availability Alert**  
 Course-specific enrollment tracking ensures that attendee spots are monitored in real time, allowing admins to manage fully booked classes or promote under-booked sessions. | ![Course counter](static/documentation/readme/course-counter.webp) |
 | **Spots Available**  
-Visual "Spots Available" status helps both users and admins see when courses are open for new bookings. | ![Spots Available](static/documentation/readme/spots-available.webp) |
+Visual "Spots Available" status helps both users & admins see when courses are open for new bookings. | ![Spots Available](static/documentation/readme/spots-available.webp) |
 | **Low Availability Warning**  
-Yellow availability warnings flag courses that are filling up fast, encouraging urgency among users and informing admin marketing strategies. | ![Low Availability](static/documentation/readme/low-availability.webp) |
+Yellow availability warnings flag courses that are filling up fast, encouraging urgency among users & informing admin marketing strategies. | ![Low Availability](static/documentation/readme/low-availability.webp) |
 | **Fully Booked Courses**  
-Clear red indicators mark courses where all attendee spots are filled, helping manage course scheduling and additional session planning. | ![Fully Booked](static/documentation/readme/fully-booked.webp) |
+Clear red indicators mark courses where all attendee spots are filled, helping manage course scheduling & additional session planning. | ![Fully Booked](static/documentation/readme/fully-booked.webp) |
 | **Order Management**  
-Admins can review all placed orders including customer details, line items, timestamps, and payment status, providing full control over order processing and fulfillment. | ![Admin Orders](static/documentation/readme/admin-orders.webp) |
+Admins can review all placed orders including customer details, line items, timestamps & payment status, providing full control over order processing & fulfillment. | ![Admin Orders](static/documentation/readme/admin-orders.webp) |
 | **Course Enrollments via Admin**  
-Admins have access to a detailed list of course enrollments generated automatically after a successful checkout, simplifying session management and attendance tracking. | ![Course Enrollments](static/documentation/readme/course-enrollments.webp) |
+Admins have access to a detailed list of course enrollments generated automatically after a successful checkout, simplifying session management & attendance tracking. | ![Course Enrollments](static/documentation/readme/course-enrollments.webp) |
 | **User Management**  
-Admins can manage the site's userbase — viewing registered accounts, managing profile data, filtering users, and handling submitted customer inquiries efficiently. | ![Admin messages](static/documentation/readme/admin-messages.webp) |
+Admins can manage the site's userbase — viewing registered accounts, managing profile data, filtering users & handling submitted customer inquiries efficiently. | ![Admin messages](static/documentation/readme/admin-messages.webp) |
 
 ### Future Features:
 
-The following features are planned for possible future development to enhance user experience, boost engagement, and scale website functionality:
+The following features are planned for possible future development to enhance user experience, boost engagement & scale website functionality:
 
 | **Feature** | **Details** |
 |:------------|:------------|
 | **Product & Course Reviews** (Build trust & provide social proof) | (1) Logged-in users can leave reviews with optional star ratings<br>(2) Reviews displayed on product & course detail pages<br>(3) Admin moderation panel for managing posted content<br>(4) 'Most Loved' badge for products with high ratings |
 | **Course Calendar** (Users can easily find available dates & register for upcoming courses) | (1) Calendar view for all scheduled courses<br>(2) Filter by level (beginner to advanced) or location (on-site / online)<br>(3) 'Book Now' button integrated into calendar view |
 | **Wishlist** (Allow users to bookmark items they are interested in) | (1) Logged-in users can add products or courses to a personal wishlist<br>(2) 'Save Items' option available at checkout<br>(3) Wishlist accessible from the user's account dashboard |
-| **Browse & Filter Products / Courses** (Help users easily find relevant items) | (1) Users can browse all available products and courses<br>(2) Filtering options for category, price, and availability<br>(3) Option to clear filters and reset the browsing view |
+| **Browse & Filter Products / Courses** (Help users easily find relevant items) | (1) Users can browse all available products & courses<br>(2) Filtering options for category, price & availability<br>(3) Option to clear filters & reset the browsing view |
 | **Rewards Program** (Incentivize repeat purchases) | (1) Users earn points for purchases, referrals, reviews, or social shares<br>(2) Points displayed on user's profile<br>(3) Points redeemable for discounts, free products, or early access to new offerings |
-| **Subscription Model** (Create recurring sales & convenience for users) | (1) Monthly or seasonal grow kit subscription options<br>(2) Auto-renew with Stripe integration<br>(3) Email reminders and subscription management from user dashboard |
-| **Advanced Kit Customisation** (Allow users to build kits tailored to their needs) | (1) Choose strain, substrate type, and grow experience level<br>(2) Dynamic pricing updates based on selections<br>(3) Helpful tips shown depending on chosen options |
+| **Subscription Model** (Create recurring sales & convenience for users) | (1) Monthly or seasonal grow kit subscription options<br>(2) Auto-renew with Stripe integration<br>(3) Email reminders & subscription management from user dashboard |
+| **Advanced Kit Customisation** (Allow users to build kits tailored to their needs) | (1) Choose strain, substrate type & grow experience level<br>(2) Dynamic pricing updates based on selections<br>(3) Helpful tips shown depending on chosen options |
 | **Product Refills** (Encourage sustainable practices & repeat purchases) | (1) Users can reorder substrate or refill their kits<br>(2) Refill reminders via email based on typical grow cycles<br>(3) Bundled refill kits with digital grow guides offered |
-| **Info Hub** (Free resources section for SEO value) | (1) Growing tips, troubleshooting articles, and recipe blog posts<br>(2) Search and filter by topic or mushroom strain<br>(3) Embedded videos from YouTube channel |
+| **Info Hub** (Free resources section for SEO value) | (1) Growing tips, troubleshooting articles & recipe blog posts<br>(2) Search & filter by topic or mushroom strain<br>(3) Embedded videos from YouTube channel |
 | **Re-stock Alerts** (Capture demand for sold out products) | (1) Users can subscribe for email or SMS restock notifications<br>(2) Admins notified of high-demand waitlist items<br>(3) Automated user notifications when items are restocked |
 
 
@@ -364,7 +364,7 @@ The following features are planned for possible future development to enhance us
 
 ### Agile Workflow
 
-An Agile development process was followed using GitHub Projects for sprint planning, user story tracking, and task issue management. New user stories have been added as the project progressed and based on user feedback during the final testing phase.
+An Agile development process was followed using GitHub Projects for sprint planning, user story tracking & task issue management. New user stories have been added as the project progressed & based on user feedback during the final testing phase.
 
 ### Project Issues
 
@@ -377,17 +377,17 @@ An Agile development process was followed using GitHub Projects for sprint plann
 
 ### MoSCoW Prioritisation:
 
-- **Must Have:** Essential for MVP and launch.
-- **Should Have:** Important but not critical for MVP.
-- **Could Have:** Enhancements added in later sprints.
-- **Won’t Have:** Out of current scope.
+- **Must Have:** Essential for MVP & launch
+- **Should Have:** Important but not critical for MVP
+- **Could Have:** Enhancements added in later sprints
+- **Won’t Have:** Out of current scope
 
 See agile [project boards here](https://github.com/users/SchoemanClaudia/projects/5/views/6)
 
 
 ## User Stories
 
-User stories were used to keep track of the MOSCOW framework and project MVP as working through the project. 
+User stories were used to keep track of the MOSCOW framework & project MVP as working through the project. 
 
 ![User story](static/documentation/readme/user-story.webp)
 
@@ -404,23 +404,23 @@ User stories were used to keep track of the MOSCOW framework and project MVP as 
 | **USER STORY** | **DETAILS** | **ACCEPTANCE CRITERIA** |
 | -------------- | ----------- | ----------------------- |
 | **Register an account** | As a User / Admin, I want to register an account so that I can create a personal profile | (1) User/Admin can create an account with a username, email & password. (2) User/Admin receives a confirmation email upon successful registration.
-| **Login & logout of account** | As a User / Admin, I want to log in and log out my account so that I can keep my profile secure | (1) User/Admin can log in using their username/email and password. (2) A "Remember Me" option is available for convenience. (3) Users/Admin can log in / out out at any time via site header.
-| **Manage user accounts** | As an Admin, I want to access user profiles from admin panel so that I can manage user accounts | (1) Admins can view, activate, and deactivate user accounts. (2) Admins can manually reset user passwords if needed.
+| **Login & logout of account** | As a User / Admin, I want to log in & log out my account so that I can keep my profile secure | (1) User/Admin can log in using their username/email & password. (2) A "Remember Me" option is available for convenience. (3) Users/Admin can log in / out out at any time via site header.
+| **Manage user accounts** | As an Admin, I want to access user profiles from admin panel so that I can manage user accounts | (1) Admins can view, activate & deactivate user accounts. (2) Admins can manually reset user passwords if needed.
 | **Browse products & courses** | As a User, I want to view available mushroom grow kits & course so that I can decide before making purchase | (1) Products are displayed with images, descriptions, prices & quantity panel. (2) A dedicated page for mushroom-growing courses with with images, descriptions & prices.
-| **Detailed product & course view** | As a User, I want to view a product & course details so that I can see in depth details before making purchase | (1) Clicking a product / course opens a detailed page with full descriptions, stock levels and images. (2) If the item is out of stock or course fully booked, an automated message is displayed.
-| **Add featured items** | As a User, I want to view a product & course details so that I can see in depth details before making purchase | (1) Clicking a product / course opens a detailed page with full descriptions, stock levels and images. (2) If the item is out of stock or course fully booked, an automated message is displayed.
-| **Add to shopping cart** | As a User, I want to add items to my shopping cart so that I can continue browsing | (1) User can add multiple products to their cart. (2) The cart updates dynamically with quantity and total price.
+| **Detailed product & course view** | As a User, I want to view a product & course details so that I can see in depth details before making purchase | (1) Clicking a product / course opens a detailed page with full descriptions, stock levels & images. (2) If the item is out of stock or course fully booked, an automated message is displayed.
+| **Add featured items** | As a User, I want to view a product & course details so that I can see in depth details before making purchase | (1) Clicking a product / course opens a detailed page with full descriptions, stock levels & images. (2) If the item is out of stock or course fully booked, an automated message is displayed.
+| **Add to shopping cart** | As a User, I want to add items to my shopping cart so that I can continue browsing | (1) User can add multiple products to their cart. (2) The cart updates dynamically with quantity & total price.
 | **Update items in cart** | As a User, I want to update my shopping cart so that I can or add or remove items | (1) User can increase / decrease item quantity. (2) User can remove items from the cart before checkout.
 | **Secure card payment checkout** | As a User, I want to I want to securely pay for my order so that I can place order effortlessly | (1) User enters shipping details. (2) Card payment is processed via Stripe securely. (3) A confirmation email is sent upon successful payment. (4) Error messages if card payment is not successful, prompting user. (5)Order not processed if declined, keep order payment pending.
-| **Order summary display** | As a User, I want to see an order summary so that I can review items before completing checkout | (1) User can review products, quantities and final prices before payment.
-| **Order management** | As an Admin, I want to see successful orders in admin panel so that I can manage customer orders | (1) Orders appear in the Admin panel. (2) Admin can update order status (Pending, Shipped, Delivered). (3) Admin can search and sort orders by date, status, and user.
+| **Order summary display** | As a User, I want to see an order summary so that I can review items before completing checkout | (1) User can review products, quantities & final prices before payment.
+| **Order management** | As an Admin, I want to see successful orders in admin panel so that I can manage customer orders | (1) Orders appear in the Admin panel. (2) Admin can update order status (Pending, Shipped, Delivered). (3) Admin can search & sort orders by date, status & user.
 | **Successful order email** | As an Admin, I want to receive a confirmation email after purchase so that I can see my order has been placed successfully | (1) An email is automatically sent to user with order confirmation.
-| **Product & course management** | As an Admin, I want to add, edit & delete items so that edit & add new products / courses easily | (1) Admin can add, edit and delete products / courses via the Admin dashboard. (2) Admin can add, edit and delete products / courses directly on site when logged in as an admin.
-| **Auto low-stock warning** | As an Admin, I want to see stock levels and a low-stock warning so that I can manage restocking easily | (1) If stock is below 5 units, a warning appears. (2) If stock is 0, the product is marked as "Out of Stock".
-| **Booking a course** | As a User, I want to book a mushroom-growing course so that I can learn more about mushrooms | (1) Courses are listed separately on a dedicated page. (2) User can select a course and pay for the course as a product. (3) User receives an email confirming course registration, after successful payment upon checkout.
-| **Social media profile** | As a User, I want to follow 1up GrowKits on facebook so that I can share my mushroom growing journey | (1) User can access facebook profile page via footer link. (2) Social profile contains logo, recent user post tags, and latest news.
+| **Product & course management** | As an Admin, I want to add, edit & delete items so that edit & add new products / courses easily | (1) Admin can add, edit & delete products / courses via the Admin dashboard. (2) Admin can add, edit & delete products / courses directly on site when logged in as an admin.
+| **Auto low-stock warning** | As an Admin, I want to see stock levels & a low-stock warning so that I can manage restocking easily | (1) If stock is below 5 units, a warning appears. (2) If stock is 0, the product is marked as "Out of Stock".
+| **Booking a course** | As a User, I want to book a mushroom-growing course so that I can learn more about mushrooms | (1) Courses are listed separately on a dedicated page. (2) User can select a course & pay for the course as a product. (3) User receives an email confirming course registration, after successful payment upon checkout.
+| **Social media profile** | As a User, I want to follow 1up GrowKits on facebook so that I can share my mushroom growing journey | (1) User can access facebook profile page via footer link. (2) Social profile contains logo, recent user post tags & latest news.
 | **Optimize with Google SEO** | As a Developer, I want the website to be optimised for Google SEO so that the site can be top of mind when user searched mushroom grow kits | (1) Meta tags are correctly structured for SEO.
-| **User logged in for checkout** | I want users to be logged into their profile before proceeding with checkout so that they can have their orders linked and traced back to their profiles | (1) If user is logged in already: CTA on bag view directs user to checkout page with delivery details & Stripe payment option. (2) If user is not logged in: User is directed to login / register page. (3) Once user is successfully logged in, they are redirected back to checkout view to place order successfully.
+| **User logged in for checkout** | I want users to be logged into their profile before proceeding with checkout so that they can have their orders linked & traced back to their profiles | (1) If user is logged in already: CTA on bag view directs user to checkout page with delivery details & Stripe payment option. (2) If user is not logged in: User is directed to login / register page. (3) Once user is successfully logged in, they are redirected back to checkout view to place order successfully.
 
 
 ## Site Testing 
@@ -434,14 +434,14 @@ Please see [TESTING.md](TESTING.md) document.
 
 | **Page** | **Description** |
 |:-------------------|:----------------|
-| **Landing** | Shop products access from hero section and featured product cards. |
-| **Product** | View individual product details and add to cart. |
+| **Landing** | Shop products access from hero section & featured product cards. |
+| **Product** | View individual product details & add to cart. |
 | **Grow Guide** | Step-by-step guide to growing mushrooms with the grow kit. |
-| **Course Booking** | Available courses listed with dates, registration options, and "Book Spot" buttons. |
-| **Contact** | Form field to send user messages directly to admin via email and admin panel. |
-| **Cart & Checkout** | Display of item list, total price calculation, and Stripe integration for secure payment. |
-| **Profile** | Manage user delivery details and view previous order history. |
-| **Admin Panel** | Full CRUD functionality for product, course, and order management. |
+| **Course Booking** | Available courses listed with dates, registration options, & "Book Spot" buttons. |
+| **Contact** | Form field to send user messages directly to admin via email & admin panel. |
+| **Cart & Checkout** | Display of item list, total price calculation & Stripe integration for secure payment. |
+| **Profile** | Manage user delivery details & view previous order history. |
+| **Admin Panel** | Full CRUD functionality for product, course & order management. |
 
 
 ### Wireframe
@@ -471,9 +471,9 @@ Site was deployed after all styling & error handling was in place. An up-to-date
 
 | **No.** | **Feedback** | **Action** | **Outcome** |
 |:-------:|:-------------|:-----------|:------------|
-| 1 | Mobile view of the shopping bag was cluttered | Restructured layout for smaller screens | Clearer mobile interface, with product/course & total info easier to read |
+| 1 | Mobile view of the shopping bag was cluttered | Restructured layout for smaller screens | Clearer mobile interface, with product / course & total info easier to read |
 | 2 | Button styling inconsistent between bag & checkout | Unified button classes & layout across pages | Improved visual consistency & professionalism |
-| 3 | Course details page missing availability indicator | Added "Spaces Left" | Users better informed before adding to bag |
+| 3 | Course details page missing availability indicator | Added 'Spaces Left' | Users better informed before adding to bag |
 | 4 | Product images were too large on mobile | Adjusted image sizing with responsive CSS rules | Improved load times & visual clarity on smaller screens |
 | 5 | Users overlooked course start dates & durations | Enhanced course cards with date, time, & duration info | Improved clarity, leading to more informed bookings |
 
@@ -487,11 +487,11 @@ Site was deployed after all styling & error handling was in place. An up-to-date
 | **UserProfile** | Stores customer details linked to Django’s built-in User model. |
 | **Product** | Represents mushroom grow kits available for purchase. |
 | **Course** | Represents educational events such as mushroom growing workshops. |
-| **Order** | Stores information about product and course purchases by users. |
+| **Order** | Stores information about product & course purchases by users. |
 | **Cart** | Handles session-based shopping cart items before checkout. |
 | **Payment** | Processes transactions securely using Stripe integration. |
-| **StockAlert** | Tracks low inventory alerts for products and courses. |
-| **NewsletterSubscription** | Manages email opt-ins and subscriptions via Mailchimp integration. |
+| **StockAlert** | Tracks low inventory alerts for products & courses. |
+| **NewsletterSubscription** | Manages email opt-ins & subscriptions via Mailchimp integration. |
 
 
 
@@ -551,10 +551,10 @@ __Application Structure__
 
 | **Frontend** |    |
 |:-------------|:---|
-| **HTML** | Provides the main content and structure of the site. |
-| **CSS** | Defines the styling, layout, and visual presentation of the site. |
-| **JavaScript** | Enables user interactions and dynamic behavior on the frontend. |
-| **Bootstrap** | CSS framework used for responsive design and pre-built UI components. |
+| **HTML** | Provides the main content & structure of the site. |
+| **CSS** | Defines the styling, layout & visual presentation of the site. |
+| **JavaScript** | Enables user interactions & dynamic behaviour on the frontend. |
+| **Bootstrap** | CSS framework used for responsive design & pre-built UI components. |
 | **Crispy Forms** | Formats Django forms to use Bootstrap styles for a consistent look. |
 
 
@@ -564,32 +564,34 @@ __Application Structure__
 | **Django** | High-level Python web framework used for rapid backend development. |
 | **PostgreSQL** | Relational database management system for storing application data. |
 | **psycopg2** | PostgreSQL adapter allowing Django to interact with the PostgreSQL database. |
-| **Stripe** | Secure payment gateway integrated for processing orders and course bookings. |
-| **Django Allauth** | Library handling user authentication, registration, login, and email verification. |
-| **Pillow** | Python library used for image uploading and processing for products and courses. |
+| **Stripe** | Secure payment gateway integrated for processing orders & course bookings. |
+| **Django Allauth** | Library handling user authentication, registration, login & email verification. |
+| **Pillow** | Python library used for image uploading & processing for products & courses. |
+
 
 | **Development Tools:** |    |
 |:-----------------------|:---|
 | **Git** | Version control system used for tracking changes in the project (`git add`, `git commit`, `git push`). |
-| **GitHub** | Remote code repository and collaboration platform for version control and backups. |
-| **VS Code** | Integrated Development Environment (IDE) used for coding, debugging, and project management. |
+| **GitHub** | Remote code repository & collaboration platform for version control & backups. |
+| **VS Code** | Integrated Development Environment (IDE) used for coding, debugging & project management. |
+
 
 | **Hosting & Deployment:** |    |
 |:--------------------------|:---|
-| **Heroku** | Cloud platform used for hosting and deploying the Django web application. |
-| **AWS S3** | Amazon Web Services storage service used for hosting static and media files. |
+| **Heroku** | Cloud platform used for hosting & deploying the Django web application. |
+| **AWS S3** | Amazon Web Services storage service used for hosting static & media files. |
 | **Gunicorn** | WSGI HTTP server used to run Django apps in a production environment. |
 
 
 ### Libraries & Frameworks
 
-The following libraries and frameworks were used to enhance functionality, improve user experience, and support deployment:
+The following libraries & frameworks were used to enhance functionality, improve user experience & support deployment:
 
 - **Backend & Django:**
   - `Django` – Core web framework
-  - `django-allauth` – User authentication, registration, and social login
-  - `django-crispy-forms` – Bootstrap-styled form rendering
-  - `django-storages` – AWS S3 integration for static/media file storage
+  - `django-allauth` – User authentication, registration & social login
+  - `django-crispy-forms` – Bootstrap styled form rendering
+  - `django-storages` – AWS S3 integration for static / media file storage
   - `dj-database-url` – Simplifies database configuration for Heroku
   - `whitenoise` – Serves static files in production
   - `gunicorn` – WSGI server for deployment
@@ -597,11 +599,11 @@ The following libraries and frameworks were used to enhance functionality, impro
 
 - **Frontend:**
   - `Bootstrap` (via CDN) – Responsive front-end framework
-  - `jQuery` (via CDN) – DOM manipulation and cart interactivity
+  - `jQuery` (via CDN) – DOM manipulation & cart interactivity
 
 - **Payment Integration:**
   - `stripe` – Secure online payments
-  - `PyJWT` – Token-based authentication (used by Stripe and others)
+  - `PyJWT` – Token-based authentication (used by Stripe & others)
 
 - **AWS Integration:**
   - `boto3` – AWS SDK for Python
@@ -614,20 +616,20 @@ The following libraries and frameworks were used to enhance functionality, impro
 
 - **Security & Email:**
   - `cryptography`, `cffi`, `pycparser` – Secure cryptographic operations
-  - `requests`, `requests-oauthlib` – Secure API/OAuth integrations
+  - `requests`, `requests-oauthlib` – Secure API / OAuth integrations
   - `python3-openid`, `oauthlib` – Social login support
   - `defusedxml` – XML security
 
 - **Utilities & Linting:**
   - `flake8`, `pyflakes`, `pycodestyle`, `mccabe` – Code quality checks
-  - `setuptools`, `typing_extensions` – Development utilities and type hinting support
+  - `setuptools`, `typing_extensions` – Development utilities & type hinting support
 
 
 ### Sitemap
 I used XML-Sitemaps to generate a sitemap.xml file. This was generated using my deployed site URL:
   - https://shop-1up-growkits-e6669e001bb1.herokuapp.com/
 
-After it finished crawling the entire site, it created a sitemap.xml which I've downloaded and included in the repository.
+After it finished crawling the entire site, it created a sitemap.xml which I've downloaded & included in the repository.
 
 ### Robots
 I've created the robots.txt file at the root-level. Inside, I've included the default settings:
@@ -637,8 +639,8 @@ I've created the robots.txt file at the root-level. Inside, I've included the de
 `Sitemap: https://shop-1up-growkits-e6669e001bb1.herokuapp.com/sitemap.xml`
 
 - **Further links for future implementation::**
-  - [Managing your sitemaps and using sitemaps reports](https://support.google.com/webmasters/answer/7451001)
-  - [Creating and submitting a sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
+  - [Managing your sitemaps & using sitemaps reports](https://support.google.com/webmasters/answer/7451001)
+  - [Creating & submitting a sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
   - [Google search console](https://search.google.com/search-console/welcome)
   - [Testing the robots.txt file](https://support.google.com/webmasters/answer/6062598)
 
@@ -692,7 +694,7 @@ I've created the robots.txt file at the root-level. Inside, I've included the de
 
 ## Django Project Setup
 
-##### (1) Install Django and Supporting Libraries
+##### (1) Install Django & Supporting Libraries
 ```bash
 pip3 install 'django<4' gunicorn
 pip3 install dj_database_url psycopg2
@@ -704,7 +706,7 @@ Once the relevant dependencies are installed, generate a `requirements.txt` file
 pip3 freeze --local > requirements.txt
 ```
 
-##### (2) Create Your Django Project and App
+##### (2) Create Your Django Project & App
 ```bash
 django-admin startproject growkits .
 python3 manage.py startapp home
@@ -729,7 +731,7 @@ python3 manage.py migrate
 ```
 
 ##### (5) Set Up Environment Variables
-Create an `env.py` file to store sensitive information like `DATABASE_URL` and `SECRET_KEY`.
+Create an `env.py` file to store sensitive information like `DATABASE_URL` & `SECRET_KEY`.
 
 ```python
 import os
@@ -771,7 +773,7 @@ Update the `DIRS` section of `TEMPLATES`:
 ],
 ```
 
-##### (8) Create Media, Static, and Templates Directories
+##### (8) Create Media, Static & Templates Directories
 Inside the top-level project directory (same level as `manage.py`), create:
 
 - `media/`
@@ -779,7 +781,7 @@ Inside the top-level project directory (same level as `manage.py`), create:
 - `templates/`
 
 ##### (9) Prepare for Heroku Deployment
-Create a `Procfile` in the root of your project and add:
+Create a `Procfile` in the root of your project & add:
 
 ```
 web: gunicorn growkits.wsgi
@@ -849,7 +851,7 @@ python3 manage.py migrate
 
 **Create a User Group:**
 - Go to IAM > User Groups > Create New Group
-- Name it (e.g., `group-1up-growkits`)
+- Name it (eg. `group-1up-growkits`)
 
 **Attach Policies:**
 - Attach `AmazonS3FullAccess` policy
@@ -889,10 +891,8 @@ python3 manage.py migrate
 ### Stripe Integration
 - Stripe is used to process payments securely
 
-![Stripe Webhooks](static/documentation/readme/stripe-webhooks.webp)
-
 #### Stripe Setup:
-(1) Create a Stripe account and login
+(1) Create a Stripe account & login
 (2) Retrieve:
    - `STRIPE_PUBLIC_KEY`
    - `STRIPE_SECRET_KEY`
@@ -919,7 +919,7 @@ Used to send transactional emails (confirmations, resets etc.)
 (1) Enable 2FA on Gmail account
 (2) Create App Password:
    - Go to Security > App Passwords
-   - Choose "Mail" > Other > Enter name (e.g., DjangoApp)
+   - Choose "Mail" > Other > Enter name (eg. DjangoApp)
    - Copy 16-digit password
 
 (3) Update settings in Django:
@@ -950,7 +950,7 @@ EMAIL_HOST_PASSWORD = 'your-app-password'
 (6) Ensure:
    - `DEBUG=False` in `settings.py`
    - Heroku URL is in `ALLOWED_HOSTS`
-   - `requirements.txt` and `Procfile` are committed
+   - `requirements.txt` & `Procfile` are committed
 
 ### Forking the Project
 (1) Go to the GitHub repo
@@ -994,7 +994,7 @@ git clone https://github.com/your-username/repo-name.git
 - Adobe Stock Images (licensed): 
   - https://stock.adobe.com/ie/images/indoor-mushroom-grow-kit-with-fresh-pink-oyster-mushrooms-on-a-kitchen-table-concept-home-gardening-sustainable-living-diy-culinary-modern-trendy-healthy-food/873123243?prev_url=detail
 
-- Used throughout the site to compress and optimize images for faster loading times and improved performance:
+- Used throughout the site to compress & optimize images for faster loading times and improved performance:
   - [TinyPNG](https://tinypng.com/)
 
 - Helped reinforce concepts used to build modern, responsive Flexbox-based layouts across the site:
@@ -1012,10 +1012,10 @@ git clone https://github.com/your-username/repo-name.git
 
 ## Acknowledgements
 
-- A huge thanks to my husband for his continued support during this project & the year of getting through the Diploma.
+- A huge thanks to my husband for his continued support during this project & the past year of completing this diploma.
 
 - Tutor Assist for the support when debugging became overwhelming.
 
-- My mentor & facilitator for the support and knowledge shared.
+- My mentor & facilitator for the support & knowledge shared.
 
-- Slack channel peers for their feedback and support with errors.
+- Slack channel peers for their feedback & support with errors.
