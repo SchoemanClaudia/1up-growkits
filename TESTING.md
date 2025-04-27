@@ -193,7 +193,7 @@ Common issues that were identified and resolved included:
 | guide | [no errors](static/documentation/testing/guide-admin.webp) | [no errors](static/documentation/testing/guide-apps.webp) | [no errors](static/documentation/testing/guide-models.webp) | [no errors](static/documentation/testing/guide-urls.webp) | [no errors](static/documentation/testing/guide-views.webp) | n/a | [no errors](static/documentation/testing/guide-test.webp) |
 | courses | [no errors](static/documentation/testing/courses-admin.webp) | [no errors](static/documentation/testing/courses-apps.webp) | [no errors](static/documentation/testing/courses-models.webp) | [no errors](static/documentation/testing/courses-urls.webp) | [no errors](static/documentation/testing/courses-views.webp) | [no errors](static/documentation/testing/courses-forms.webp) | [no errors](static/documentation/testing/courses-test.webp) |
 | bag | n/a | [no errors](static/documentation/testing/bag-apps.webp) | n/a | [no errors](static/documentation/testing/bag-urls.webp) | [no errors](static/documentation/testing/bag-views.webp) | n/a | [no errors](static/documentation/testing/bag-test.webp) |
-| checkout | [no errors](static/documentation/testing/checkout-admin.webp) | [no errors](static/documentation/testing/checkout-apps.webp) | [no errors](static/documentation/testing/checkout-forms.webp) | [no errors](static/documentation/testing/checkout-models.webp) | [no errors](static/documentation/testing/checkout-urls.webp) | [no errors](static/documentation/testing/checkout-views.webp) | [no errors](static/documentation/testing/checkout-test.webp) |
+| checkout | [no errors](static/documentation/testing/checkout-admin.webp) | [no errors](static/documentation/testing/checkout-apps.webp) | [no errors](static/documentation/testing/checkout-models.webp) | [no errors](static/documentation/testing/checkout-urls.webp) | [no errors](static/documentation/testing/checkout-views.webp) | [no errors](static/documentation/testing/checkout-forms.webp) | [no errors](static/documentation/testing/checkout-test.webp) |
 | profiles | n/a | [no errors](static/documentation/testing/profiles-apps.webp) | [no errors](static/documentation/testing/profiles-models.webp) | [no errors](static/documentation/testing/profiles-urls.webp) | [no errors](static/documentation/testing/profiles-views.webp) | n/a | [no errors](static/documentation/testing/profiles-test.webp) |
 | contact | [no errors](static/documentation/testing/contact-admin.webp) | [no errors](static/documentation/testing/contact-apps.webp) | [no errors](static/documentation/testing/contact-models.webp) | [no errors](static/documentation/testing/contact-urls.webp) | [no errors](static/documentation/testing/contact-views.webp) | [no errors](static/documentation/testing/contact-forms.webp) | [no errors](static/documentation/testing/contact-test.webp) |
 
@@ -208,25 +208,26 @@ Common issues that were identified and resolved included:
 Automated backend testing has been implemented across all apps using Django’s built-in TestCase framework. Each app has its own test.py file containing unit and view tests. All tests are [PEP8](https://peps.python.org/pep-0008/) compliant & validate the critical functionality of models, forms, views & session handling.
 
 __Apps tested:__
-- home
-- products
-- guide
-- courses
-- bag
-- checkout
-- profiles
-- contact
+- [x] home
+- [x] products
+- [x] guide
+- [x] courses
+- [x] bag
+- [x] checkout
+- [x] profiles
+- [x] contact
 
-__Test coverage includes:__
-- Model string representations (__str__)
-- Model properties & methods (spaces_left, stock management)
-- Form validations
-- View responses & template rendering
-- Access control for restricted views (admin-only access)
-- Bag session behavior (adding, adjusting & removing items)
-- Checkout process & order creation
-- Stripe webhook handling & order confirmation
-- User profile updates & order history retrieval
+| **Testing Includes** | **Description** |
+|:--------------|:----------------|
+| **Model String Representations** | Tests that model `__str__` methods return correct readable strings. |
+| **Model Properties & Methods** | Tests custom model properties like `spaces_left` and stock quantity management. |
+| **Form Validations** | Ensures forms validate correctly with valid and invalid inputs. |
+| **View Responses & Template Rendering** | Verifies correct HTTP responses and that the correct templates are rendered. |
+| **Access Control for Restricted Views** | Tests that only admins can access certain admin-only views and actions. |
+| **Bag Session Behavior** | Tests session functionality for adding, adjusting, and removing bag items. |
+| **Checkout Process & Order Creation** | Verifies checkout flow, order saving, and stock adjustments post-purchase. |
+| **Stripe Webhook Handling & Order Confirmation** | Tests webhook reception, validation, and updating orders after Stripe confirmation. |
+| **User Profile Updates & Order History Retrieval** | Ensures users can update profiles and view past orders from their account page. |
 
 ### Running Tests
 
@@ -235,28 +236,28 @@ __Test coverage includes:__
     OR
     run `python3 manage.py test app_name` in console for specific app testing
 
-**Home Test Results**  
+- [x] **Home Test Results**  
 ![bag.js Validation](static/documentation/testing/console-home-test.webp)
 
-**Products Test Results**  
+- [x] **Products Test Results**  
 ![bag.js Validation](static/documentation/testing/console-product-test.webp)
 
-**Guide Test Results**  
+- [x] **Guide Test Results**  
 ![bag.js Validation](static/documentation/testing/console-guide-test.webp)
 
-**Courses Test Results**  
+- [x] **Courses Test Results**  
 ![bag.js Validation](static/documentation/testing/console-courses-test.webp)
 
-**Bag Test Results**  
+- [x] **Bag Test Results**  
 ![bag.js Validation](static/documentation/testing/console-bag-test.webp)
 
-**Checkout Test Results**  
+- [x] **Checkout Test Results**  
 ![bag.js Validation](static/documentation/testing/console-checkout-test.webp)
 
-**Profiles Test Results**  
+- [x] **Profiles Test Results**  
 ![bag.js Validation](static/documentation/testing/console-profiles-test.webp)
 
-**Contact Test Results**  
+- [x] **Contact Test Results**  
 ![bag.js Validation](static/documentation/testing/console-contact-test.webp)
 
 
@@ -313,7 +314,7 @@ Accessibility was included in every planning stage for 1up Grow Kits, through th
 __Accessibility Fixes__
 
 **Accessibility Issue**| **Items Affected** |
-|----------------------|-------------------|
+|:---------------------|:-------------------|
 | Missing form labels | Newsletter signup input, quantity inputs (products/courses) |
 | Duplicate input IDs | Multiple inputs using `id="email"` |
 | Hidden honeypot field missing accessible name | Mailchimp honeypot input |
@@ -332,46 +333,82 @@ During accessibility testing, some text & button elements lacked color contrast 
 ![Contrast Checker 01](static/documentation/testing/contrast-01.webp)
 ![Contrast Checker 02](static/documentation/testing/contrast-02.webp)
 
+## Testing Stripe Integration
+
+### Core Functionalities Tested
+
+**Secure Payment Processing**
+- [x] Confirmed Stripe securely processes payments without sensitive payment data touching the application's servers.
+- [x] Verified correct Stripe test mode operation with test credit card numbers.
+
+**Webhook Notifications:**
+- [x] Ensured real-time webhook events from Stripe trigger immediate and accurate responses within the application.
+- [x] Validated appropriate webhook events (`payment_intent.created`, `payment_intent.succeeded`, `charge.succeeded`, `charge.updated`) correctly trigger order creation or updates.
+
+**Idempotent Payment Handling:**
+- [x] Tested handling duplicate webhook events to confirm no duplicated orders or redundant email notifications occur.
+- [x] Ensured application logic gracefully handles repeated webhook events without side effects.
+
+**Order Creation and Updating:**
+- [x] Verified that successful payment events (`payment_intent.succeeded`, `charge.succeeded`) automatically create and update orders accurately.
+- [x] Checked database integrity and consistency of order records following webhook processing.
+
+### Stripe Webhook Events Tested
+
+| Webhook Event | Purpose and Test Outcome |
+|---------------|--------------------------|
+| `payment_intent.created`| Successfully initiated payment intent recorded |
+| `payment_intent.succeeded`| Correct order creation and confirmation emails sent |
+| `charge.succeeded`| Order payment status updated, inventory adjusted |
+| `charge.updated`| Order adjustments verified following charge updates (refunds, disputes) |
+
+![Stripe Webhooks](static/documentation/readme/stripe-webhooks.webp)
+
 
 ## Manual Testing
 
 ### User Input / Form Validation
 
-Testing was carried out on desktop using a Chrome browser to ensure all forms take the intended input and process the input appropriately. Manual testing by checking the following:
+Testing was carried out on desktop & mobile using multiple browsers to ensure consistent functionality, form inputs & data processing across different user environments.   
 
-| **TEST INPUT**| **CORRECT OUTCOME** | **MEET REQUIREMENTS** |
-| ------------- |:-------------------:|-----------------------|
-**Navbar Logo and Icons** | PASS | Logo takes user to home page, nav bar links (Home, Grow Kits, Grow Guide, Courses) work, hover effect present. Mobile menu opens/closes and links work.
-**Login Link** | PASS | Clicking 'Login' in nav opens the Login page correctly.
-**Log into Account** | PASS | Username and password fields present. Empty fields trigger validation. Correct login shows confirmation pop-up below navbar.
-**Register Link** | PASS | Clicking 'Register' opens the Register page correctly.
-**Register Account** | PASS | Username, email (optional), and password fields. Validation for empty fields, invalid email format, password length, etc. Successful registration shows confirmation.
-**Home Page Shop Now** | PASS | 'Shop Now' button directs user to the Products page successfully.
-**Mushroom Kits Page Link** | PASS | Grow Kits page loads correctly with product listings.
-**Grow Guide Page Link** | PASS | Grow Guide page loads properly with educational content.
-**Courses Page Link** | PASS | Courses page loads properly with course offerings.
-**Logout** | PASS | Clicking 'Logout' redirects to logout confirmation page and displays logout success message under navbar.
-**Social Links** | PASS | Footer social links open in new tabs and direct to correct sites.
-**Add Product to Bag** | PASS | Product detail page allows quantity selection and 'Add to Bag' updates bag correctly with success message.
-**Add Course to Bag** | PASS | Course detail page allows quantity (spots) selection and 'Add to Bag' updates bag correctly with success message.
-**View Bag Page** | PASS | Clicking Bag icon or 'View Bag' link opens bag page showing all items, images, quantities, subtotals, and totals accurately.
-**Update Quantity in Bag** | PASS | Quantity field can be updated directly and recalculates totals live.
-**Remove Item from Bag** | PASS | Clicking remove (trash) icon deletes item from bag and updates totals with success message.
-**Proceed to Checkout** | PASS | Bag 'Secure Checkout' button directs correctly to checkout page with bag summary displayed.
-**Checkout Form Validation** | PASS | Empty required fields show validation errors. Email must be valid format. Fields like name, address, and postcode are required before submission.
-**Payment Card Input** | PASS | Stripe card input fields load correctly (card number, expiry, CVC). Only valid card formats allowed.
-**Place Order with Valid Card** | PASS | Entering valid test card (e.g., Stripe test card 4242 4242 4242 4242) and correct billing info allows checkout to complete, shows success page, and sends confirmation email.
-**Place Order with Invalid Card** | PASS | Using invalid test card numbers causes Stripe to reject payment and show error without submitting form.
-**Place Order with Insufficient Funds Card** | PASS | Entering insufficient funds card (e.g., 4000 0000 0000 9995) triggers payment error; checkout blocked, error message shown & bag items are still available in summary.
-**Order Confirmation Page** | PASS | After successful checkout, order confirmation page displays order number, email, and bag summary clearly.
-**Order History in Profile** | PASS | Logged-in users can view past orders correctly via profile page 'Order History', showing order number, date, items, and total.
-**Checkout Save Info Toggle** | PASS | Toggling "Save this delivery information to your profile" saves user delivery info for future purchases (if logged in).
-**Save Cart on Logout and Restore on Login** | PASS | Bag contents are saved automatically to the user's profile if they logout with items still in bag. After re-logging in, the saved bag is restored exactly as left (products, courses, quantities all correct).
-**Courses Don't Charge Delivery (Standalone / Mixed Cart)** | PASS | Courses added alone in bag = no delivery fee charged. Courses added with products = only the product(s) calculate delivery fee; courses still do not add delivery cost.
-**Contact Form Submission** | PASS | Contact form validates required fields (name, email, message). Empty fields cause validation errors. Successful submission shows confirmation message.
-**Footer Subscribe Form** | PASS | Footer email subscription form validates email format. Empty or invalid email triggers error. Successful valid email submission shows confirmation.
-**Stock / Course Adjustment After Checkout** | PASS | After successful checkout, purchased products & courses have their stock & spots available correctly reduced by the purchased amount. No over-selling possible.
-**Enrollment Creation for Courses** | PASS | After successful checkout, user is automatically enrolled into purchased course(s) with correct number of spots. Enrollment records appear in database.
+**Browsers tested:**
+- [x] Chrome – primary testing environment
+- [x] Firefox
+- [x] Safari (macOS)
+
+| **No.** | **Test Input** | **Correct Outcome** | **Meet Requirements** |
+|:-------:|:---------------|:--------------------|:----------------------|
+| 1 | Navbar Logo and Icons | PASS | Logo takes user to home page, nav bar links (Home, Grow Kits, Grow Guide, Courses) work, hover effect present. Mobile menu opens/closes and links work. |
+| 2 | Login Link | PASS | Clicking 'Login' in nav opens the Login page correctly. |
+| 3 | Log into Account | PASS | Username and password fields present. Empty fields trigger validation. Correct login shows confirmation pop-up below navbar. |
+| 4 | Register Link | PASS | Clicking 'Register' opens the Register page correctly. |
+| 5 | Register Account | PASS | Username, email (optional), and password fields. Validation for empty fields, invalid email format, password length, etc. Successful registration shows confirmation. |
+| 6 | Home Page Shop Now | PASS | 'Shop Now' button directs user to the Products page successfully. |
+| 7 | Mushroom Kits Page Link | PASS | Grow Kits page loads correctly with product listings. |
+| 8 | Grow Guide Page Link | PASS | Grow Guide page loads properly with educational content. |
+| 9 | Courses Page Link | PASS | Courses page loads properly with course offerings. |
+| 10 | Logout | PASS | Clicking 'Logout' redirects to logout confirmation page and displays logout success message under navbar. |
+| 11 | Social Links | PASS | Footer social links open in new tabs and direct to correct sites. |
+| 12 | Add Product to Bag | PASS | Product detail page allows quantity selection and 'Add to Bag' updates bag correctly with success message. |
+| 13 | Add Course to Bag | PASS | Course detail page allows quantity (spots) selection and 'Add to Bag' updates bag correctly with success message. |
+| 14 | View Bag Page | PASS | Clicking Bag icon or 'View Bag' link opens bag page showing all items, images, quantities, subtotals, and totals accurately. |
+| 15 | Update Quantity in Bag | PASS | Quantity field can be updated directly and recalculates totals live. |
+| 16 | Remove Item from Bag | PASS | Clicking remove (trash) icon deletes item from bag and updates totals with success message. |
+| 17 | Proceed to Checkout | PASS | Bag 'Secure Checkout' button directs correctly to checkout page with bag summary displayed. |
+| 18 | Checkout Form Validation | PASS | Empty required fields show validation errors. Email must be valid format. Fields like name, address, and postcode are required before submission. |
+| 19 | Payment Card Input | PASS | Stripe card input fields load correctly (card number, expiry, CVC). Only valid card formats allowed. |
+| 20 | Place Order with Valid Card | PASS | Entering valid test card (e.g., Stripe test card 4242 4242 4242 4242) and correct billing info allows checkout to complete, shows success page, and sends confirmation email. |
+| 21 | Place Order with Invalid Card | PASS | Using invalid test card numbers causes Stripe to reject payment and show error without submitting form. |
+| 22 | Place Order with Insufficient Funds Card | PASS | Entering insufficient funds card (e.g., 4000 0000 0000 9995) triggers payment error; checkout blocked, error message shown & bag items are still available in summary. |
+| 23 | Order Confirmation Page | PASS | After successful checkout, order confirmation page displays order number, email, and bag summary clearly. |
+| 24 | Order History in Profile | PASS | Logged-in users can view past orders correctly via profile page 'Order History', showing order number, date, items, and total. |
+| 25 | Checkout Save Info Toggle | PASS | Toggling "Save this delivery information to your profile" saves user delivery info for future purchases (if logged in). |
+| 26 | Save Cart on Logout and Restore on Login | PASS | Bag contents are saved automatically to the user's profile if they logout with items still in bag. After re-logging in, the saved bag is restored exactly as left (products, courses, quantities all correct). |
+| 27 | Courses Don't Charge Delivery (Standalone / Mixed Cart) | PASS | Courses added alone in bag = no delivery fee charged. Courses added with products = only the product(s) calculate delivery fee; courses still do not add delivery cost. |
+| 28 | Contact Form Submission | PASS | Contact form validates required fields (name, email, message). Empty fields cause validation errors. Successful submission shows confirmation message. |
+| 29 | Footer Subscribe Form | PASS | Footer email subscription form validates email format. Empty or invalid email triggers error. Successful valid email submission shows confirmation. |
+| 30 | Stock / Course Adjustment After Checkout | PASS | After successful checkout, purchased products & courses have their stock & spots available correctly reduced by the purchased amount. No over-selling possible. |
+| 31 | Enrollment Creation for Courses | PASS | After successful checkout, user is automatically enrolled into purchased course(s) with correct number of spots. Enrollment records appear in database. |
 
 
 ## Bugs Encountered 
